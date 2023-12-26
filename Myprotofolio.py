@@ -8,7 +8,7 @@ source_code = html_file.read()
 html_file.close()
 
 # Read the image file
-image_file = open('D:/Course/Streamlit/phototaahaa.jpg', "rb")
+image_file = open('phototaahaa.jpg', "rb")
 contents = image_file.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 image_file.close()
