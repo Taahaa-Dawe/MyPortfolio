@@ -16,4 +16,4 @@ image_file.close()
 
 source_code_with_image = source_code.replace('{data_url}', data_url)
 
-components.html(source_code_with_image, height=1500)
+components.html(source_code_with_image, height=1850)
