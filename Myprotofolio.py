@@ -3,7 +3,7 @@ import streamlit.components.v1 as components
 import base64
 
 
-html_file = open("tp.html", 'r', encoding='UTF-8')
+html_file = open("main.html", 'r', encoding='UTF-8')
 source_code = html_file.read()
 html_file.close()
 
