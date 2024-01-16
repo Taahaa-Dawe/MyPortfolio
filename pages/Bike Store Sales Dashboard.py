@@ -85,7 +85,8 @@ st.subheader("**Problem Statement**")
 st.write("The bike store faced critical challenges in effectively monitoring and leveraging its sales data to drive informed business decisions. The existing data management system, relying on normalized data in MySQL, struggled with query performance, hindering the store's ability to quickly extract valuable insights. Recognizing the need for a solution that not only addressed these performance issues but also provided a user-friendly interface for comprehensive sales analysis, the project aimed to denormalize the data and integrate it seamlessly into Tableau. The overarching problem was the lack of an efficient, visually intuitive tool to transform raw sales data into actionable insights, limiting the store's capacity to optimize operations, identify trends, and tailor strategies to enhance overall performance.")
 
 st.subheader("__**Data Evolution**__ ")
-st.subheader("From Normalized to Denormalized Form")
+st.write("From Normalized to Denormalized Form")
+
 st.write("""*Note:*
 *For a seamless demonstration of the transformation from normalized to denormalized data, I utilized Python's Pandas library. This streamlined approach not only simplifies the showcase but also minimizes potential latency by consolidating data into Pandas DataFrames. The result is a faster and more responsive user experience.*""")
 st.write("This table corresponds to the Orders dataset, capturing key details including order ID, customer ID, status, dates, store ID, and staff ID. Each entry provides specific information about individual orders, offering insights into customer transactions and order processing.")
