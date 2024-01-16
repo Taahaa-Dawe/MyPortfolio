@@ -75,7 +75,7 @@ staffs ={
 staffs = pd.DataFrame(staffs )
 
 st.header("Bike Store Sales Dashboard: SQL & Tableau Unleash Data-Driven Success", divider='blue')
-st.subheader("**Project Overview: Bike Store Sales Dashboard**")
+st.subheader("**Project Overview:**")
 st.write(""" 
 \t The Bike Store Sales Dashboard project involved the creation of a powerful tool to enhance a local bike store's operational efficiency and decision-making. Beginning with data normalization in MySQL, the project addressed performance concerns through denormalization, optimizing query speed and efficiency. The denormalized database featured key columns like order_id, Customer_Name, and Revenue. Integrated seamlessly into Tableau, the dashboard offered dynamic visualization and comprehensive functionalities. Users could explore summarized information, yearly trends, monthly revenue, and granular details by state, store, bike category, and sales representative. The user-focused design allowed for customization, and the dashboard facilitated in-depth revenue analysis, identifying top customers for targeted strategies. Overall, the project transformed raw sales data into actionable insights, empowering the bike store to make informed decisions and optimize business operations.
 """)
@@ -95,6 +95,7 @@ st.dataframe(customers)
 
 st.write("The database includes key tables crucial for bike store management. The **order items** table details items within orders, **products** covers product specifics, and **categories** defines product categories. The **stores** table provides store details, and **staffs** contains essential staff information. Each table plays a vital role in efficiently managing inventory, sales, and staff data for the bike store.")
 st.write("**Denormalized Data**")
+st.write("SQL code creates a database named **bikes_store** and a table named **denormalised_bike_data**. It then populates this table by joining various tables, calculating total units and revenue, and grouping the data by order attributes. This denormalized view consolidates information from multiple tables for efficient analysis and reporting in the bike store context.")
 
 bike_store_data = {
      "order_id":[1,1,1,1,1],
@@ -165,7 +166,6 @@ group by
 order by ord.order_id;
 """
 st.code(code, language ="sql")
-st.write("SQL code creates a database named **bikes_store** and a table named **denormalised_bike_data**. It then populates this table by joining various tables, calculating total units and revenue, and grouping the data by order attributes. This denormalized view consolidates information from multiple tables for efficient analysis and reporting in the bike store context.")
 
 st.write("""
          The denormalized data, represented by the **denormalised_bike_data** table, amalgamates information for enhanced readability and reduced complexity. The table includes details such as order ID, customer name, city, state, order date, total units, revenue, category name, store name, sales representative, and product name. Each entry provides a consolidated view of the order, customer, and product-related information, streamlining data representation for improved comprehension and simplified analysis.
