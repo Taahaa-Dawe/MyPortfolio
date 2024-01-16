@@ -164,8 +164,9 @@ group by
     concat (sta.first_name, " ", sta.last_name)
 order by ord.order_id;
 """
-st.code(code, language ="sql")
 st.write("SQL code creates a database named **bikes_store** and a table named **denormalised_bike_data**. It then populates this table by joining various tables, calculating total units and revenue, and grouping the data by order attributes. This denormalized view consolidates information from multiple tables for efficient analysis and reporting in the bike store context.")
+
+st.code(code, language ="sql")
 
 st.write("""
          The denormalized data, represented by the **denormalised_bike_data** table, amalgamates information for enhanced readability and reduced complexity. The table includes details such as order ID, customer name, city, state, order date, total units, revenue, category name, store name, sales representative, and product name. Each entry provides a consolidated view of the order, customer, and product-related information, streamlining data representation for improved comprehension and simplified analysis.
