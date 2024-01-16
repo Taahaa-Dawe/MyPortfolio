@@ -95,6 +95,7 @@ st.dataframe(customers)
 
 st.write("The database includes key tables crucial for bike store management. The **order items** table details items within orders, **products** covers product specifics, and **categories** defines product categories. The **stores** table provides store details, and **staffs** contains essential staff information. Each table plays a vital role in efficiently managing inventory, sales, and staff data for the bike store.")
 st.write("**Denormalized Data**")
+st.write("SQL code creates a database named **bikes_store** and a table named **denormalised_bike_data**. It then populates this table by joining various tables, calculating total units and revenue, and grouping the data by order attributes. This denormalized view consolidates information from multiple tables for efficient analysis and reporting in the bike store context.")
 
 bike_store_data = {
      "order_id":[1,1,1,1,1],
@@ -164,7 +165,6 @@ group by
     concat (sta.first_name, " ", sta.last_name)
 order by ord.order_id;
 """
-st.write("SQL code creates a database named **bikes_store** and a table named **denormalised_bike_data**. It then populates this table by joining various tables, calculating total units and revenue, and grouping the data by order attributes. This denormalized view consolidates information from multiple tables for efficient analysis and reporting in the bike store context.")
 
 st.code(code, language ="sql")
 
