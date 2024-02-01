@@ -20,7 +20,7 @@ Even seemingly minor elements like call-to-action buttons witness optimization e
 
 This newfound knowledge enables marketers to make strategic decisions and fine-tune their digital strategies, ensuring success in a highly competitive and dynamic environment. As the marketing landscape continues to evolve, A/B testing's role as a data-driven powerhouse is assured, propelling businesses towards unparalleled success. The anticipated substantial value of $1.08 billion for the global A/B testing software market by 2025, as reported by Business Insider, underscores the industry's recognition of A/B testing as an indispensable tool for achieving marketing efficiency and driving business growth.
 </p>"""	, unsafe_allow_html=True)
-
+	st.subheader("Questions to be answered")
 	lst = [
     "What is the distribution of user spending across different gender categories?",
     "How does the number of purchases vary between different user groups?",
