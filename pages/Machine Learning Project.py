@@ -56,6 +56,8 @@ def DisplayPart(option):
 		Intro()
 	elif option == "Data Cleaning":
 		DataCleaning()
+	else:
+		st.write("Work in Progress")
 
 
 st.title("Data-Driven Optimization: A/B Testing and Machine Learning Integration for Enhanced Digital Strategies")
@@ -63,7 +65,7 @@ st.title("Data-Driven Optimization: A/B Testing and Machine Learning Integration
 
 header = st.container()
 with header:
-	option = st.selectbox("", ("Introduction", "Data Cleaning"))
+	option = st.selectbox("", ("Introduction", "DataPrep/EDA", "Clustering", "ARM","DT","NB","SVM"))
 header.write("""<div class='fixed-header'/>""", unsafe_allow_html=True)
 select(option)
 ### Custom CSS for the sticky header
