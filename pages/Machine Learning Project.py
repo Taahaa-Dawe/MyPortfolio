@@ -21,6 +21,29 @@ Even seemingly minor elements like call-to-action buttons witness optimization e
 This newfound knowledge enables marketers to make strategic decisions and fine-tune their digital strategies, ensuring success in a highly competitive and dynamic environment. As the marketing landscape continues to evolve, A/B testing's role as a data-driven powerhouse is assured, propelling businesses towards unparalleled success. The anticipated substantial value of $1.08 billion for the global A/B testing software market by 2025, as reported by Business Insider, underscores the industry's recognition of A/B testing as an indispensable tool for achieving marketing efficiency and driving business growth.
 </p>"""	, unsafe_allow_html=True)
 
+	lst = [
+    "What is the distribution of user spending across different gender categories?",
+    "How does the number of purchases vary between different user groups?",
+    "Can we identify any seasonal patterns in user spending behavior?",
+    "Is there a correlation between the amount spent and the user's country of origin?",
+    "What is the overall distribution of users based on the device they use?",
+    "Are there any outliers or unusual spending patterns in the dataset?",
+    "How does the average spending differ between male and female users?",
+    "Is there a relationship between the user's group membership and the number of purchases?",
+    "What insights can be gained from visualizing the temporal trends in user engagement metrics?",
+    "Can we build a predictive model to estimate the amount spent by users based on their demographic and behavioral features?",
+    "How well can we classify users into different groups using their spending patterns and demographic information?",
+    "Is it possible to predict the likelihood of a user making a purchase based on their historical behavior and characteristics?",
+    "Can we identify the most important features that contribute to predicting the gender of a user in the dataset?",
+    "How effective is a clustering algorithm in grouping users based on their spending behavior and demographics?"
+	]
+
+	s = ''
+
+	for i in lst:
+		s += "- " + i + "\n"
+
+	st.markdown(s)
 
 def DataCleaning():
 	st.header("Data Cleaning")
