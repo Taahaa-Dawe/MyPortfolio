@@ -54,7 +54,7 @@ def DataCleaning():
 def DisplayPart(option):
 	if option == "Introduction":
 		Intro()
-	elif option == "Data Cleaning":
+	elif option == "DataPrep/EDA":
 		DataCleaning()
 	else:
 		st.write("Work in Progress")
