@@ -73,14 +73,15 @@ def DataCleaning():
   <center><a href="https://ibb.co/PhbSGFw"><img src="https://i.ibb.co/d23h4jG/image.png" alt="image" border="0"></a></center>
 
 """	, unsafe_allow_html=True)
-	st.caption("<center><b>Figure 2: Snapshot of Raw Data from Kaggle.</b></center>", unsafe_allow_html=True)
-	st.caption("<center><b>Figure 2: Snapshot of Clean Data from DataCamp AB Testing Exercise Dataset.</b></center>", unsafe_allow_html=True)
+	st.caption("<center><b>Figure 3: Snapshot of Raw Data from Kaggle.</b></center>", unsafe_allow_html=True)
+
+	st.write("")
 	st.write( """
   <center><a href="https://ibb.co/9yDBm33"><img src="https://i.ibb.co/L9FBDhh/image.png" alt="image" border="0"></a>/center>
 
 """,
 	 unsafe_allow_html=True)
-	st.caption("<center><b>Figure 2: Snapshot of Cleaned Data from Kaggle.</b></center>", unsafe_allow_html=True)
+	st.caption("<center><b>Figure 4: Snapshot of Cleaned Data from Kaggle.</b></center>", unsafe_allow_html=True)
 
 
 
