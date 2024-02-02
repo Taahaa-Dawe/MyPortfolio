@@ -60,7 +60,7 @@ def DataCleaning():
   <center><a href="https://ibb.co/yYVVnHv" target="_blank"><img src="https://i.ibb.co/0FQQjH4/Screenshot-369.png" alt="Screenshot-369" border="0"></a></center>
 """	,unsafe_allow_html=True)
 
-	st.caption("<center><b>Figure 1: Snapshot of Raw Data from DataCamp AB Testing Exercise Dataset.</b></center>", unsafe_allow_html=True)	
+	st.caption("<center><b>Figure 1: Snapshot of Raw Data from DataCamp AB Dataset.</b></center>", unsafe_allow_html=True)	
 	st.write("")
 	st.write( """
   <center><a href="https://imgbb.com/" target="_blank"><img src="https://i.ibb.co/3YdhbB1/image.png" alt="image" border="0"></a></center>
@@ -104,7 +104,9 @@ def DataCleaning():
 
 """,
 	 unsafe_allow_html=True)
-	st.subheader("Visual Exploration:")
+	st.subheader("Exploratory Data Analysis:")
+	st.write("DataCamp AB Dataset")
+	st.write()
 	components.html("""
  	<div class='tableauPlaceholder' id='viz1706825440189' style='position: relative'>
   		<noscript><a href='#'>
@@ -122,6 +124,19 @@ def DataCleaning():
 	 	</script>
  """
  	,height=2300,width=1000)
+
+	st.write("Kaggle Dataset")
+	st.write(
+		"""
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/dm06Db9/boxplot.png" alt="boxplot" border="0"></a>
+<a href="https://ibb.co/2SSgwjN"><img src="https://i.ibb.co/HCCn0rd/corrplot.png" alt="corrplot" border="0"></a>
+<a href="https://ibb.co/ChFwVJV"><img src="https://i.ibb.co/Tm5wPKP/newplot-1.png" alt="newplot-1" border="0"></a>
+<a href="https://ibb.co/ccDkJ4n"><img src="https://i.ibb.co/mC6bJfW/newplot.png" alt="newplot" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/pnsG6yR/Histogram.png" alt="Histogram" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/nsCq25P/Spend-Data.png" alt="Spend-Data" border="0"></a>
+  """
+	)
+	
 
 
 
