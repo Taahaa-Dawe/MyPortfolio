@@ -128,11 +128,14 @@ def DataCleaning():
 	st.write("<b>Kaggle Dataset</b>", unsafe_allow_html=True)
 	st.write(
 		"""
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/dm06Db9/boxplot.png" alt="boxplot" border="0"></a> <br>
-<a href="https://ibb.co/2SSgwjN"><img src="https://i.ibb.co/HCCn0rd/corrplot.png" alt="corrplot" border="0"></a>  <br>
-<a href="https://ibb.co/ChFwVJV"><img src="https://i.ibb.co/Tm5wPKP/newplot-1.png" alt="newplot-1" border="0"></a> <br>
-<a href="https://ibb.co/ccDkJ4n"><img src="https://i.ibb.co/mC6bJfW/newplot.png" alt="newplot" border="0"></a> <br>
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/pnsG6yR/Histogram.png" alt="Histogram" border="0"></a> <br>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/dm06Db9/boxplot.png" alt="boxplot" border="0"></a> <br>""",unsafe_allow_html=True)
+	st.write("""
+<a href="https://ibb.co/2SSgwjN"><img src="https://i.ibb.co/HCCn0rd/corrplot.png" alt="corrplot" border="0"></a>  <br> """,unsafe_allow_html=True)
+	st.write("""
+<a href="https://ibb.co/ChFwVJV"><img src="https://i.ibb.co/Tm5wPKP/newplot-1.png" alt="newplot-1" border="0"></a> <br>""",unsafe_allow_html=True)
+	st.write("""<a href="https://ibb.co/ccDkJ4n"><img src="https://i.ibb.co/mC6bJfW/newplot.png" alt="newplot" border="0"></a> """,unsafe_allow_html=True) 
+	st.write("""<a href="https://imgbb.com/"><img src="https://i.ibb.co/pnsG6yR/Histogram.png" alt="Histogram" border="0"></a>""", unsafe_allow_html=True)
+	st.write("""
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/nsCq25P/Spend-Data.png" alt="Spend-Data" border="0"></a> <br>
   """
 	, unsafe_allow_html=True)
