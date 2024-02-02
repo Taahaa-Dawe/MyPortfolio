@@ -108,6 +108,7 @@ def DataCleaning():
 	st.write("<b>DataCamp AB Dataset</b>", unsafe_allow_html=True)
 	st.write()
 	components.html("""
+ <center>
  	<div class='tableauPlaceholder' id='viz1706825440189' style='position: relative'>
   		<noscript><a href='#'>
   			<img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AB&#47;ABtestAnalysis&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
@@ -122,6 +123,7 @@ def DataCleaning():
      		var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
        		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
 	 	</script>
+</center>
  """
  	,height=2300,width=1000)
 
