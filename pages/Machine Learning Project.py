@@ -83,7 +83,18 @@ def DataCleaning():
 	 unsafe_allow_html=True)
 	st.caption("<center><b>Figure 4: Snapshot of Cleaned Data from Kaggle.</b></center>", unsafe_allow_html=True)
 	st.write()
-	st.subheader("Data Cleaning")
+	st.subheader("Data Cleaning:")
+	st. write("""
+ 	DataCamp AB Testing Exercise Dataset:
+		- The dataset was free from missing values, NaNs, or incorrect entries.
+		- No normalization was required as the data was already in a suitable scale for analysis.
+
+""" 	)
+	st.write( """
+  <center><a href="https://ibb.co/GT0731k"><img src="https://i.ibb.co/pyx2rsZ/image.png" alt="image" border="0"></a></center>
+
+""",
+	 unsafe_allow_html=True)
 
 
 
