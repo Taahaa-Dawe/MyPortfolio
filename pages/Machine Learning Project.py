@@ -147,7 +147,9 @@ def DataCleaning():
 	st.write("""<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/pnsG6yR/Histogram.png" alt="Histogram" border="0"></a></center>""", unsafe_allow_html=True)
 	st.write("")
 
-	
+	st.subheader("Code:")
+	st.write("""<a href="https://drive.google.com/file/d/12JXgly9Y-njQBujVTpQt3BDA55tsvPA9/view?usp=sharing" alt="Histogram" border="0">Data Cleaning of API</a>""", unsafe_allow_html=True)
+	st.write("""<a href="https://drive.google.com/file/d/1XhJ-kGKVv2KPPQMdj1w7OVJhq6CemU6s/view?usp=sharing" alt="Histogram" border="0">Data Cleaning of API</a>""", unsafe_allow_html=True)
 
 
 
