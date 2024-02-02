@@ -85,9 +85,16 @@ def DataCleaning():
 	st.write()
 	st.subheader("Data Cleaning:")
 	st. write("""
- 	<ul> DataCamp AB Testing Exercise Dataset: 
+ 	<ul> DataCamp AB Testing Dataset: 
 		<li> The dataset was free from missing values, NaNs, or incorrect entries.</li>
 		<li> No normalization was required as the data was already in a suitable scale for analysis.</li>
+  	</ul>
+
+""" 	, unsafe_allow_html=True)
+	st. write("""
+ 	<ul> Kaggle AB Testing Dataset:
+		<li> A null value in every column of the Kaggle dataset (marked as NaN) was identified and removed, as it didn't provide valuable information.</li>
+		<li> The decision to exclude this column aligns with the principle of maintaining data integrity by eliminating irrelevant or non-contributory features. </li>
   	</ul>
 
 """ 	, unsafe_allow_html=True)
