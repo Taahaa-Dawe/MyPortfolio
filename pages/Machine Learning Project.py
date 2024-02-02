@@ -90,7 +90,7 @@ def DataCleaning():
 		<li> No normalization was required as the data was already in a suitable scale for analysis.</li>
   	</ul>
 
-""" 	, unsafe_allow_html=True))
+""" 	, unsafe_allow_html=True)
 	st.write( """
   <center><a href="https://ibb.co/GT0731k"><img src="https://i.ibb.co/pyx2rsZ/image.png" alt="image" border="0"></a></center>
 
