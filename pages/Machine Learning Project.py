@@ -135,7 +135,7 @@ def DataCleaning():
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/pnsG6yR/Histogram.png" alt="Histogram" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/nsCq25P/Spend-Data.png" alt="Spend-Data" border="0"></a>
   """
-	)
+	, unsafe_allow_html=True)
 	
 
 
