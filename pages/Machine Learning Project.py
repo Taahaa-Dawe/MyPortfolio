@@ -85,11 +85,12 @@ def DataCleaning():
 	st.write()
 	st.subheader("Data Cleaning:")
 	st. write("""
- 	DataCamp AB Testing Exercise Dataset:
-		- The dataset was free from missing values, NaNs, or incorrect entries.
-		- No normalization was required as the data was already in a suitable scale for analysis.
+ 	<ul> DataCamp AB Testing Exercise Dataset: 
+		<li> The dataset was free from missing values, NaNs, or incorrect entries.</li>
+		<li> No normalization was required as the data was already in a suitable scale for analysis.</li>
+  	</ul>
 
-""" 	)
+""" 	, unsafe_allow_html=True))
 	st.write( """
   <center><a href="https://ibb.co/GT0731k"><img src="https://i.ibb.co/pyx2rsZ/image.png" alt="image" border="0"></a></center>
 
