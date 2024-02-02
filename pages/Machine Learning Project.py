@@ -69,6 +69,7 @@ def DataCleaning():
 	 unsafe_allow_html=True)
 
 	st.caption("<center><b>Figure 2: Snapshot of Clean Data from DataCamp AB Testing Exercise Dataset.</b></center>", unsafe_allow_html=True)
+	st.write("")
 	st.write( """
   <center><a href="https://ibb.co/PhbSGFw"><img src="https://i.ibb.co/d23h4jG/image.png" alt="image" border="0"></a></center>
 
@@ -77,7 +78,7 @@ def DataCleaning():
 
 	st.write("")
 	st.write( """
-  <center><a href="https://ibb.co/9yDBm33"><img src="https://i.ibb.co/L9FBDhh/image.png" alt="image" border="0"></a>/center>
+  <center><a href="https://ibb.co/9yDBm33"><img src="https://i.ibb.co/L9FBDhh/image.png" alt="image" border="0"></a></center>
 
 """,
 	 unsafe_allow_html=True)
