@@ -121,7 +121,7 @@ def DataCleaning():
        		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
 	 	</script>
  """
- 	,height=2000,width=1000)
+ 	,height=2500,width=1000)
 
 
 
