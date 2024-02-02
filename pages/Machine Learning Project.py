@@ -47,8 +47,31 @@ This newfound knowledge enables marketers to make strategic decisions and fine-t
 
 	st.markdown(s)
 
+
 def DataCleaning():
-	st.header("Data Cleaning")
+	st.header("Data Cleaning", divider='blue')
+	st.subheader("Data Gathering:")
+	st.write("""
+		<p style = "line-height: 2">The data for this project was collected from two distinct sources to gain comprehensive insights into A/B testing scenarios. The first dataset, <a href="https://assets.datacamp.com/production/repositories/1646/datasets/2751adce60684a03d8b4132adeadab8a0b95ee56/AB_testing_exercise.csv" target="_blank">DataCamp AB Testing Exercise Dataset</a>, was obtained using the provided API. It includes 
+		information on user interactions, spending patterns, and other relevant variables during A/B testing exercises. The second dataset, <a href="https://www.kaggle.com/datasets/amirmotefaker/ab-testing-dataset/code" target="_blank">Kaggle AB Testing Dataset</a>, provides insights into the impact of different campaigns on user engagement and conversions. Both datasets were meticulously cleaned to ensure accuracy and compatibility.</p>
+"""	, unsafe_allow_html=True)
+	st.subheader("Visual Exploration:")
+	st.write(	
+""" 
+  <center><a href="https://ibb.co/yYVVnHv" target="_blank"><img src="https://i.ibb.co/0FQQjH4/Screenshot-369.png" alt="Screenshot-369" border="0"></a></center>
+"""	,unsafe_allow_html=True)
+
+	st.caption("<center><b>Figure 1: Snapshot of Raw Data from DataCamp AB Testing Exercise Dataset.</b></center>", unsafe_allow_html=True)	
+	st.write("")
+	st.write( """
+  <center><a href="https://imgbb.com/" target="_blank"><img src="https://i.ibb.co/3YdhbB1/image.png" alt="image" border="0"></a></center>
+
+""",
+	 unsafe_allow_html=True)
+
+	st.caption("<center><b>Figure 2: Snapshot of Clean Data from DataCamp AB Testing Exercise Dataset.</b></center>", unsafe_allow_html=True)	
+
+
 
 
 def DisplayPart(option):
