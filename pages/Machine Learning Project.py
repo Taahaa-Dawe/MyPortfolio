@@ -49,7 +49,6 @@ This newfound knowledge enables marketers to make strategic decisions and fine-t
 
 
 def DataCleaning():
-	st.header("Data Cleaning", divider='blue')
 	st.subheader("Data Gathering:")
 	st.write("""
 		<p style = "line-height: 2">The data for this project was collected from two distinct sources to gain comprehensive insights into A/B testing scenarios. The first dataset, <a href="https://assets.datacamp.com/production/repositories/1646/datasets/2751adce60684a03d8b4132adeadab8a0b95ee56/AB_testing_exercise.csv" target="_blank">DataCamp AB Testing Exercise Dataset</a>, was obtained using the provided API. It includes 
@@ -83,6 +82,8 @@ def DataCleaning():
 """,
 	 unsafe_allow_html=True)
 	st.caption("<center><b>Figure 4: Snapshot of Cleaned Data from Kaggle.</b></center>", unsafe_allow_html=True)
+	st.write()
+	st.subheader("Data Cleaning")
 
 
 
