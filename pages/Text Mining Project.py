@@ -58,7 +58,7 @@ While online dating has become a ubiquitous part of contemporary courtship, publ
 
 
 def DataCleaning():
-	st.header("Data Cleaning", divider='blue')
+	st.header("Data Gathering and Cleaning", divider='blue')
 	st.subheader("Data Gathering:")
 	st.write("""
 		<p style = "line-height: 2">
@@ -164,7 +164,7 @@ def DataCleaning():
 def DisplayPart(option):
 	if option == "Introduction":
 		Intro()
-	elif option == "Data Cleaning":
+	elif option == "Data":
 		DataCleaning()
 
 
@@ -173,7 +173,7 @@ st.title("Exploring the Landscape of Modern Romance through Text Mining and Mach
 
 header = st.container()
 with header:
-	option = st.selectbox("", ("Introduction", "Data Cleaning"))
+	option = st.selectbox("", ("Introduction", "Data"))
 header.write("""<div class='fixed-header'/>""", unsafe_allow_html=True)
 select(option)
 ### Custom CSS for the sticky header
