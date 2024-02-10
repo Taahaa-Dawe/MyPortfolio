@@ -160,7 +160,7 @@ def DataCleaning():
 	st.write("<a href = 'https://docs.google.com/document/d/1HRjFws5aJQJA_leQlAZfkUmM_xDHAZOo3ZnJWs6-ztw/edit?usp=sharing'>Code</a>", unsafe_allow_html=True)
 	
 	st.subheader("API:")
-	st.write("<a href = 'https://newsapi.org/v2/everything?q=%22tinder%22&apiKey=18f881afeae84b84a02136ecb0600ea2Code'> </a>", unsafe_allow_html=True)
+	st.write("<a href = 'https://newsapi.org/v2/everything?q=%22tinder%22&apiKey=18f881afeae84b84a02136ecb0600ea2Code'> NewsAPI</a>", unsafe_allow_html=True)
 	st.write("The other API use is from Reddit, It uses Praw Library")
 
 
