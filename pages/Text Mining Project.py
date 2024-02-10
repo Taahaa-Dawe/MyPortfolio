@@ -161,7 +161,7 @@ def DataCleaning():
 	
 	st.subheader("API:")
 	st.write("<a href = 'https://newsapi.org/v2/everything'> NewsAPI</a>", unsafe_allow_html=True)
-	st.write("The other API use is from Reddit, It uses Praw Library")
+	st.write("The other API used is from Reddit, It uses Praw Library")
 
 
 def DisplayPart(option):
