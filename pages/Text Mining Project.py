@@ -19,7 +19,7 @@ While online dating has become a ubiquitous part of contemporary courtship, publ
 	st.write(""" <center>
 	<a href="https://imgbb.com/"><img src="https://i.ibb.co/LvmHsDN/Img-1.png" alt="Img-1" border="0"></a> </center>
 """ , unsafe_allow_html=True)
-	st.caption("<center>Pew Research Center</center>", unsafe_allow_html=True)
+	st.caption("<center>Views on dating Apps</center>", unsafe_allow_html=True)
 	st.write("""
 			<p style = "line-height: 2" >
 				<br>
@@ -29,7 +29,7 @@ While online dating has become a ubiquitous part of contemporary courtship, publ
 	st.write(""" <center>
 	<a href="https://imgbb.com/"><img src="https://i.ibb.co/Jm9LSh9/img-2.png" alt="img-2" border="0"></a></center>
 """ , unsafe_allow_html=True)
-	st.caption("<center>Pew Research Center</center>", unsafe_allow_html=True)
+	st.caption("<center>Thoughts on how easy it is to find love</center>", unsafe_allow_html=True)
 	st.write("""
 			<p style = "line-height: 2" >
 				<br>
