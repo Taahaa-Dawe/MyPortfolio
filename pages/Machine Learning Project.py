@@ -25,7 +25,7 @@ This newfound knowledge enables marketers to make strategic decisions and fine-t
 	, unsafe_allow_html=True)
 	st.write("""
 <p style = "line-height: 2" >
-According to an article titled <a href ='https://hbr.org/2017/06/a-refresher-on-ab-testing'>"A Refresher on A/B Testing"</a>published by the Harvard Business Review in June 2017, the method known as A/B testing was developed almost a century ago by Ronald Fisher. Initially utilized in agricultural and medical experiments, its adaptation to online environments in the 1990s revolutionized how businesses optimize websites, apps, and marketing strategies
+According to an article titled <a href ='https://hbr.org/2017/06/a-refresher-on-ab-testing'>"A Refresher on A/B Testing"</a>&nbsp;published by the Harvard Business Review in June 2017, the method known as A/B testing was developed almost a century ago by Ronald Fisher. Initially utilized in agricultural and medical experiments, its adaptation to online environments in the 1990s revolutionized how businesses optimize websites, apps, and marketing strategies
 </p>
 """	, unsafe_allow_html=True)
 	st.write("""
