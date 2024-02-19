@@ -23,6 +23,34 @@ Even seemingly minor elements like call-to-action buttons witness optimization e
 
 This newfound knowledge enables marketers to make strategic decisions and fine-tune their digital strategies, ensuring success in a highly competitive and dynamic environment. As the marketing landscape continues to evolve, A/B testing's role as a data-driven powerhouse is assured, propelling businesses towards unparalleled success. The anticipated substantial growth in the global A/B testing software market, as reported by Business Insider, underscores the industry's recognition of A/B testing as an indispensable tool for achieving marketing efficiency and driving business growth.</p>"""	
 	, unsafe_allow_html=True)
+	st.write("""
+<p style = "line-height: 2" >
+According to an article titled <a href =”https://hbr.org/2017/06/a-refresher-on-ab-testing”>"A Refresher on A/B Testing" </a>published by the Harvard Business Review in June 2017, the method known as A/B testing was developed almost a century ago by Ronald Fisher. Initially utilized in agricultural and medical experiments, its adaptation to online environments in the 1990s revolutionized how businesses optimize websites, apps, and marketing strategies
+</p>
+"""	, unsafe_allow_html=True)
+	st.write("""
+<p style = "line-height: 2" >
+
+
+By randomly assigning users to different versions and analyzing metrics like click-through rates, companies can swiftly assess the impact of changes and make data-driven decisions.
+However, despite its widespread adoption, many organizations fall prey to common pitfalls such as premature conclusions, excessive metric tracking, and neglecting the importance of retesting.
+
+
+</p>
+"""	, unsafe_allow_html=True)
+	
+	st.write(""" <center>
+<a href="https://ibb.co/nPPbby7"><img src="https://i.ibb.co/5KK663r/image.png" alt="image" border="0"></a></center>
+"""	, unsafe_allow_html=True)
+	st.write("""
+<p style = "line-height: 2" >
+
+Nonetheless, A/B testing remains invaluable for its ability to provide quick insights and facilitate iterative improvements, enabling businesses to adapt rapidly to changing consumer preferences and market dynamics. While A/B testing offers valuable insights, its effectiveness hinges on proper execution and interpretation.
+
+As companies strive to maximize online engagement and conversion rates, understanding the nuances of experimental design and statistical analysis becomes paramount. By adopting best practices and leveraging the flexibility of digital platforms, businesses can harness the power of A/B testing to iteratively refine their strategies, enhance user experiences, and drive sustainable growth in an increasingly competitive landscape.
+
+</p>
+"""	, unsafe_allow_html=True)
 	st.subheader("Questions to be answered")
 	lst = [
     "What is the distribution of user spending across different gender categories?",
