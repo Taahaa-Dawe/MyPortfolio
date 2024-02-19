@@ -25,7 +25,7 @@ This newfound knowledge enables marketers to make strategic decisions and fine-t
 	, unsafe_allow_html=True)
 	st.write("""
 <p style = "line-height: 2" >
-According to an article titled <a href =”https://hbr.org/2017/06/a-refresher-on-ab-testing”>"A Refresher on A/B Testing" </a>published by the Harvard Business Review in June 2017, the method known as A/B testing was developed almost a century ago by Ronald Fisher. Initially utilized in agricultural and medical experiments, its adaptation to online environments in the 1990s revolutionized how businesses optimize websites, apps, and marketing strategies
+According to an article titled <a href ='https://hbr.org/2017/06/a-refresher-on-ab-testing'>"A Refresher on A/B Testing"</a>published by the Harvard Business Review in June 2017, the method known as A/B testing was developed almost a century ago by Ronald Fisher. Initially utilized in agricultural and medical experiments, its adaptation to online environments in the 1990s revolutionized how businesses optimize websites, apps, and marketing strategies
 </p>
 """	, unsafe_allow_html=True)
 	st.write("""
@@ -42,6 +42,7 @@ However, despite its widespread adoption, many organizations fall prey to common
 	st.write(""" <center>
 <a href="https://ibb.co/nPPbby7"><img src="https://i.ibb.co/5KK663r/image.png" alt="image" border="0"></a></center>
 """	, unsafe_allow_html=True)
+	st.caption("<center><a href = 'https://zapier.com/blog/ab-testing-email-marketing/'>_zapier</a></center>", unsafe_allow_html=True)
 	st.write("""
 <p style = "line-height: 2" >
 
