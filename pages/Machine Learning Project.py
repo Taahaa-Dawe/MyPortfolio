@@ -16,33 +16,46 @@ def Clustering():
         position: sticky;
         top: 2.875rem;
         z-index: 999;
-	background-color: #0c1415;
+        background-color: #0c1415;
     }
     .fixed-header {
-        border-bottom:1px ;
+        border-bottom: 1px;
     }
     .btn {
-            color: white;
-            height: 40px;
-            width: 100px;
-            padding: 2px;
-            text-decoration: none;
-        }
-    #atag{
-            text-decoration: none;
-        }
-      .nav {
+        color: white;
+        height: 40px;
+        width: 100px;
+        padding: 2px;
+        text-decoration: none;
+    }
+    #atag {
+        text-decoration: none;
+    }
+    .nav {
+        width: 100%;
+        height: 10vh;
+        font-size: large;
+        text-align: center;
+        margin: 10px 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        place-items: center;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .nav {
             width: 50vw;
-            height: 10vh;
-            font-size: Large;
-            text-align: center;
-            margin: 10px 5px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            place-items: center;
         }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .nav {
+            width: 33.33vw;
+        }
+    }
 </style>
+
     """,
     unsafe_allow_html=True
 )
