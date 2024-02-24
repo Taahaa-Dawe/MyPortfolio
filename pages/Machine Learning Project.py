@@ -279,8 +279,7 @@ The elbow method suggests that the optimal number of clusters is 2, which aligns
 
 	st.subheader("Conclusion")
 	st.write("""
-Clustering is essential for organizing AB testing data into clear groups, confirming variations in spending habits between control and test users. It sheds light on purchasing behaviors, providing deeper insights into user characteristics and preferences within each group. This insight helps refine marketing strategies, products, and customer experiences tailored to specific segments. By understanding behavioral nuances, businesses can optimize decision-making and improve overall performance based on a nuanced understanding of user behavior and preferences.
-	""",unsafe_allow_html=True)
+Through clustering analysis of A/B testing data, we unveil nuanced response patterns across diverse experimental groups. This exploration highlights the variability in treatment effectiveness, emphasizing the significance of segmenting audiences based on their unique characteristics and behaviors. By discerning these distinctions, organizations can tailor their strategies and interventions more effectively, optimizing decision-making processes in areas such as marketing and product development. This iterative approach enables continuous improvement, driving towards enhanced outcomes and greater success in achieving desired objectives.	""",unsafe_allow_html=True)
 
 
 def Intro():
