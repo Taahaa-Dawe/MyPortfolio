@@ -6,6 +6,270 @@ option = ""
 
 def select(option):
 	DisplayPart(option)
+
+import streamlit as st
+def Clustering():
+	st.markdown(
+    """
+<style>
+    div[data-testid="stVerticalBlock"] div:has(div.fixed-header) {
+        position: sticky;
+        top: 2.875rem;
+        z-index: 999;
+	background-color: #0c1415;
+    }
+    .fixed-header {
+        border-bottom:1px ;
+    }
+    .btn {
+            color: white;
+            height: 40px;
+            width: 100px;
+            padding: 2px;
+            text-decoration: none;
+        }
+    #atag{
+            text-decoration: none;
+        }
+      .nav {
+            width: 50vw;
+            height: 10vh;
+            font-size: Large;
+            text-align: center;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+        }
+</style>
+    """,
+    unsafe_allow_html=True
+)
+	st.header("Clustering", divider = "blue")
+
+	header = st.container()
+
+	header.write(
+"""
+<div class='fixed-header'/>
+<center>
+    <div class="nav"/>
+	<a href="#Overview" class="btn",id ="atag">Overview</a>
+        <a href="#DataPrep" class="btn",id ="atag">Data Prep</a>
+        <a href="#Code" class="btn",id ="agta">Code</a>
+        <a href="#Result" class="btn",id ="atag">Results</a>
+	<a href="#Conclusion" class="btn",id ="atag">Conclusions</a>
+
+</center>
+""", 
+	    unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown("""
+<div id="Overview">
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Overview")
+	st.write("""
+	<p style = "line-height: 2">
+		
+Clustering is an unsupervised technique in machine learning designed to group data points that share similarities. These similarities are evaluated using distance or similarity metrics. 
+	<br><br>
+A distance metric is a measurement that adheres to specific conditions:</p> 
+
+<ul>
+	<li>It always produces a value greater than zero when comparing two distinct points, yields the same result regardless of the order of comparison
+		<ul>
+			<li>dis(A, B) &gt; 0</li>
+			<li>dis(A, B) = dis(B, A)</li>
+		</ul>
+	</li>
+	<li>It returns zero only when comparing identical points
+		<ul>
+			<li>dis(A, B) = 0 iff A = B</li>
+		</ul>
+	</li>
+	<li>It satisfies the triangle inequality property.
+		<ul>
+			<li>dis(A, B) + dis(B, C) &ge; dis(A, C)</li>
+		</ul>
+	</li>
+</ul>
+	<b>  The distance metrics used for this project: </b>
+<ul>
+    <li>Euclidean Distance, also known as the L2-Norm, represents the geometric distance between two points within a vector space. It is a fundamental concept in mathematics and is a specific case of the Minkowski distance with <em>p = 2</em>.</li>
+    	<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/rmyvH50/image.png" alt="image" border="0"></a> </center>
+	<br>
+    <li>Cosine similarity refers to a mathematical measure used to determine the similarity between two vectors in a multi-dimensional space. It calculates the cosine of the angle between these vectors. 
+
+When two vectors are highly similar, they will have a small angle between them, resulting in a cosine similarity close to 1. Conversely, if the vectors are orthogonal (perpendicular) to each other, indicating no similarity, the cosine similarity will be 0. If the vectors point in opposite directions, the cosine similarity will be negative, indicating dissimilarity.
+
+
+In essence, cosine similarity quantifies the similarity in direction between two vectors, with values ranging from -1 (completely dissimilar) to 1 (completely similar), with 0 indicating no similarity.</li>
+	<br>
+	<center> <a href="https://ibb.co/2gM6J7L"><img src="https://i.ibb.co/xJgsZSc/image.png" alt="image" border="0"></a> </center>
+	<center><p><a href ="https://weaviate.io/blog/distance-metrics-in-vector-search">weaviate</a></center>
+</ul>
+
+
+	""", unsafe_allow_html=True)
+	st.write("""
+	Data clustering can be categorized into three main types: Partitional clustering, Hierarchical clustering, and Density-based clustering.
+	<br><br>
+	<b> Partitional clustering:</b>
+		<p>In partitional clustering, we need to decide how many clusters we want beforehand. The aim is to group data in a way that minimizes the distance within each group while maximizing the distance between groups. However, the initial clusters we choose can affect the final result, sometimes causing inconsistent groupings. A commonly used method for this type of clustering is called k-means. </p>
+			<br>	
+			<center> <a href="https://ibb.co/55BjJs5"><img src="https://i.ibb.co/xMJgrzM/image.png" alt="image" border="0"></a></center>
+			<center><a herf ="https://computing4all.com/courses/introductory-data-science/lessons/a-few-types-of-clustering-algorithms/">computing4all</a></center><br>
+	<b> Hierarchical clustering:</b><br><br>
+		<p>
+    Unlike partitional clustering, this method does not require us to set the number of clusters beforehand. It operates in either a bottom-up (agglomerative) or top-down (divisive) manner. In the bottom-up approach, each data point starts as its own cluster and then gets merged based on similarity. In the top-down approach, the entire dataset begins as one cluster and then splits into smaller clusters. Various techniques are used to calculate similarities between clusters, such as single linkage, complete linkage, and ward linkage. Common algorithms for these approaches include AGNES for agglomerative clustering and DIANA for divisive clustering.
+		</p>
+		<br>
+		<center><a href="https://ibb.co/qd8B4Qm"><img src="https://i.ibb.co/CzyBXGV/image.png" alt="image" border="0"></a> </center>
+		<center> <a href ="https://harshsharma1091996.medium.com/hierarchical-clustering-996745fe656b"> Medium</a></center><br>
+	<b> Density clustering: </b> <br><br>
+	<p>
+
+Density clustering, unlike partitional clustering, doesn't need the number of clusters to be determined beforehand. It operates by grouping data based on density, making it particularly effective when data doesn't naturally form distinct clusters. The popular algorithm used for density clustering is DBSCAN.
+	</p><br>
+	<center><a href="https://ibb.co/m9gqLM2"><img src="https://i.ibb.co/X7MshvK/image.png" alt="image" border="0"></a></center>
+	<center><a href ="https://www.analyticsvidhya.com/blog/2020/09/how-dbscan-clustering-works/"> Analytics Vidhya</a><center>
+""",unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="DataPrep"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Data Prep")
+	st.write("""
+		In clustering, we can explore whether we can group together the control and treatment groups from A/B testing and identify any patterns or similarities between them. This analysis can help us understand if there are any common characteristics or trends shared between the two groups, potentially providing insights into the effectiveness of the treatment compared to the control.
+	<br><br>
+		The dataset started off well-structured with labeled data. However, for our clustering analysis, we discarded the labels and focused exclusively on columns containing numerical values that had substantial relevance to our analysis. This preprocessing step was crucial because distance metrics such as Euclidean and cosine are only suitable for numeric data. Additionally, we normalized and standardized the data to ensure consistency and comparability across different attributes, thereby enhancing the accuracy of our clustering analysis.
+	<center><a href="https://ibb.co/5k5CpTR"><img src="https://i.ibb.co/hcKrQsm/image.png" alt="image" border="0"></a></center>
+	<center>Data Before Transforming</center><br>
+	<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/ZYp7th8/image.png" alt="image" border="0"></a></center>
+	<center>Data After Transforming</center>	
+	<a href ="https://drive.google.com/file/d/1NDDKA6fWW65en4QouqHsR6ZE1ONleatW/view?usp=sharing">Link To Sample Data </a>
+
+
+	""",unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="Code"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Code")
+	st.write("""
+	<ul>
+	<li>Link to the Hierarchical clustering in R:  <a href = "https://github.com/Taahaa-Dawe/Machine_Learning_Project_AB_Testing/blob/main/hclust_using_r">Hclust </a>
+	<li>Link to the K-means clustering in python: <a href = "https://github.com/Taahaa-Dawe/Machine_Learning_Project_AB_Testing/blob/main/kmeans.py"> K-means</a>
+
+	""",unsafe_allow_html=True)
+
+	st.markdown(""" 
+<div id="Result"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Results")
+	st.write("""
+	<b>Hierarchical clustering:</b><br>
+ 
+<center><a href="https://ibb.co/K2cF1x0"><img src="https://i.ibb.co/n7qzWMg/image.png" alt="image" border="0"></a></center>
+<center>Hierarchical clustering using Euclidean distance</center>
+<br><br><center><a href="https://ibb.co/b7yy1hM"><img src="https://i.ibb.co/stDDjSd/image.png" alt="image" border="0"></a></center>
+<center>Hierarchical clustering using Cosine Similarity</center><br>
+
+<p>
+	The Cosine clustering method indicates two distinct clusters, whereas the Euclidean distance measure didn't work well in hierarchical clustering (hclust). There are a few exceptions where the test and control groups were classified incorrectly. 
+</p>
+	<b>K-means clustering:</b><br>
+	<center> <a href="https://ibb.co/R2QkqjK"><img src="https://i.ibb.co/qBm3vJ8/image.png" alt="image" border="0"></a> </center> 
+	<center> Distance matrix for 4 control and 4 test conditions.</center>
+	<br>
+	<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/RcWF7QL/image.png" alt="image" border="0"></a></center>
+	<br>
+The above picture depicts K-means clustering with a specified number of clusters, which is 2. The features used in plotting the clusters tend to provide a good segregation of two labels.
+<br><br>
+<center><a href="https://ibb.co/8P9GN3V"><img src="https://i.ibb.co/h2VrL5v/image.png" alt="image" border="0"></a></center>
+<center>Silhouette value for K=2</center><br>
+<b>Different Values of K and their Silhouette Score</b>
+<center><a href="https://ibb.co/3p3D3NT"><img src="https://i.ibb.co/QPg2gNJ/image.png" alt="image" border="0"></a></center>
+<center>Silhouette value for K=3</center><br>
+<center><a href="https://ibb.co/F32jc2h"><img src="https://i.ibb.co/GpybGyd/image.png" alt="image" border="0"></a></center>
+<center>Silhouette value for K=4</center><br>
+<center><a href="https://ibb.co/kHd2xkH"><img src="https://i.ibb.co/f1cd2B1/image.png" alt="image" border="0"></a></center>
+<center>Silhouette value for K=5</center><br>
+
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/8nC7YDk/image.png" alt="image" border="0"></a></center> 
+<center>Comparison of number of clusters and their Silhouette scores</centre> <br><br>
+
+	""",unsafe_allow_html=True)
+	st.write("""
+The silhouette analysis suggests that the maximum silhouette average value occurs at 4, indicating that this could be considered the optimal number of clusters.
+
+However, based on our prior knowledge, we understand that the data can only be classified into two groups. Therefore, we will not accept the value of <strong>k</strong> as 4.
+
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/5FHdSMY/image.png" alt="image" border="0"></a></center>
+<center>WCSS (Elbow Method)</center>
+The elbow method suggests that the optimal number of clusters is 2, which aligns with our data where we have only two classes.
+	<br><br>
+	<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/t3R3PR3/image.png" alt="image" border="0"></a></center>
+	<center><b> Confusion matrix </b></center>
+	The model classified 7 True Negatives and 9 False Positives, with an overall accuracy of 70.2 percent.
+	<br><br>
+	<b> Comparison of Hierarchical Clustering and K-means: </b>
+	<br>In the given scenario, both hierarchical clustering (hclust) and K-means clustering suggested 2 clusters, aligning with the number of labels available in the data. This suggests that both methods have successfully identified the underlying structure of the data into two distinct groups or classes. However, despite suggesting the correct number of clusters, there may be instances where individual data points are misclassified within those clusters. The overall accuracy of the model is reported as 72 percent, indicating that while a majority of the data points are correctly classified, there are still some misclassifications present.
+
+
+	""",unsafe_allow_html=True)
+	st.markdown(""" 
+<div id="Conclusion"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+
+	st.subheader("Conclusion")
+	st.write("""
+Clustering is essential for organizing AB testing data into clear groups, confirming variations in spending habits between control and test users. It sheds light on purchasing behaviors, providing deeper insights into user characteristics and preferences within each group. This insight helps refine marketing strategies, products, and customer experiences tailored to specific segments. By understanding behavioral nuances, businesses can optimize decision-making and improve overall performance based on a nuanced understanding of user behavior and preferences.
+	""",unsafe_allow_html=True)
+
+
 def Intro():
 	st.header("Introduction")
 	st.write("""
