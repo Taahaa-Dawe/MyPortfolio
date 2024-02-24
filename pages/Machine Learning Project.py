@@ -451,6 +451,8 @@ def DisplayPart(option):
 		Intro()
 	elif option == "DataPrep/EDA":
 		DataCleaning()
+	elif option == "Clustering":
+		Clustering()
 	else:
 		st.write("Work in Progress")
 
