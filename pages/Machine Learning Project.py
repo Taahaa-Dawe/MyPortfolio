@@ -79,8 +79,111 @@ def Clustering():
 	    unsafe_allow_html=True)
 
 
-import streamlit as st
-import streamlit.components.v1 as components
+
+
+	st.markdown(""" 
+<div id="DataPrep"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Data Prep")
+	st.write("""
+		The dataset started off well-structured with labeled data. However, for our clustering analysis, we discarded the labels and focused exclusively on columns containing numerical values that had substantial relevance to our analysis. This preprocessing step was crucial because distance metrics such as Euclidean and cosine are only suitable for numeric data. Additionally, we normalized and standardized the data to ensure consistency and comparability across different attributes, thereby enhancing the accuracy of our clustering analysis.
+	<center><a href="https://ibb.co/5k5CpTR"><img src="https://i.ibb.co/hcKrQsm/image.png" alt="image" border="0"></a></center>
+	<center>Data Before Transforming</center><br>
+	<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/ZYp7th8/image.png" alt="image" border="0"></a></center>
+	<center>Data After Transforming</center>	
+	<a href ="https://drive.google.com/file/d/1NDDKA6fWW65en4QouqHsR6ZE1ONleatW/view?usp=sharing">Link To Sample Data </a>
+
+
+	""",unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="Code"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Code")
+	st.write("""
+	<ul>
+	<li>Link to the Hierarchical clustering in R:  <a href = "https://github.com/Taahaa-Dawe/Machine_Learning_Project_AB_Testing/blob/main/hclust_using_r">Hclust </a>
+	<li>Link to the K-means clustering in python: <a href = "https://github.com/Taahaa-Dawe/Machine_Learning_Project_AB_Testing/blob/main/kmeans.py"> K-means</a>
+
+	""",unsafe_allow_html=True)
+
+	st.markdown(""" 
+<div id="Result"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Results")
+	st.write("""
+	<b>Hierarchical clustering:</b><br>
+ 
+<center><a href="https://ibb.co/K2cF1x0"><img src="https://i.ibb.co/n7qzWMg/image.png" alt="image" border="0"></a></center>
+<center>Hierarchical clustering using Euclidean distance</center>
+<br><br><center><a href="https://ibb.co/b7yy1hM"><img src="https://i.ibb.co/stDDjSd/image.png" alt="image" border="0"></a></center>
+<center>Hierarchical clustering using Cosine Similarity</center><br>
+
+<p>
+	The Cosine clustering method indicates two distinct clusters, whereas the Euclidean distance measure didn't work well in hierarchical clustering (hclust). There are a few exceptions where the test and control groups were classified incorrectly. 
+</p>
+	<b>K-means clustering:</b><br>
+	<center> <a href="https://ibb.co/R2QkqjK"><img src="https://i.ibb.co/qBm3vJ8/image.png" alt="image" border="0"></a> </center> 
+	<center> Distance matrix for 4 control and 4 test conditions.</center>
+	<br>
+	<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/RcWF7QL/image.png" alt="image" border="0"></a></center>
+	<br>
+The above picture depicts K-means clustering with a specified number of clusters, which is 2. The features used in plotting the clusters tend to provide a good segregation of two labels.
+<br><br>
+<center><a href="https://ibb.co/8P9GN3V"><img src="https://i.ibb.co/h2VrL5v/image.png" alt="image" border="0"></a></center>
+<center>Silhouette value for K=2</center><br>
+<b>Different Values of K and their Silhouette Score</b>
+<center><a href="https://ibb.co/3p3D3NT"><img src="https://i.ibb.co/QPg2gNJ/image.png" alt="image" border="0"></a></center>
+<center>Silhouette value for K=3</center><br>
+<center><a href="https://ibb.co/F32jc2h"><img src="https://i.ibb.co/GpybGyd/image.png" alt="image" border="0"></a></center>
+<center>Silhouette value for K=4</center><br>
+<center><a href="https://ibb.co/kHd2xkH"><img src="https://i.ibb.co/f1cd2B1/image.png" alt="image" border="0"></a></center>
+<center>Silhouette value for K=5</center><br>
+
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/8nC7YDk/image.png" alt="image" border="0"></a></center> 
+<center>Comparison of number of clusters and their Silhouette scores</centre> <br><br>
+
+	""",unsafe_allow_html=True)
+	st.write("""
+The silhouette analysis suggests that the maximum silhouette average value occurs at 4, indicating that this could be considered the optimal number of clusters.
+
+However, based on our prior knowledge, we understand that the data can only be classified into two groups. Therefore, we will not accept the value of <strong>k</strong> as 4.
+
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/5FHdSMY/image.png" alt="image" border="0"></a></center>
+<center>WCSS (Elbow Method)</center>
+The elbow method suggests that the optimal number of clusters is 2, which aligns with our data where we have only two classes.
+	<br><br>
+	<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/t3R3PR3/image.png" alt="image" border="0"></a></center>
+	<center><b> Confusion matrix </b></center>
+	The model classified 7 True Negatives and 9 False Positives, with an overall accuracy of 70.2 percent.
+	<br><br>
+	<b> Comparison of Hierarchical Clustering and K-means: </b>
+	<br>In the given scenario, both hierarchical clustering (hclust) and K-means clustering suggested 2 clusters, aligning with the number of labels available in the data. This suggests that both methods have successfully identified the underlying structure of the data into two distinct groups or classes. However, despite suggesting the correct number of clusters, there may be instances where individual data points are misclassified within those clusters. The overall accuracy of the model is reported as 72 percent, indicating that while a majority of the data points are correctly classified, there are still some misclassifications present.
+
+
+	""",unsafe_allow_html=True)
+	st.markdown(""" 
+<div id="Conclusion"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+
+	st.subheader("Conclusion")
+	st.write("""
+Through clustering analysis of A/B testing data, we unveil nuanced response patterns across diverse experimental groups. This exploration highlights the variability in treatment effectiveness, emphasizing the significance of segmenting audiences based on their unique characteristics and behaviors. By discerning these distinctions, organizations can tailor their strategies and interventions more effectively, optimizing decision-making processes in areas such as marketing and product development. This iterative approach enables continuous improvement, driving towards enhanced outcomes and greater success in achieving desired objectives.	""",unsafe_allow_html=True)
 
 def ARM():
 	st.markdown(
@@ -390,125 +493,6 @@ Density clustering, unlike partitional clustering, doesn't need the number of cl
 	st.write(
 		"""In clustering, we can explore whether we can group together the control and treatment groups from A/B testing and identify any patterns or similarities between them. This analysis can help us understand if there are any common characteristics or trends shared between the two groups, potentially providing insights into the effectiveness of the treatment compared to the control.
 """)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	st.markdown(""" 
-<div id="DataPrep"> 
-<br><br><br><br><br>
-</div>
-""",  unsafe_allow_html=True)
-	st.subheader("Data Prep")
-	st.write("""
-		The dataset started off well-structured with labeled data. However, for our clustering analysis, we discarded the labels and focused exclusively on columns containing numerical values that had substantial relevance to our analysis. This preprocessing step was crucial because distance metrics such as Euclidean and cosine are only suitable for numeric data. Additionally, we normalized and standardized the data to ensure consistency and comparability across different attributes, thereby enhancing the accuracy of our clustering analysis.
-	<center><a href="https://ibb.co/5k5CpTR"><img src="https://i.ibb.co/hcKrQsm/image.png" alt="image" border="0"></a></center>
-	<center>Data Before Transforming</center><br>
-	<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/ZYp7th8/image.png" alt="image" border="0"></a></center>
-	<center>Data After Transforming</center>	
-	<a href ="https://drive.google.com/file/d/1NDDKA6fWW65en4QouqHsR6ZE1ONleatW/view?usp=sharing">Link To Sample Data </a>
-
-
-	""",unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-	st.markdown(""" 
-<div id="Code"> 
-<br><br><br><br><br>
-</div>
-""",  unsafe_allow_html=True)
-	st.subheader("Code")
-	st.write("""
-	<ul>
-	<li>Link to the Hierarchical clustering in R:  <a href = "https://github.com/Taahaa-Dawe/Machine_Learning_Project_AB_Testing/blob/main/hclust_using_r">Hclust </a>
-	<li>Link to the K-means clustering in python: <a href = "https://github.com/Taahaa-Dawe/Machine_Learning_Project_AB_Testing/blob/main/kmeans.py"> K-means</a>
-
-	""",unsafe_allow_html=True)
-
-	st.markdown(""" 
-<div id="Result"> 
-<br><br><br><br><br>
-</div>
-""",  unsafe_allow_html=True)
-	st.subheader("Results")
-	st.write("""
-	<b>Hierarchical clustering:</b><br>
- 
-<center><a href="https://ibb.co/K2cF1x0"><img src="https://i.ibb.co/n7qzWMg/image.png" alt="image" border="0"></a></center>
-<center>Hierarchical clustering using Euclidean distance</center>
-<br><br><center><a href="https://ibb.co/b7yy1hM"><img src="https://i.ibb.co/stDDjSd/image.png" alt="image" border="0"></a></center>
-<center>Hierarchical clustering using Cosine Similarity</center><br>
-
-<p>
-	The Cosine clustering method indicates two distinct clusters, whereas the Euclidean distance measure didn't work well in hierarchical clustering (hclust). There are a few exceptions where the test and control groups were classified incorrectly. 
-</p>
-	<b>K-means clustering:</b><br>
-	<center> <a href="https://ibb.co/R2QkqjK"><img src="https://i.ibb.co/qBm3vJ8/image.png" alt="image" border="0"></a> </center> 
-	<center> Distance matrix for 4 control and 4 test conditions.</center>
-	<br>
-	<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/RcWF7QL/image.png" alt="image" border="0"></a></center>
-	<br>
-The above picture depicts K-means clustering with a specified number of clusters, which is 2. The features used in plotting the clusters tend to provide a good segregation of two labels.
-<br><br>
-<center><a href="https://ibb.co/8P9GN3V"><img src="https://i.ibb.co/h2VrL5v/image.png" alt="image" border="0"></a></center>
-<center>Silhouette value for K=2</center><br>
-<b>Different Values of K and their Silhouette Score</b>
-<center><a href="https://ibb.co/3p3D3NT"><img src="https://i.ibb.co/QPg2gNJ/image.png" alt="image" border="0"></a></center>
-<center>Silhouette value for K=3</center><br>
-<center><a href="https://ibb.co/F32jc2h"><img src="https://i.ibb.co/GpybGyd/image.png" alt="image" border="0"></a></center>
-<center>Silhouette value for K=4</center><br>
-<center><a href="https://ibb.co/kHd2xkH"><img src="https://i.ibb.co/f1cd2B1/image.png" alt="image" border="0"></a></center>
-<center>Silhouette value for K=5</center><br>
-
-<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/8nC7YDk/image.png" alt="image" border="0"></a></center> 
-<center>Comparison of number of clusters and their Silhouette scores</centre> <br><br>
-
-	""",unsafe_allow_html=True)
-	st.write("""
-The silhouette analysis suggests that the maximum silhouette average value occurs at 4, indicating that this could be considered the optimal number of clusters.
-
-However, based on our prior knowledge, we understand that the data can only be classified into two groups. Therefore, we will not accept the value of <strong>k</strong> as 4.
-
-<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/5FHdSMY/image.png" alt="image" border="0"></a></center>
-<center>WCSS (Elbow Method)</center>
-The elbow method suggests that the optimal number of clusters is 2, which aligns with our data where we have only two classes.
-	<br><br>
-	<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/t3R3PR3/image.png" alt="image" border="0"></a></center>
-	<center><b> Confusion matrix </b></center>
-	The model classified 7 True Negatives and 9 False Positives, with an overall accuracy of 70.2 percent.
-	<br><br>
-	<b> Comparison of Hierarchical Clustering and K-means: </b>
-	<br>In the given scenario, both hierarchical clustering (hclust) and K-means clustering suggested 2 clusters, aligning with the number of labels available in the data. This suggests that both methods have successfully identified the underlying structure of the data into two distinct groups or classes. However, despite suggesting the correct number of clusters, there may be instances where individual data points are misclassified within those clusters. The overall accuracy of the model is reported as 72 percent, indicating that while a majority of the data points are correctly classified, there are still some misclassifications present.
-
-
-	""",unsafe_allow_html=True)
-	st.markdown(""" 
-<div id="Conclusion"> 
-<br><br><br><br><br>
-</div>
-""",  unsafe_allow_html=True)
-
-	st.subheader("Conclusion")
-	st.write("""
-Through clustering analysis of A/B testing data, we unveil nuanced response patterns across diverse experimental groups. This exploration highlights the variability in treatment effectiveness, emphasizing the significance of segmenting audiences based on their unique characteristics and behaviors. By discerning these distinctions, organizations can tailor their strategies and interventions more effectively, optimizing decision-making processes in areas such as marketing and product development. This iterative approach enables continuous improvement, driving towards enhanced outcomes and greater success in achieving desired objectives.	""",unsafe_allow_html=True)
-
 
 def Intro():
 	st.header("Introduction")
