@@ -145,7 +145,9 @@ In essence, cosine similarity quantifies the similarity in direction between two
 Density clustering, unlike partitional clustering, doesn't need the number of clusters to be determined beforehand. It operates by grouping data based on density, making it particularly effective when data doesn't naturally form distinct clusters. The popular algorithm used for density clustering is DBSCAN.
 	</p><br>
 	<center><a href="https://ibb.co/m9gqLM2"><img src="https://i.ibb.co/X7MshvK/image.png" alt="image" border="0"></a></center>
-	<center><a href ="https://www.analyticsvidhya.com/blog/2020/09/how-dbscan-clustering-works/"> Analytics Vidhya</a><center>
+	<center><a href ="https://www.analyticsvidhya.com/blog/2020/09/how-dbscan-clustering-works/"> Analytics Vidhya</a><center><br>
+ 		In clustering, we can explore whether we can group together the control and treatment groups from A/B testing and identify any patterns or similarities between them. This analysis can help us understand if there are any common characteristics or trends shared between the two groups, potentially providing insights into the effectiveness of the treatment compared to the control.
+
 """,unsafe_allow_html=True)
 
 
@@ -169,7 +171,6 @@ Density clustering, unlike partitional clustering, doesn't need the number of cl
 """,  unsafe_allow_html=True)
 	st.subheader("Data Prep")
 	st.write("""
-		In clustering, we can explore whether we can group together the control and treatment groups from A/B testing and identify any patterns or similarities between them. This analysis can help us understand if there are any common characteristics or trends shared between the two groups, potentially providing insights into the effectiveness of the treatment compared to the control.
 	<br><br>
 		The dataset started off well-structured with labeled data. However, for our clustering analysis, we discarded the labels and focused exclusively on columns containing numerical values that had substantial relevance to our analysis. This preprocessing step was crucial because distance metrics such as Euclidean and cosine are only suitable for numeric data. Additionally, we normalized and standardized the data to ensure consistency and comparability across different attributes, thereby enhancing the accuracy of our clustering analysis.
 	<center><a href="https://ibb.co/5k5CpTR"><img src="https://i.ibb.co/hcKrQsm/image.png" alt="image" border="0"></a></center>
@@ -377,7 +378,9 @@ The example above mentioned is a classic illustration often used to explain asso
 In a dataset with n elements in transactions, there are 2^n subsets, leading to an immense number of possible association rules. To manage this large rule space, programming languages utilize the Apriori algorithm, which employs pruning. If a rule like A -> B doesn't meet the minimum support requirement, Apriori avoids exploring any larger sets containing A -> B. This approach reduces computational workload by focusing only on promising rule combinations, thus improving the efficiency and scalability of the algorithm.
 <br><br>
 <center><a href="https://ibb.co/X8WCsdz"><img src="https://i.ibb.co/q5Drs4R/image.png" alt="image" border="0"></a></center>
-<center><a href ="https://gatesboltonanalytics.com/">Amy Gates</a></center>	
+<center><a href ="https://gatesboltonanalytics.com/">Amy Gates</a></center>	<br>
+
+Association rule mining (ARM) is a valuable technique for analyzing data related to marketing campaigns and customer behaviors. By examining patterns and associations within the dataset, ARM can uncover insights that help marketers optimize their campaign strategies. For example, ARM might reveal that certain combinations of customer behaviors, such as low search activity and high impressions, are strongly associated with specific types of marketing campaigns, like control campaigns. Armed with this knowledge, marketers can tailor their campaigns to better target and engage customers based on their observed behaviors. Additionally, ARM can assist in segmentation and personalization efforts by identifying distinct customer segments with unique preferences and behaviors. This enables marketers to deliver more personalized messaging and offers, leading to improved campaign effectiveness. Furthermore, ARM can support A/B testing initiatives by helping marketers design experiments that test different campaign approaches and interpret the results more effectively. Overall, ARM provides marketers with valuable insights into the complex dynamics between customer behaviors and marketing campaigns, empowering them to make data-driven decisions that drive better outcomes.
 
 """, unsafe_allow_html=True)
 
