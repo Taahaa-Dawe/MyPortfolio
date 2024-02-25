@@ -159,6 +159,8 @@ Density clustering, unlike partitional clustering, doesn't need the number of cl
 	</p><br>
 	<center><a href="https://ibb.co/m9gqLM2"><img src="https://i.ibb.co/X7MshvK/image.png" alt="image" border="0"></a></center>
 	<center><a href ="https://www.analyticsvidhya.com/blog/2020/09/how-dbscan-clustering-works/"> Analytics Vidhya</a><center>
+
+ In clustering, we can explore whether we can group together the control and treatment groups from A/B testing and identify any patterns or similarities between them. This analysis can help us understand if there are any common characteristics or trends shared between the two groups, potentially providing insights into the effectiveness of the treatment compared to the control.
 """,unsafe_allow_html=True)
 
 
@@ -182,8 +184,6 @@ Density clustering, unlike partitional clustering, doesn't need the number of cl
 """,  unsafe_allow_html=True)
 	st.subheader("Data Prep")
 	st.write("""
-		In clustering, we can explore whether we can group together the control and treatment groups from A/B testing and identify any patterns or similarities between them. This analysis can help us understand if there are any common characteristics or trends shared between the two groups, potentially providing insights into the effectiveness of the treatment compared to the control.
-	<br><br>
 		The dataset started off well-structured with labeled data. However, for our clustering analysis, we discarded the labels and focused exclusively on columns containing numerical values that had substantial relevance to our analysis. This preprocessing step was crucial because distance metrics such as Euclidean and cosine are only suitable for numeric data. Additionally, we normalized and standardized the data to ensure consistency and comparability across different attributes, thereby enhancing the accuracy of our clustering analysis.
 	<center><a href="https://ibb.co/5k5CpTR"><img src="https://i.ibb.co/hcKrQsm/image.png" alt="image" border="0"></a></center>
 	<center>Data Before Transforming</center><br>
