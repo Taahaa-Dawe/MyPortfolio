@@ -7,7 +7,7 @@ option = ""
 def select(option):
 	DisplayPart(option)
 
-import streamlit as st
+
 def Clustering():
 	st.markdown(
     """
@@ -16,46 +16,33 @@ def Clustering():
         position: sticky;
         top: 2.875rem;
         z-index: 999;
-        background-color: #0c1415;
+	background-color: #0c1415;
     }
     .fixed-header {
-        border-bottom: 1px;
+        border-bottom:1px ;
     }
     .btn {
-        color: white;
-        height: 40px;
-        width: 100px;
-        padding: 2px;
-        text-decoration: none;
-    }
-    #atag {
-        text-decoration: none;
-    }
-    .nav {
-        width: 100%;
-        height: 10vh;
-        font-size: large;
-        text-align: center;
-        margin: 10px 5px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        place-items: center;
-    }
-
-    @media only screen and (min-width: 768px) {
-        .nav {
+            color: white;
+            height: 40px;
+            width: 100px;
+            padding: 2px;
+            text-decoration: none;
+        }
+    #atag{
+            text-decoration: none;
+        }
+      .nav {
             width: 50vw;
+            height: 10vh;
+            font-size: Large;
+            text-align: center;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
         }
-    }
-
-    @media only screen and (min-width: 1024px) {
-        .nav {
-            width: 33.33vw;
-        }
-    }
 </style>
-
     """,
     unsafe_allow_html=True
 )
@@ -81,6 +68,100 @@ def Clustering():
 
 
 
+
+
+
+
+
+
+
+	st.markdown("""
+<div id="Overview">
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Overview")
+	st.write("""
+	<p style = "line-height: 2">
+		
+Clustering is an unsupervised technique in machine learning designed to group data points that share similarities. These similarities are evaluated using distance or similarity metrics. 
+	<br><br>
+A distance metric is a measurement that adheres to specific conditions:</p> 
+
+<ul>
+	<li>It always produces a value greater than zero when comparing two distinct points, yields the same result regardless of the order of comparison
+		<ul>
+			<li>dis(A, B) &gt; 0</li>
+			<li>dis(A, B) = dis(B, A)</li>
+		</ul>
+	</li>
+	<li>It returns zero only when comparing identical points
+		<ul>
+			<li>dis(A, B) = 0 iff A = B</li>
+		</ul>
+	</li>
+	<li>It satisfies the triangle inequality property.
+		<ul>
+			<li>dis(A, B) + dis(B, C) &ge; dis(A, C)</li>
+		</ul>
+	</li>
+</ul>
+	<b>  The distance metrics used for this project: </b>
+<ul>
+    <li>Euclidean Distance, also known as the L2-Norm, represents the geometric distance between two points within a vector space. It is a fundamental concept in mathematics and is a specific case of the Minkowski distance with <em>p = 2</em>.</li>
+    	<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/rmyvH50/image.png" alt="image" border="0"></a> </center>
+	<br>
+    <li>Cosine similarity refers to a mathematical measure used to determine the similarity between two vectors in a multi-dimensional space. It calculates the cosine of the angle between these vectors. 
+
+When two vectors are highly similar, they will have a small angle between them, resulting in a cosine similarity close to 1. Conversely, if the vectors are orthogonal (perpendicular) to each other, indicating no similarity, the cosine similarity will be 0. If the vectors point in opposite directions, the cosine similarity will be negative, indicating dissimilarity.
+
+
+In essence, cosine similarity quantifies the similarity in direction between two vectors, with values ranging from -1 (completely dissimilar) to 1 (completely similar), with 0 indicating no similarity.</li>
+	<br>
+	<center> <a href="https://ibb.co/2gM6J7L"><img src="https://i.ibb.co/xJgsZSc/image.png" alt="image" border="0"></a> </center>
+	<center><p><a href ="https://weaviate.io/blog/distance-metrics-in-vector-search">weaviate</a></center>
+</ul>
+
+
+	""", unsafe_allow_html=True)
+	st.write("""
+	Data clustering can be categorized into three main types: Partitional clustering, Hierarchical clustering, and Density-based clustering.
+	<br><br>
+	<b> Partitional clustering:</b>
+		<p>In partitional clustering, we need to decide how many clusters we want beforehand. The aim is to group data in a way that minimizes the distance within each group while maximizing the distance between groups. However, the initial clusters we choose can affect the final result, sometimes causing inconsistent groupings. A commonly used method for this type of clustering is called k-means. </p>
+			<br>	
+			<center> <a href="https://ibb.co/55BjJs5"><img src="https://i.ibb.co/xMJgrzM/image.png" alt="image" border="0"></a></center>
+			<center><a herf ="https://computing4all.com/courses/introductory-data-science/lessons/a-few-types-of-clustering-algorithms/">computing4all</a></center><br>
+	<b> Hierarchical clustering:</b><br><br>
+		<p>
+    Unlike partitional clustering, this method does not require us to set the number of clusters beforehand. It operates in either a bottom-up (agglomerative) or top-down (divisive) manner. In the bottom-up approach, each data point starts as its own cluster and then gets merged based on similarity. In the top-down approach, the entire dataset begins as one cluster and then splits into smaller clusters. Various techniques are used to calculate similarities between clusters, such as single linkage, complete linkage, and ward linkage. Common algorithms for these approaches include AGNES for agglomerative clustering and DIANA for divisive clustering.
+		</p>
+		<br>
+		<center><a href="https://ibb.co/qd8B4Qm"><img src="https://i.ibb.co/CzyBXGV/image.png" alt="image" border="0"></a> </center>
+		<center> <a href ="https://harshsharma1091996.medium.com/hierarchical-clustering-996745fe656b"> Medium</a></center><br>
+	<b> Density clustering: </b> <br><br>
+	<p>
+
+Density clustering, unlike partitional clustering, doesn't need the number of clusters to be determined beforehand. It operates by grouping data based on density, making it particularly effective when data doesn't naturally form distinct clusters. The popular algorithm used for density clustering is DBSCAN.
+	</p><br>
+	<center><a href="https://ibb.co/m9gqLM2"><img src="https://i.ibb.co/X7MshvK/image.png" alt="image" border="0"></a></center>
+	<center><a href ="https://www.analyticsvidhya.com/blog/2020/09/how-dbscan-clustering-works/"> Analytics Vidhya</a><center>
+""",unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	st.markdown(""" 
 <div id="DataPrep"> 
 <br><br><br><br><br>
@@ -88,6 +169,8 @@ def Clustering():
 """,  unsafe_allow_html=True)
 	st.subheader("Data Prep")
 	st.write("""
+		In clustering, we can explore whether we can group together the control and treatment groups from A/B testing and identify any patterns or similarities between them. This analysis can help us understand if there are any common characteristics or trends shared between the two groups, potentially providing insights into the effectiveness of the treatment compared to the control.
+	<br><br>
 		The dataset started off well-structured with labeled data. However, for our clustering analysis, we discarded the labels and focused exclusively on columns containing numerical values that had substantial relevance to our analysis. This preprocessing step was crucial because distance metrics such as Euclidean and cosine are only suitable for numeric data. Additionally, we normalized and standardized the data to ensure consistency and comparability across different attributes, thereby enhancing the accuracy of our clustering analysis.
 	<center><a href="https://ibb.co/5k5CpTR"><img src="https://i.ibb.co/hcKrQsm/image.png" alt="image" border="0"></a></center>
 	<center>Data Before Transforming</center><br>
@@ -183,8 +266,8 @@ The elbow method suggests that the optimal number of clusters is 2, which aligns
 
 	st.subheader("Conclusion")
 	st.write("""
-Through clustering analysis of A/B testing data, we unveil nuanced response patterns across diverse experimental groups. This exploration highlights the variability in treatment effectiveness, emphasizing the significance of segmenting audiences based on their unique characteristics and behaviors. By discerning these distinctions, organizations can tailor their strategies and interventions more effectively, optimizing decision-making processes in areas such as marketing and product development. This iterative approach enables continuous improvement, driving towards enhanced outcomes and greater success in achieving desired objectives.	""",unsafe_allow_html=True)
-
+Clustering is essential for organizing AB testing data into clear groups, confirming variations in spending habits between control and test users. It sheds light on purchasing behaviors, providing deeper insights into user characteristics and preferences within each group. This insight helps refine marketing strategies, products, and customer experiences tailored to specific segments. By understanding behavioral nuances, businesses can optimize decision-making and improve overall performance based on a nuanced understanding of user behavior and preferences.
+	""",unsafe_allow_html=True)
 def ARM():
 	st.markdown(
     """
