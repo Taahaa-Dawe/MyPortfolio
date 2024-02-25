@@ -281,7 +281,7 @@ Additional insights can be gleaned by examining the association rules, particula
 
 
 	""",unsafe_allow_html=True)
-	html_file = open("ARMRules.html", 'r', encoding='UTF-8')
+	html_file = open("pages/ARMRules.html", 'r', encoding='UTF-8')
 	source_code = html_file.read()
 	html_file.close()
 	components.html(source_code, height=550)
