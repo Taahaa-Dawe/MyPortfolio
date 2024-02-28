@@ -476,6 +476,11 @@ Additional insights can be gleaned by examining the association rules, particula
 	html_file.close()
 	components.html(source_code, height=550)
 	
+	html_file = open("pages/ARMRules1.html", 'r', encoding='UTF-8')
+	source_code = html_file.read()
+	html_file.close()
+	components.html(source_code, height=550)
+	
 	st.markdown(""" 
 <div id="Conclusion"> 
 <br><br><br><br><br>
