@@ -42,7 +42,8 @@ The data on online dating trends in the United States presents a nuanced picture
 				<br>
 			</p>
    <a href="https://ibb.co/XjTjR1q"><img src="https://i.ibb.co/Dznz2hZ/image.png" alt="image" border="0"></a>
-   <a href ="https://www.pewresearch.org/short-reads/2023/02/02/key-findings-about-online-dating-in-the-u-s/">Pew Research</a>
+   <br>
+    <center><a href ="https://www.pewresearch.org/short-reads/2023/02/02/key-findings-about-online-dating-in-the-u-s/">Pew Research</a></center>
    	<br>
    <p style = "line-height: 2" >
 	Popular platforms like Tinder, Match, and Bumble dominate the market, with differences in usage patterns among age groups and sexual orientations. Despite mixed experiences reported by users, with slightly more leaning towards positive encounters, concerns about safety persist, particularly among older adults and non-users. Support for background checks on dating profiles is widespread, indicating a desire for enhanced security within the online dating landscape.
@@ -51,7 +52,7 @@ The data on online dating trends in the United States presents a nuanced picture
 
    <a href="https://ibb.co/xmhVrdg"><img src="https://i.ibb.co/9wnRdS4/image.png" alt="image" border="0"></a>
    <br>
-    <a href ="https://www.pewresearch.org/short-reads/2023/02/02/key-findings-about-online-dating-in-the-u-s/">Pew Research</a>
+    <center><a href ="https://www.pewresearch.org/short-reads/2023/02/02/key-findings-about-online-dating-in-the-u-s/">Pew Research</a></center>
 
    <br>
 
