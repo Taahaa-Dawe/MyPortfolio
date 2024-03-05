@@ -38,12 +38,11 @@ While online dating has become a ubiquitous part of contemporary courtship, publ
 			</p>"""	, unsafe_allow_html=True)
 	st.write("""
 			<p style = "line-height: 2" >
-				<br>
-
 The data on online dating trends in the United States presents a nuanced picture of the phenomenon's prevalence, demographics, and experiences. It reveals that while around three-in-ten adults have utilized dating sites or apps, there are significant variations across demographic groups. Younger individuals, LGB adults, and those with higher education levels are more likely to engage in online dating.
 				<br>
 			</p>
-   <a href="https://ibb.co/XjTjR1q"><img src="https://i.ibb.co/Dznz2hZ/image.png" alt="image" border="0"></a>		
+   <a href="https://ibb.co/XjTjR1q"><img src="https://i.ibb.co/Dznz2hZ/image.png" alt="image" border="0"></a>
+   <a href ="https://www.pewresearch.org/short-reads/2023/02/02/key-findings-about-online-dating-in-the-u-s/">Pew Research</a>
    	<br>
    <p style = "line-height: 2" >
 	Popular platforms like Tinder, Match, and Bumble dominate the market, with differences in usage patterns among age groups and sexual orientations. Despite mixed experiences reported by users, with slightly more leaning towards positive encounters, concerns about safety persist, particularly among older adults and non-users. Support for background checks on dating profiles is widespread, indicating a desire for enhanced security within the online dating landscape.
@@ -51,6 +50,8 @@ The data on online dating trends in the United States presents a nuanced picture
    </p>
 
    <a href="https://ibb.co/xmhVrdg"><img src="https://i.ibb.co/9wnRdS4/image.png" alt="image" border="0"></a>
+    <a href ="https://www.pewresearch.org/short-reads/2023/02/02/key-findings-about-online-dating-in-the-u-s/">Pew Research</a>
+
    <br>
 
  <p style = "line-height: 2" >
