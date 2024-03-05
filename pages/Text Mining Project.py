@@ -36,6 +36,30 @@ While online dating has become a ubiquitous part of contemporary courtship, publ
 				Despite the positive aspects, challenges and criticisms are also associated with online dating. Issues such as dishonesty, perceived impersonality in courtship, and concerns about safety are raised by those who hold a more negative view. Some argue that the traditional ways of meeting people, such as through friends or in-person introductions, offer a more individualized and authentic approach to building connections. The study's findings reveal the complexities surrounding the impact of online dating on dating culture, emphasizing the need for a nuanced understanding that considers the diversity of experiences and perspectives within the broader population.
 				<br>
 			</p>"""	, unsafe_allow_html=True)
+	st.write("""
+			<p style = "line-height: 2" >
+				<br>
+
+The data on online dating trends in the United States presents a nuanced picture of the phenomenon's prevalence, demographics, and experiences. It reveals that while around three-in-ten adults have utilized dating sites or apps, there are significant variations across demographic groups. Younger individuals, LGB adults, and those with higher education levels are more likely to engage in online dating.
+				<br>
+			</p>
+   <a href="https://ibb.co/XjTjR1q"><img src="https://i.ibb.co/Dznz2hZ/image.png" alt="image" border="0"></a>		
+   	<br>
+   <p style = "line-height: 2" >
+	Popular platforms like Tinder, Match, and Bumble dominate the market, with differences in usage patterns among age groups and sexual orientations. Despite mixed experiences reported by users, with slightly more leaning towards positive encounters, concerns about safety persist, particularly among older adults and non-users. Support for background checks on dating profiles is widespread, indicating a desire for enhanced security within the online dating landscape.
+ 
+   </p>
+
+   <a href="https://ibb.co/xmhVrdg"><img src="https://i.ibb.co/9wnRdS4/image.png" alt="image" border="0"></a>
+   <br>
+
+ <p style = "line-height: 2" >
+   Moreover, gender disparities in online dating experiences are evident, with women more likely to encounter unwanted behaviors such as receiving unsolicited sexually explicit messages or continued unwanted contact. Conversely, men are more prone to feelings of insecurity due to a lack of messages. The reasons for using online dating platforms vary, ranging from seeking long-term partners to casual dating, with men more inclined towards casual sex as a major motivator. Despite some skepticism, a substantial proportion of Americans believe online dating facilitates the search for partners, although opinions on the abundance of choices available differ. Overall, the data underscores the complex interplay of usage patterns, perceptions, and safety concerns within the realm of online dating in contemporary society.
+</p>
+
+   """	, unsafe_allow_html=True)
+	
+
 	st.subheader("Questions to be answered")
 	lst = [
     "Key themes or topics discussed in the text regarding online dating",
