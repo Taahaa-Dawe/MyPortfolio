@@ -42,7 +42,6 @@ The data on online dating trends in the United States presents a nuanced picture
 				<br>
 			</p>
   <center> <a href="https://ibb.co/XjTjR1q"><img src="https://i.ibb.co/Dznz2hZ/image.png" alt="image" border="0"></a></center>
-   <br>
     <center><a href ="https://www.pewresearch.org/short-reads/2023/02/02/key-findings-about-online-dating-in-the-u-s/">Pew Research</a></center>
    	<br>
    <p style = "line-height: 2" >
@@ -51,7 +50,7 @@ The data on online dating trends in the United States presents a nuanced picture
    </p>
 
    <center><a href="https://ibb.co/xmhVrdg"><img src="https://i.ibb.co/9wnRdS4/image.png" alt="image" border="0"></a></center>
-   <br>
+
     <center><a href ="https://www.pewresearch.org/short-reads/2023/02/02/key-findings-about-online-dating-in-the-u-s/">Pew Research</a></center>
 
    <br>
