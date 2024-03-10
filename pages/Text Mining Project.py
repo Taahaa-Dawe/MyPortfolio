@@ -699,7 +699,7 @@ In essence, both topics revolve around dating, but Topic #0 may lean towards sub
 	html_file = open("pages/ViewsonDating.html", 'r', encoding='UTF-8')
 	source_code = html_file.read()
 	html_file.close()
-	components.html(source_code, height=750)
+	components.html(source_code, height=800, width = 600)
 	
 	st.markdown(""" 
 <div id="Conclusion"> 
