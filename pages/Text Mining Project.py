@@ -7,9 +7,6 @@ option = ""
 def select(option):
 	DisplayPart(option)
 
-import streamlit as st
-import streamlit.components.v1 as components
-
 def Clustering():
 	st.markdown(
     """
@@ -150,7 +147,11 @@ Density clustering, unlike partitional clustering, doesn't need the number of cl
 	<center><a href ="https://www.analyticsvidhya.com/blog/2020/09/how-dbscan-clustering-works/"> Analytics Vidhya</a><center><br>
 
 """,unsafe_allow_html=True)
-	st.write("""  		In clustering, we can explore whether we can group together the control and treatment groups from A/B testing and identify any patterns or similarities between them. This analysis can help us understand if there are any common characteristics or trends shared between the two groups, potentially providing insights into the effectiveness of the treatment compared to the control.
+	st.write("""  		In clustering, we aim to uncover patterns or similarities within the data by grouping similar data points together based on their features. In the context of dating data, clustering can help us identify distinct groups or clusters of individuals who share similar characteristics or behaviors in their dating experiences. By examining these clusters, we can gain insights into various aspects of dating dynamics and understand the underlying motivations or intentions of different groups of people.
+
+For example, clustering analysis might reveal clusters of individuals who primarily use dating apps for casual hookups, while another cluster might consist of individuals seeking long-term relationships. Within each cluster, we can explore common traits such as age, interests, preferences, and communication patterns. By understanding these patterns, we can tailor dating app features or marketing strategies to better serve the needs of specific user groups.
+
+Furthermore, clustering can help us identify outliers or anomalies in the data, such as individuals who deviate significantly from the characteristics of their respective clusters. These outliers may represent unique or unconventional dating behaviors that warrant further investigation.
 """)
 
 
@@ -174,11 +175,24 @@ Density clustering, unlike partitional clustering, doesn't need the number of cl
 """,  unsafe_allow_html=True)
 	st.subheader("Data Prep")
 	st.write("""
-	<br><br>
+	<br><br>The process of transforming the text data involved utilizing the TF-IDF vectorizer, a common technique used in natural language processing to convert textual data into numerical representations. By applying TF-IDF, the importance of each word in the dataset was assessed based on its frequency in each document relative to the entire corpus. This transformation helped to capture the unique characteristics of the text data while reducing the impact of common terms that may not carry much semantic meaning.
 
+Normalization was then applied to the data to ensure that each feature (word or term) had a similar scale, making the dataset more amenable to clustering analysis. This step is crucial, especially when dealing with text data, as different features may have vastly different magnitudes, which can skew the clustering results.
+
+Given that the original dataset contained a disproportionate number of rows from Reddit compared to other sources like News API and Buzzfeed, there was a noticeable imbalance in the language usage and vocabulary across the dataset. This imbalance could potentially bias the clustering algorithm towards the predominant language and jargon found in Reddit posts. To address this issue, a representative sample of 100 rows was extracted from the original dataset, ensuring a more balanced representation of language usage across different sources.
+
+By using this sampled dataset, the clustering algorithm can better capture the underlying patterns and structure within the data, without being overly influenced by the dominant language found in a particular source. This approach enhances the reliability and generalizability of the clustering results, allowing for more robust insights to be gleaned from the text data.
+<center> <a href="https://ibb.co/ZBKys0f"><img src="https://i.ibb.co/3pWtXnT/image.png" alt="image" border="0"></a> </center>
+<center><p>Data Before Cleaning</p></center>
+
+<center><p>Data After Cleaning</p></center>
+
+<a href ="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/DataProceesed.csv"> Link to Cleaned Data</a>
 
 
 	""",unsafe_allow_html=True)
+
+		
 
 
 
@@ -195,6 +209,10 @@ Density clustering, unlike partitional clustering, doesn't need the number of cl
 	st.subheader("Code")
 	st.write("""
 
+	<ul>
+	<li>Link to the Hierarchical clustering in R:  <a href = "https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/Hclust.R">Hclust </a>
+	<li>Link to the K-means clustering in python: <a href = "https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/kmeansclustering.py"> K-means</a>
+
 	""",unsafe_allow_html=True)
 
 	st.markdown(""" 
@@ -204,8 +222,70 @@ Density clustering, unlike partitional clustering, doesn't need the number of cl
 """,  unsafe_allow_html=True)
 	st.subheader("Results")
 	st.write("""
+	<b>Hierarchical clustering:</b>
+	<center> <a href="https://ibb.co/0MLySjM"><img src="https://i.ibb.co/fpWd5Yp/image.png" alt="image" border="0"></a> </center>
+	<center>Dendrogram using Euclidean Distance</center>
+	<br>
+	<center> <a href="https://ibb.co/cY05Jph"><img src="https://i.ibb.co/NT5hxk2/image.png" alt="image" border="0"></a> </center>
+	<center>Dendrogram using Cosine Similarity</center>
+	The cosine similarity is not accurately reflecting the dendrogram, as it tends to cluster most of the data into one group, with only a single cluster forming in another part. This discrepancy likely arises from the nature of cosine similarity itself and its sensitivity to the vector angles between data points, rather than their magnitudes.
+
+Cosine similarity measures the cosine of the angle between two vectors, representing the similarity in direction between them. However, it does not consider the magnitude of the vectors, meaning that vectors with different magnitudes can still have a high cosine similarity if they point in similar directions. In the context of clustering, this can lead to the grouping of data points that have similar directional trends but differ significantly in scale or magnitude.
+
+For instance, if one cluster contains data points with relatively small magnitudes but similar directional trends, while another cluster consists of data points with larger magnitudes but different directional trends, cosine similarity may still perceive them as similar due to their directional alignment. This can result in the formation of larger, less meaningful clusters, rather than capturing the nuanced differences between distinct groups within the data.
+
+In contrast, Euclidean distance, which considers both the direction and magnitude of vectors, often provides a more accurate representation of the data's clustering structure. It accounts for the overall distance between data points in multidimensional space, allowing for the identification of more distinct clusters based on both their spatial proximity and magnitude differences. As a result, Euclidean distance may better capture the underlying patterns and relationships within the data, leading to a more informative dendrogram visualization.
+	<br><br>
+	<b>K Means Clustering: </b>	
+<center>
+  <a href="https://imgbb.com/"><img src="https://i.ibb.co/GRw6szT/image.png" alt="image" border="0"></a>
+</center>
+<center><p>Distance Matrix for First Few Rows</p></center>
+<br>
+<center>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/9nsvXtz/image.png" alt="image" border="0"></a>
+</center>
+<center>Word Cloud of Cluster One</center><br>
+Cluster 1 portrays the landscape of modern dating and relationships, heavily influenced by digital platforms and apps. The inclusion of terms like "app," "Bumble," and "Hinge" reflects the prevalence of online dating in contemporary society. The words "meet," "date," and "profile" suggest the initial stages of forming connections, highlighting the importance of digital profiles and virtual interactions in sparking real-life encounters. Additionally, phrases such as "happy," "married," and "couple" signify the ultimate goal for many individuals navigating these platforms – finding lasting companionship or love. However, there's also a recognition of the challenges inherent in this process, as indicated by phrases like "do not," "doesn't," and "really." These words hint at the complexities, uncertainties, and occasional disappointments that can accompany the quest for meaningful connections in the digital age.
+<br><br>
+<center>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/z84c7pH/image.png" alt="image" border="0"></a>
+</center>
+<center>Word Cloud of Cluster Two</center><br>
+In contrast, Cluster 2 delves into the dynamics and evolution of relationships themselves. Words like "relationship," "talked," and "experience" emphasize the importance of communication and shared interactions in building and maintaining romantic connections. The presence of terms such as "recently," "started," and "moved" suggests a focus on the progression of relationships over time, highlighting key milestones and transitions. The inclusion of specific app names like "Tinder" and "Bumble" underscores the role of digital platforms in facilitating these connections, reflecting the increasingly intertwined nature of technology and romance. Overall, Cluster 2 paints a picture of individuals navigating the complexities of modern relationships, from the initial spark of attraction to the deepening of emotional bonds, all within the context of a digital dating landscape.
+<br><br>
 	
 
+<center>
+ <a href="https://imgbb.com/"><img src="https://i.ibb.co/HCLZbPp/image.png" alt="image" border="0"></a>
+</center>
+<center>Silhouette value for K=2</center> <br>
+<b>Different Values of K and their Silhouette Score: </b> <br><br>
+<center> <a href="https://ibb.co/c34f9jW"><img src="https://i.ibb.co/zxq9gz3/image.png" alt="image" border="0"></a> </center> 
+<center>Silhouette value for K=3</center> <br>
+<center> <a href="https://ibb.co/1ZF31c0"><img src="https://i.ibb.co/sj8hn7g/image.png" alt="image" border="0"></a> </center> 
+<center>Silhouette value for K=4</center> <br>
+<center> <a href="https://ibb.co/syjQznD"><img src="https://i.ibb.co/m6JtgkY/image.png" alt="image" border="0"></a> </center> 
+<center>Silhouette value for K=5</center> <br>
+<center> <a href="https://ibb.co/bFbt8Pb"><img src="https://i.ibb.co/m0NpMGN/image.png" alt="image" border="0"></a> </center> 
+<center>Silhouette value for K=6</center> <br>
+
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/SccLBcz/image.png" alt="image" border="0"></a> </center>
+<center> Comparison of number of clusters and their Silhouette scores </center>
+
+The silhouette analysis suggests that the maximum silhouette average value occurs at 2, indicating that this could be considered the optimal number of clusters.
+<br>
+<center>  <a href="https://imgbb.com/"><img src="https://i.ibb.co/TkPLtgp/image.png" alt="image" border="0"></a> </center>
+<center> WCSS (Elbow Method) </center>
+
+The elbow method also suggests that the optimal number of clusters is 2
+
+
+Comparison of Hierarchical Clustering and K-means:
+
+In the given scenario, both hierarchical clustering (hclust) with cosine similarity and K-means clustering suggested two clusters. However, when using cosine similarity with hierarchical clustering, it didn't effectively separate the data into distinct groups. On the other hand, using Euclidean distance with hierarchical clustering suggested two clusters, indicating a clearer separation of the data. This discrepancy suggests that the choice of distance metric significantly impacts the clustering results.
+
+Overall, the fact that both hierarchical clustering with Euclidean distance and K-means clustering suggested two clusters implies that the underlying structure of the data likely consists of two distinct groups or classes. This demonstrates the importance of selecting appropriate distance metrics and clustering algorithms based on the characteristics of the data to achieve meaningful clustering results.
 	""",unsafe_allow_html=True)
 	st.markdown(""" 
 <div id="Conclusion"> 
@@ -215,9 +295,17 @@ Density clustering, unlike partitional clustering, doesn't need the number of cl
 
 	st.subheader("Conclusion")
 	st.write("""
+The analysis dives into the complexities of modern dating and relationships, shining a light on how digital platforms and apps like "Bumble" and "Hinge" influence the way people connect. It emphasizes how online interactions through terms like "meet," "date," and "profile" play a big role in initiating real-life meetings.
 
+Additionally, it explores the dynamics within relationships, highlighting the importance of communication and shared experiences, as seen in words like "relationship," "talked," and "experience." It also shows how relationships evolve over time, with phrases like "recently," "started," and "moved."
+
+Overall, the analysis gives us a clear picture of how technology impacts romance, offering both opportunities and challenges. It helps us understand the modern dating scene, from initial digital sparks to deeper emotional connections, all within today's digitally connected world.
 
 	""",unsafe_allow_html=True)
+
+
+
+
 
 
 
