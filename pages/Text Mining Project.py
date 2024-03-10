@@ -505,7 +505,7 @@ Additional insights can be gleaned by examining the association rules through ne
 	html_file = open("pages/ARMTextMiningRules.html", 'r', encoding='UTF-8')
 	source_code = html_file.read()
 	html_file.close()
-	components.html(source_code, height=550)
+	components.html(source_code, height=750)
 	
 	
 	st.markdown(""" 
@@ -522,6 +522,12 @@ Moreover, the analysis highlights an intriguing relationship between Facebook an
 
 
 """,unsafe_allow_html=True)
+
+
+
+
+
+
 def LDA():
 	st.markdown(
     """
