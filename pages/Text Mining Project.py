@@ -566,7 +566,7 @@ def LDA():
     """,
     unsafe_allow_html=True
 )
-	st.header("Association Rule Mining", divider = "blue")
+	st.header("Latent Dirichlet Allocation (LDA)", divider = "blue")
 
 	header = st.container()
 
@@ -602,6 +602,39 @@ def LDA():
 """,  unsafe_allow_html=True)
 	st.subheader("Overview")
 	st.write("""
+Latent Dirichlet Allocation (LDA) is a powerful statistical model for uncovering underlying themes or topics within a collection of documents. It operates on the assumption that each document is a mixture of topics, and each topic is characterized by a distribution of words. By iteratively assigning words to topics and updating topic distributions based on these assignments, LDA uncovers the latent structure of the documents. Through this process, LDA represents each document as a distribution over topics, and each topic as a distribution over words. This allows for a deeper understanding of the content and themes present in the corpus. LDA finds applications in various fields such as natural language processing, information retrieval, and document classification, aiding in tasks like summarization, categorization, and recommendation systems. Its ability to automatically identify topics without the need for labeled data makes it a valuable tool for exploring and analyzing large text datasets.
+<center> <a href="https://ibb.co/D8q3Vhm"><img src="https://i.ibb.co/TbCzv6J/image.png" alt="image" border="0"></a> </center>
+
+<center> <a href = “https://www.analyticsvidhya.com/blog/2021/06/part-2-topic-modeling-and-latent-dirichlet-allocation-lda-using-gensim-and-sklearn/”> Analytics Vidhya</a> </center>
+<br>
+Latent Dirichlet Allocation (LDA) is needed for several reasons:
+<ul>
+<li> <b>Topic Discovery:</b> LDA enables the automatic discovery of underlying topics or themes within a collection of documents. This is particularly useful when dealing with large corpora where manual inspection of each document is impractical.
+
+<li> <b>Document Summarization:</b>  By identifying the topics present in documents, LDA facilitates document summarization. It allows for the creation of concise representations of documents based on their dominant themes, making it easier to understand and analyze large volumes of text.
+
+<li> <b>Information Retrieval: </b> LDA assists in information retrieval tasks by providing a way to index and search documents based on their topics. This helps users find relevant documents more efficiently, as documents can be ranked or filtered based on their topical relevance.
+
+<li> <b>Content Recommendation:</b>  LDA can be used to build recommendation systems by identifying topics of interest for users. By analyzing the topics present in documents that a user has interacted with, LDA can suggest other documents or resources on similar topics.
+
+<li> <b>Content Analysis:</b>  LDA aids in content analysis by revealing patterns and trends within a corpus. It allows researchers and analysts to gain insights into the distribution of topics over time, across different sources, or within specific domains.
+
+<li> <b>Feature Selection:</b>  In machine learning tasks, LDA can be used for feature selection by identifying the most relevant words or terms associated with each topic. This can help improve the performance of models by focusing on the most discriminative features.
+
+</ul>
+<center> <a href="https://ibb.co/QHH5nHp"><img src="https://i.ibb.co/R665P6Y/image.png" alt="image" border="0"></a> </center>
+<center> <a href = “https://www.kdnuggets.com/2019/09/overview-topics-extraction-python-latent-dirichlet-allocation.html”> Kdnuggets </a> </center>
+<br>
+<b>LDA assumes a generative process for document creation:</b>
+<li>	For each document, it first decides on the distribution of topics that the document will contain. This distribution is drawn from a Dirichlet distribution over topics.
+<li>	For each word in the document, it then chooses a topic from the document's distribution of topics.
+<li>	Finally, it selects a word from the chosen topic's distribution over words. <br><br>
+The goal of LDA is to infer the underlying topic structure from the observed words in the documents. It does this by iteratively updating its parameters (i.e., the topic distributions for documents and the word distributions for topics) until it converges to a stable solution.
+<br><br>
+<center> <a href="https://ibb.co/bWYg0by"><img src="https://i.ibb.co/FxcbrHf/image.png" alt="image" border="0"></a> </center>
+<center> <a href= "https://towardsdatascience.com/topic-modeling-with-latent-dirichlet-allocation-e7ff75290f8"> Towards Data Science</a></center>
+<br><br>
+Latent Dirichlet Allocation (LDA) can uncover key topics within the dating-related text data. By identifying prevalent themes like online dating experiences and preferences, LDA can provide structured insights. It can also reveal trends over time and enables segmentation for targeted strategies. LDA can also enhance our understanding of the dataset, guiding decision-making effectively.
 
 """, unsafe_allow_html=True)
 
@@ -623,8 +656,13 @@ def LDA():
 """,  unsafe_allow_html=True)
 	st.subheader("Data Prep")
 	st.write("""
+The text data was first converted using CountVectorizer, limiting features to a maximum of 200. Then, Latent Dirichlet Allocation (LDA) was applied to uncover key topics within the dataset. LDA analyzes the frequency of words to identify prevalent themes like online dating experiences and preferences. By using a limited set of features, we focus on the most relevant aspects of the data, enhancing the effectiveness of the LDA analysis.
+<center> <a href="https://ibb.co/7yzS7yv"><img src="https://i.ibb.co/DKb13K4/image.png" alt="image" border="0"></a> </center>
 
-
+<center> Data Before Cleaning </center>
+<br>
+<center> <a href="https://ibb.co/6Ywc0Bs"><img src="https://i.ibb.co/0q2pytJ/image.png" alt="image" border="0"></a> </center>
+<center> Data After Cleaning </center>
 	""",unsafe_allow_html=True)
 
 
@@ -641,14 +679,27 @@ def LDA():
 """,  unsafe_allow_html=True)
 	st.subheader("Code")
 	st.write("""
-	
+	<li>  
+	<a href = "https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/LDA.py"> Latent Dirichlet Allocation (LDA) </a>
 """,  unsafe_allow_html=True)
 	st.subheader("Results")
 	st.write("""
 	
+<center> <a href="https://ibb.co/hgKVvyM"><img src="https://i.ibb.co/kGhXFxy/image.png" alt="image" border="0"></a>  </center>
+<center> Topic Viz </center>
+
+
+Topic #0 seems to capture discussions around personal experiences and feelings related to dating. Words like "just," "like," "don't," and "want" suggest a more subjective or emotional aspect of dating, possibly reflecting individual sentiments and perspectives.
+
+Topic #1, on the other hand, appears to be more about practical aspects of dating, such as the use of dating apps, interactions with potential partners, and considerations about profiles and matches.
+
+In essence, both topics revolve around dating, but Topic #0 may lean towards subjective experiences and emotions, while Topic #1 focuses more on practical aspects and actions related to dating.
 
 	""",unsafe_allow_html=True)
-
+	html_file = open("pages/ViewsonDating.html", 'r', encoding='UTF-8')
+	source_code = html_file.read()
+	html_file.close()
+	components.html(source_code, height=750)
 	
 	st.markdown(""" 
 <div id="Conclusion"> 
@@ -659,10 +710,9 @@ def LDA():
 	st.subheader("Conclusion")
 	st.write("""
 	
-
+The analysis uncovered two main themes within dating-related conversations. One theme revolves around personal experiences and emotions tied to dating, while the other focuses on practical aspects such as using dating apps and interacting with potential partners. These findings offer valuable insights into the various dimensions of discussions about dating, shedding light on both the emotional and practical considerations involved. Such understanding is crucial for navigating the complexities of modern relationships and enhancing communication in the digital dating landscape.
 
 """,unsafe_allow_html=True)
-
 
 ## Introduction 
 def Intro():
