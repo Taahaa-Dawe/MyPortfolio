@@ -177,7 +177,6 @@ Furthermore, clustering can help us identify outliers or anomalies in the data, 
 	st.write("""
 	<br><br>The process of transforming the text data involved utilizing the TF-IDF vectorizer, a common technique used in natural language processing to convert textual data into numerical representations. By applying TF-IDF, the importance of each word in the dataset was assessed based on its frequency in each document relative to the entire corpus. This transformation helped to capture the unique characteristics of the text data while reducing the impact of common terms that may not carry much semantic meaning.
 
-Normalization was then applied to the data to ensure that each feature (word or term) had a similar scale, making the dataset more amenable to clustering analysis. This step is crucial, especially when dealing with text data, as different features may have vastly different magnitudes, which can skew the clustering results.
 
 Given that the original dataset contained a disproportionate number of rows from Reddit compared to other sources like News API and Buzzfeed, there was a noticeable imbalance in the language usage and vocabulary across the dataset. This imbalance could potentially bias the clustering algorithm towards the predominant language and jargon found in Reddit posts. To address this issue, a representative sample of 100 rows was extracted from the original dataset, ensuring a more balanced representation of language usage across different sources.
 
