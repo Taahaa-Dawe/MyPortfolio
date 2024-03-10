@@ -252,7 +252,7 @@ Cluster 1 portrays the landscape of modern dating and relationships, heavily inf
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/z84c7pH/image.png" alt="image" border="0"></a>
 </center>
 <center>Word Cloud of Cluster Two</center><br>
-In contrast, Cluster 2 delves into the dynamics and evolution of relationships themselves. Words like "relationship," "talked," and "experience" emphasize the importance of communication and shared interactions in building and maintaining romantic connections. The presence of terms such as "recently," "started," and "moved" suggests a focus on the progression of relationships over time, highlighting key milestones and transitions. The inclusion of specific app names like "Tinder" and "Bumble" underscores the role of digital platforms in facilitating these connections, reflecting the increasingly intertwined nature of technology and romance. Overall, Cluster 2 paints a picture of individuals navigating the complexities of modern relationships, from the initial spark of attraction to the deepening of emotional bonds, all within the context of a digital dating landscape.
+In contrast, Cluster 2 delves into the dynamics and evolution of relationships themselves. Words like "relationship," "talked," and "experience" emphasize the importance of communication and shared interactions in building and maintaining romantic connections. The presence of terms such as "recently," "started," and "moved" suggests a focus on the progression of relationships over time, highlighting key milestones and Transactionss. The inclusion of specific app names like "Tinder" and "Bumble" underscores the role of digital platforms in facilitating these connections, reflecting the increasingly intertwined nature of technology and romance. Overall, Cluster 2 paints a picture of individuals navigating the complexities of modern relationships, from the initial spark of attraction to the deepening of emotional bonds, all within the context of a digital dating landscape.
 <br><br>
 	
 
@@ -446,11 +446,11 @@ Association rule mining can be applied to text data containing opinions on onlin
 	st.write("""
 	The data, initially in text format, underwent transformation using a TF-IDF vectorizer. This method converts text into numerical vectors, considering the importance of each word relative to its frequency across a set of documents.
 
-	After this transformation, the data was converted into a transitional format. Here, non-zero values were replaced by their corresponding column names or words. This made the data more suitable for transition analysis
+	After this transformation, the data was converted into a Transactions format. Here, non-zero values were replaced by their corresponding column names or words. This made the data more suitable for Transaction analysis
 	<center> <a href="https://ibb.co/Wt0dRQ9"><img src="https://i.ibb.co/4d2D0cy/image.png" alt="image" border="0"></a> </center>
 	<center> Data In Vector Format </center> <br><br>
 	<center> <a href="https://ibb.co/x7sH23J"><img src="https://i.ibb.co/2k6NF5g/image.png" alt="image" border="0"></a> </center>
-	<center> Data In Transitional Format </center>
+	<center> Data In Transactionsal Format </center>
 	""",unsafe_allow_html=True)
 
 
@@ -471,9 +471,9 @@ Association rule mining can be applied to text data containing opinions on onlin
 
 The dataset underwent preprocessing to convert it into a format suitable for association rule mining (ARM), where it was transformed into a basket format. This involved loading the data, vectorizing, and removing unnecessary columns, focusing solely on transaction records. Following this preparation, association rule mining was performed on the dataset, along with visualizations to explore the discovered associations further. Below is the code showcasing the steps for data preparation, ARM, and visualization of the association rules.
 
-The data was converted into transition data using Python, and R was used to perform association rule mining.
+The data was converted into Transactions data using Python, and R was used to perform association rule mining.
 
-<a href="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/DataCleaingForTransitionData.py">Python Code: Converting Data to Transition Data</a>
+<a href="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/DataCleaingForTransitionData.py">Python Code: Converting Data to Transactions Data</a>
 
 <a href="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/ARMDating.R">R Code: Association Rule Mining</a>
 
