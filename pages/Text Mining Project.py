@@ -423,8 +423,7 @@ In a dataset with n elements in transactions, there are 2^n subsets, leading to 
 <center><a href="https://ibb.co/X8WCsdz"><img src="https://i.ibb.co/q5Drs4R/image.png" alt="image" border="0"></a></center>
 <center><a href ="https://gatesboltonanalytics.com/">Amy Gates</a></center>	<br>
 
-Association rule mining (ARM) is a valuable technique for analyzing data related to marketing campaigns and customer behaviors. By examining patterns and associations within the dataset, ARM can uncover insights that help marketers optimize their campaign strategies. For example, ARM might reveal that certain combinations of customer behaviors, such as low search activity and high impressions, are strongly associated with specific types of marketing campaigns, like control campaigns. Armed with this knowledge, marketers can tailor their campaigns to better target and engage customers based on their observed behaviors. Additionally, ARM can assist in segmentation and personalization efforts by identifying distinct customer segments with unique preferences and behaviors. This enables marketers to deliver more personalized messaging and offers, leading to improved campaign effectiveness. Furthermore, ARM can support A/B testing initiatives by helping marketers design experiments that test different campaign approaches and interpret the results more effectively. Overall, ARM provides marketers with valuable insights into the complex dynamics between customer behaviors and marketing campaigns, empowering them to make data-driven decisions that drive better outcomes.
-
+Association rule mining can be applied to text data containing opinions on online dating to uncover patterns and relationships between different aspects of the dating experience. By analyzing the opinions expressed in the text, association rule mining can identify frequent co-occurrences or associations between specific words or phrases. For example, it could reveal that positive sentiments towards a particular dating app are often associated with specific features mentioned in the reviews, such as ease of use or success in finding matches. Additionally, association rule mining could uncover interesting insights into user preferences and behaviors, such as the tendency for individuals who express dissatisfaction with one aspect of online dating to also mention specific challenges or frustrations they encounter. Overall, by applying association rule mining to text data on online dating opinions, valuable insights can be gained into the factors that influence users' perceptions and experiences in the digital dating landscape.
 """, unsafe_allow_html=True)
 
 
@@ -445,8 +444,13 @@ Association rule mining (ARM) is a valuable technique for analyzing data related
 """,  unsafe_allow_html=True)
 	st.subheader("Data Prep")
 	st.write("""
+	The data, initially in text format, underwent transformation using a TF-IDF vectorizer. This method converts text into numerical vectors, considering the importance of each word relative to its frequency across a set of documents.
 
-
+	After this transformation, the data was converted into a transitional format. Here, non-zero values were replaced by their corresponding column names or words. This made the data more suitable for transition analysis
+	<center> <a href="https://ibb.co/Wt0dRQ9"><img src="https://i.ibb.co/4d2D0cy/image.png" alt="image" border="0"></a> </center>
+	<center> Data In Vector Format </center> <br><br>
+	<center> <a href="https://ibb.co/x7sH23J"><img src="https://i.ibb.co/2k6NF5g/image.png" alt="image" border="0"></a> </center>
+	<center> Data In Transitional Format </center>
 	""",unsafe_allow_html=True)
 
 
@@ -463,19 +467,47 @@ Association rule mining (ARM) is a valuable technique for analyzing data related
 """,  unsafe_allow_html=True)
 	st.subheader("Code")
 	st.write("""
-	
+
+
+The dataset underwent preprocessing to convert it into a format suitable for association rule mining (ARM), where it was transformed into a basket format. This involved loading the data, vectorizing, and removing unnecessary columns, focusing solely on transaction records. Following this preparation, association rule mining was performed on the dataset, along with visualizations to explore the discovered associations further. Below is the code showcasing the steps for data preparation, ARM, and visualization of the association rules.
+
+The data was converted into transition data using Python, and R was used to perform association rule mining.
+
+<a href="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/DataCleaingForTransitionData.py">Python Code: Converting Data to Transition Data</a>
+
+<a href="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/ARMDating.R">R Code: Association Rule Mining</a>
+
+	""",  unsafe_allow_html=True)
+	st.markdown(""" 
+<div id="Result"> 
+<br><br><br><br><br>
+</div>
 """,  unsafe_allow_html=True)
 	st.subheader("Results")
 	st.write("""
-	
+	A threshold support of 0.03 and confidence of 0.8, a total of 24 rules were obtained.<br><br>
+	<a href="https://ibb.co/Kh3n6ny"><img src="https://i.ibb.co/r019k9y/image.png" alt="image" border="0"></a>
+	<center>Scatter Plot Of Confidence and Support</center><br>
 
+The support for most of the rules is relatively low but the confidence and lift are high for most of the rules. <br> 
+The Top Rules are as follow:<br>
+
+<center><a href="https://ibb.co/BKf2b9X"><img src="https://i.ibb.co/TqwM6sV/image.png" alt="image" border="0"></a></center>
+<center>Rules Sorted By Support</center><br>
+<center><a href="https://ibb.co/4tgTzNj"><img src="https://i.ibb.co/Rb40fHC/image.png" alt="image" border="0"></a></center>
+<center>Rules Sorted By Confidence</center><br>
+<center><a href="https://ibb.co/dLnBVfs"><img src="https://i.ibb.co/Yyv21N4/image.png" alt="image" border="0"></a></center>
+<center>Rules Sorted By Lift</center> <br>
+
+
+Additional insights can be gleaned by examining the association rules through network diagrams. These diagrams visually represent the relationships between items or variables in the dataset, allowing for a more intuitive understanding of the associations discovered through association rule mining.
 	""",unsafe_allow_html=True)
-	html_file = open("pages/ARMRules.html", 'r', encoding='UTF-8')
+	html_file = open("pages/ARMTextMiningRules.html", 'r', encoding='UTF-8')
 	source_code = html_file.read()
 	html_file.close()
 	components.html(source_code, height=550)
 	
-	html_file = open("pages/ARMRules1.html", 'r', encoding='UTF-8')
+	html_file = open("pages/ARMTextMiningRules.html", 'r', encoding='UTF-8')
 	source_code = html_file.read()
 	html_file.close()
 	components.html(source_code, height=550)
@@ -488,11 +520,12 @@ Association rule mining (ARM) is a valuable technique for analyzing data related
 
 	st.subheader("Conclusion")
 	st.write("""
-	
+	The analysis of the data uncovers intriguing connections between online activity and dating interests. It's clear that individuals who use dating apps and engage in online interactions are more likely to show an interest in dating. Topics commonly discussed online, such as relationships, apps, and social media, are strongly linked with this interest. Furthermore, positive expressions and curiosity, as indicated by words like "like" and "know," often accompany a heightened interest in dating.
+
+Moreover, the analysis highlights an intriguing relationship between Facebook and dating interests. It appears that individuals who mention Facebook in their online discussions are more inclined towards dating. This suggests that Facebook, being a widely used social platform, serves as a significant avenue for individuals to explore and express their romantic interests. Whether it's through connecting with potential partners, sharing relationship status updates, or discussing dating-related topics, Facebook seems to play a pivotal role in facilitating and reflecting dating behaviors in the digital age.
 
 
 """,unsafe_allow_html=True)
-
 def LDA():
 	st.markdown(
     """
