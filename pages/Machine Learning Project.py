@@ -7,7 +7,237 @@ option = ""
 def select(option):
 	DisplayPart(option)
 
+def NB():
+	st.markdown(
+    """
+<style>
+    div[data-testid="stVerticalBlock"] div:has(div.fixed-header) {
+        position: sticky;
+        top: 2.875rem;
+        z-index: 999;
+	background-color: #0c1415;
+    }
+    .fixed-header {
+        border-bottom:1px ;
+    }
+    .btn {
+            color: white;
+            height: 40px;
+            width: 100px;
+            padding: 2px;
+            text-decoration: none;
+        }
+    #atag{
+            text-decoration: none;
+        }
+      .nav {
+            width: 50vw;
+            height: 10vh;
+            font-size: Large;
+            text-align: center;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+        }
+</style>
+    """,
+    unsafe_allow_html=True
+)
+	st.header("Association Rule Mining", divider = "blue")
 
+	header = st.container()
+
+	header.write(
+"""
+<div class='fixed-header'/>
+<center>
+    <div class="nav"/>
+	<a href="#Overview" class="btn",id ="atag">Overview</a>
+        <a href="#DataPrep" class="btn",id ="atag">Data Prep</a>
+        <a href="#Code" class="btn",id ="agta">Code</a>
+        <a href="#Result" class="btn",id ="atag">Results</a>
+	<a href="#Conclusion" class="btn",id ="atag">Conclusions</a>
+
+</center>
+""", 
+	    unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown("""
+<div id="Overview">
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Overview")
+	st.write("""
+
+Naive Bayes is a simple yet powerful probabilistic classifier based on Bayes' theorem with an assumption of independence between features. It is commonly used in machine learning for various classification tasks due to its simplicity, efficiency, and effectiveness, especially in text classification and spam filtering. Here's an overview of Naive Bayes:
+<ul>
+<li> <b>Bayes' Theorem: </b> At the core of Naive Bayes is Bayes' theorem, which describes the probability of an event, based on prior knowledge of conditions that might be related to the event. Mathematically, it's represented as:
+<center>
+<a href="https://ibb.co/DtqkPk7"><img src="https://i.ibb.co/ZVZKRKh/image.png" alt="image" border="0"></a>
+</center>
+<li> <b> Naive Assumption: </b> Naive Bayes assumes that the presence of a particular feature in a class is independent of the presence of any other feature. This is a strong assumption and often unrealistic in real-world scenarios, but despite its simplification, Naive Bayes often performs well in practice, especially with text data.
+
+<li> <b>Types of Naive Bayes: </b>
+<ol>
+   <li>  <b> Multinomial Naive Bayes: </b> 
+		Multinomial Naive Bayes is a variant of the Naive Bayes algorithm specifically tailored for classification tasks where features are categorical and represent counts or frequencies, commonly seen in text classification scenarios. In this approach, each document is represented as a vector of term frequencies or counts, where each element corresponds to the occurrence of a specific term within the document. 
+
+The algorithm computes the probability of observing each term given each class, typically denoted as P(t|c) , where (t) represents a term and (c) represents a class. These probabilities are estimated from the training data using techniques like Laplace smoothing to handle cases where certain terms may not occur in specific classes. 
+
+During classification, Multinomial Naive Bayes employs Bayes' theorem to calculate the posterior probability of each class given the observed term frequencies. It selects the class with the highest posterior probability as the predicted class for the document. Despite its simplicity, Multinomial Naive Bayes is effective in text classification tasks due to its ability to handle large feature spaces efficiently and its robustness to irrelevant features. However, it assumes independence between terms, which may not always hold true, and can be sensitive to zero-frequency issues where a term may not occur in any document of a particular class.
+<center>
+<a href="https://ibb.co/QMpSJt2"><img src="https://i.ibb.co/2dWVFHD/image.png" alt="image" border="0"></a>
+</center>
+
+<center>
+<a href =  “https://thatware.co/naive-bayes/”> thatware.co</a>
+</center>
+
+   <li> <b> Gaussian Naive Bayes: </b> 
+Gaussian Naive Bayes is an extension of Naive Bayes for classification with continuous features following a Gaussian distribution assumption. During training, it estimates the mean and variance for each feature in each class. Then, it calculates the likelihood of observing feature values given each class using the Gaussian distribution formula. During classification, it computes posterior probabilities for each class based on observed feature values and selects the class with the highest probability as the prediction. While simple and efficient, it assumes feature normality, which may not always hold true, and may not perform well with non-Gaussian data.
+<center>
+<a href="https://ibb.co/NL3qnyz"><img src="https://i.ibb.co/4jfLgVx/image.png" alt="image" border="0"></a>
+</center>
+<center> <a href =” https://www. kdnuggets.com/2020/06/naive-bayes-algorithm-everything.html”> KDnuggets </a></center>
+
+   <li> <b>Bernoulli Naive Bayes: </b> 
+	Bernoulli Naive Bayes is a variant of the Naive Bayes algorithm designed for classification tasks where features are binary or Boolean. It is commonly applied in text classification scenarios where features represent the presence or absence of specific words or terms in documents. 
+
+During training, Bernoulli Naive Bayes estimates the probability of observing each feature (term) given each class. It calculates the likelihood of a term occurring in documents belonging to each class based on the training data. Mathematically, this involves computing the probability of observing a term given a class using the training documents. 
+
+When classifying a new document, Bernoulli Naive Bayes calculates the likelihood of observing the presence or absence of each term given each class. It combines these likelihoods with the prior probabilities of each class to compute the posterior probability of each class using Bayes' theorem. Specifically, it calculates the likelihood of the document's features given each class and multiplies them with the prior probability of each class. The class with the highest posterior probability is then assigned as the predicted class for the document. 
+
+Overall, Bernoulli Naive Bayes offers a simple yet effective approach to text classification tasks with binary features. Despite its simplicity, it can perform well in practice, especially in scenarios where the features are binary-valued, such as spam filtering or sentiment analysis.
+</ol>
+<li> <b>Training Process: </b>
+<ul>
+   	<li>Given a dataset with labeled examples, Naive Bayes estimates the probabilities required by Bayes' theorem from the training data.
+   	<li> For each class, it calculates the prior probability (the probability of each class).
+   	<li> It then calculates the likelihood of each feature given each class.
+   	<li>Finally, it uses these probabilities to make predictions on new data.
+	</ul>
+<li>  <b> Classification Process: </b>
+<ul>
+   	<li>When presented with a new example, Naive Bayes calculates the posterior probability of each class given the features using Bayes' theorem.
+   	<li>It selects the class with the highest posterior probability as the predicted class for the example.
+</ul>
+<li> <b>  Advantages: </b>
+	<ul>
+   <li> Simple and easy to implement.
+   <li> Works well with high-dimensional data.
+   <li> Computationally efficient, particularly for large datasets.
+   <li> Performs well even with the presence of irrelevant features.
+</ul>
+</ul>
+
+
+	""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="DataPrep"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Data Prep")
+	st.write("""
+	The data was already structured in a format suitable for Naive Bayes classification. Here's a glimpse of what the data looks like:
+	<center>
+<a href="https://ibb.co/XF73Jky"><img src="https://i.ibb.co/Dw98KgG/image.png" alt="image" border="0"></a>
+</center>
+<center> Data</center><br>
+
+The dataset was divided into two subsets: a training dataset comprising 70% of the data and a testing dataset comprising the remaining 30%. This partitioning ensures that the model is trained on one set of data and tested on another, disjoint set, preventing any potential bias in the evaluation process. The model was trained using the training dataset, and its performance was assessed using the testing dataset. This approach helps to provide an unbiased evaluation of the model's performance on unseen data.
+<center>
+<a href="https://ibb.co/xq1D6Y5"><img src="https://i.ibb.co/B2ytBGs/image.png" alt="image" border="0"></a>
+</center> 
+<center> Train Data</center><br>
+
+<center>
+<a href="https://ibb.co/f06sjG3"><img src="https://i.ibb.co/h8QS31G/image.png" alt="image" border="0"></a>
+</center>
+<center> Test Data</center>
+	
+
+	""",unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="Code"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Code")
+	st.write("""
+	<ul>
+		<li> <a href = "https://github.com/Taahaa-Dawe/Machine_Learning_Project_AB_Testing/blob/main/naive_bayes.py"> Code</a>
+	</ul>
+	""",unsafe_allow_html=True)
+
+	st.markdown(""" 
+<div id="Result"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Results")
+	st.write("""
+<center>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/tH8dZdn/image.png" alt="image" border="0"></a>
+</center>
+<center> Confusion Matrix 
+</center><br>
+
+<center>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/QNHRxMK/image.png" alt="image" border="0"></a>
+</center>
+<center> Classification Report
+</center>
+<br>
+
+
+With an accuracy of 81%, the model demonstrates proficiency in predicting the class labels, distinguishing between test campaign and control. This high accuracy suggests that the model performs well in correctly classifying instances into their respective categories based on the provided features. 
+	""",unsafe_allow_html=True)
+	st.markdown(""" 
+<div id="Conclusion"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+
+	st.subheader("Conclusion")
+	st.write("""
+
+Multinomial Naive Bayes is a valuable tool for analyzing A/B testing data. It helps us uncover patterns in various metrics such as spending, impressions, reach, website clicks, searches, view content, add to cart, and purchases, depending on the group a customer belongs to. This means we can better understand how different groups behave and make predictions about which group a new data point might belong to based on its characteristics. In simpler terms, Multinomial Naive Bayes helps us make sense of the data from A/B tests and predict which group a customer is likely to fall into, based on how they interact with our offerings.
+""",unsafe_allow_html=True)
+	
 def Clustering():
 	st.markdown(
     """
@@ -686,6 +916,8 @@ def DisplayPart(option):
 		Clustering()
 	elif option == "ARM":
 		ARM()
+	elif option == "NB":
+		NB()
 	else:
 		st.write("Work in Progress")
 
