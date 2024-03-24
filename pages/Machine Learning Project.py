@@ -45,7 +45,7 @@ def NB():
     """,
     unsafe_allow_html=True
 )
-	st.header("Association Rule Mining", divider = "blue")
+	st.header("Naive Bayes", divider = "blue")
 
 	header = st.container()
 
