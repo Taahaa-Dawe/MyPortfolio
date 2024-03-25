@@ -1103,7 +1103,7 @@ def DisplayPart(option):
 	elif option == "NB":
 		NB()
 	elif option == "DT":
-		DT():
+		DT()
 	else:
 		st.write("Work in Progress")
 
