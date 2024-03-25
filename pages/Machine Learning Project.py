@@ -188,7 +188,9 @@ With an accuracy of 83%, the model demonstrates proficiency in predicting the cl
 
 	st.subheader("Conclusion")
 	st.write("""
-the decision tree model shows promising performance in classifying between "Control Campaign" and "Test Campaign" instances. With an overall accuracy of 83%, the model demonstrates strong predictive capabilities. However, there are areas for improvement, particularly in correctly identifying instances of "Control Campaign". By further refining the model and addressing its limitations, we can enhance its effectiveness in accurately categorizing different campaign types
+ Our decision tree model performed admirably in distinguishing between "Control Campaigns" and "Test Campaigns," achieving an accuracy of 83%. While it mostly got it right, there were a few instances where it confused the two types. Moving forward, we can fine-tune the model to better discern between these campaigns, improving its accuracy. Additionally, by analyzing users' spending habits, clicks, and other behaviors, we can gain insights into who they are and what they're interested in. This information helps us tailor our campaigns more effectively, ensuring that we're reaching the right audience with the right message.
+
+
 """,unsafe_allow_html=True)
 
 def NB():
