@@ -6,6 +6,190 @@ option = ""
 
 def select(option):
 	DisplayPart(option)
+def DT():
+	st.markdown(
+    """
+<style>
+    div[data-testid="stVerticalBlock"] div:has(div.fixed-header) {
+        position: sticky;
+        top: 2.875rem;
+        z-index: 999;
+	background-color: #0c1415;
+    }
+    .fixed-header {
+        border-bottom:1px ;
+    }
+    .btn {
+            color: white;
+            height: 40px;
+            width: 100px;
+            padding: 2px;
+            text-decoration: none;
+        }
+    #atag{
+            text-decoration: none;
+        }
+      .nav {
+            width: 50vw;
+            height: 10vh;
+            font-size: Large;
+            text-align: center;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+        }
+</style>
+    """,
+    unsafe_allow_html=True
+)
+	st.header("Decision Trees", divider = "blue")
+
+	header = st.container()
+
+	header.write(
+"""
+<div class='fixed-header'/>
+<center>
+    <div class="nav"/>
+	<a href="#Overview" class="btn",id ="atag">Overview</a>
+        <a href="#DataPrep" class="btn",id ="atag">Data Prep</a>
+        <a href="#Code" class="btn",id ="agta">Code</a>
+        <a href="#Result" class="btn",id ="atag">Results</a>
+	<a href="#Conclusion" class="btn",id ="atag">Conclusions</a>
+
+</center>
+""", 
+	    unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown("""
+<div id="Overview">
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Overview")
+	st.write("""
+
+Decision Trees (DTs) are versatile machine-learning models for classification and regression tasks. These hierarchical structures comprise nodes representing features, branches representing decision rules, and leaf nodes indicating class labels or numerical values. They are commonly employed in various applications such as spam detection, sentiment analysis, medical diagnosis, and predicting house prices. Decision trees operate by recursively partitioning the dataset based on feature values until certain stopping criteria are met, such as maximum depth or minimum samples per leaf. During inference, instances traverse the tree, with each node making decisions based on feature values until reaching a leaf node, where the final prediction is made. Supporting images, such as decision tree diagrams and decision boundaries, help illustrate their operation and effectiveness in partitioning the feature space for classification tasks.
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/fDzRydT/image.png" alt="image" border="0"></a> </center>
+<center><a href = “https://medium.com/@nidhigh/decision-trees-a-powerful-tool-in-machine-learning-dd0724dad4b6”> Medium</a></center><br>
+Key metrics used in decision tree algorithms include GINI impurity, entropy, and information gain. GINI impurity and entropy quantify the disorder or impurity of a dataset before and after a split, while information gain measures the reduction in impurity achieved by a particular split. For instance, in a binary classification scenario, the "goodness" of a split based on a feature like "Age" can be assessed by calculating the GINI impurity or entropy for the original dataset and each resulting subset, and then evaluating the information gain.
+<br>
+<center> <a href="https://ibb.co/zxQqgh4"><img src="https://i.ibb.co/3d4gbyC/image.png" alt="image" border="0"></a>
+</center >
+<center>Formulas </center><br>
+One notable aspect of decision trees is their potential for infinite growth. Decision trees can theoretically split the feature space indefinitely, creating increasingly refined partitions. Moreover, there exist numerous parameters and hyperparameters that can be adjusted, such as maximum tree depth or minimum samples per leaf, offering a vast array of potential tree configurations. However, to mitigate the risk of overfitting and ensure manageable model complexity, various techniques such as pruning and regularization are commonly employed to control tree growth and generalize well to unseen data.
+
+	""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="DataPrep"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Data Prep")
+	st.write("""
+		The data was already structured in a format suitable for Decision Trees. Here's a glimpse of what the data looks like:
+
+<br>
+<center>
+<a href="https://ibb.co/XF73Jky"><img src="https://i.ibb.co/Dw98KgG/image.png" alt="image" border="0"></a>
+</center>
+<center> Data</center><br><br>
+The dataset was divided into two subsets: a training dataset comprising 70% of the data and a testing dataset comprising the remaining 30%. This partitioning ensures that the model is trained on one set of data and tested on another, disjoint set, preventing any potential bias in the evaluation process. The model was trained using the training dataset, and its performance was assessed using the testing dataset. This approach helps to provide an unbiased evaluation of the model's performance on unseen data. <br>
+<br>
+<center>
+<a href="https://ibb.co/0VdvfvW"><img src="https://i.ibb.co/n85tDtV/image.png" alt="image" border="0"></a>
+</center>
+<center>Train Data</center><br>
+
+<center>
+<a href="https://ibb.co/bBhNKgY"><img src="https://i.ibb.co/KqZVrjB/image.png" alt="image" border="0"></a>
+</center>
+<center>Test Data</center>
+	""",unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="Code"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Code")
+	st.write("""
+	<ul>
+		<li> <a href = "https://github.com/Taahaa-Dawe/Machine_Learning_Project_AB_Testing/blob/main/Decision%20Trees.py"> Code</a>
+	</ul>
+	""",unsafe_allow_html=True)
+
+	st.markdown(""" 
+<div id="Result"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Results")
+	st.write("""
+<center>
+<a href="https://ibb.co/PGNGr63"><img src="https://i.ibb.co/b5P56Kq/image.png" alt="image" border="0"></a>
+</center>
+<center> Descision Tree 1 </center> <br>
+<center>
+<a href="https://ibb.co/ZG07430"><img src="https://i.ibb.co/KbJS4YJ/image.png" alt="image" border="0"></a>
+</center>
+<center> Descision Tree 2 </center> <br>
+<center>
+<a href="https://ibb.co/mF1CnRQ"><img src="https://i.ibb.co/k6kgLGY/image.png" alt="image" border="0"></a> 
+</center>
+<center> Descision Tree 3 </center> <br>
+<center>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/VHmwXDn/image.png" alt="image" border="0"></a> 
+</center>
+<center> Confusion Matrix For 3rd tree</center><br>
+<center>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/FXJZLG7/image.png" alt="image" border="0"></a>
+</center> 
+<center> Classification  Report For 3rd tree</center><br>
+
+With an accuracy of 83%, the model demonstrates proficiency in predicting the class labels, distinguishing between test campaign and control. This high accuracy suggests that the model performs well in correctly classifying instances into their respective categories based on the provided features.
+	""",unsafe_allow_html=True)
+	st.markdown(""" 
+<div id="Conclusion"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+
+	st.subheader("Conclusion")
+	st.write("""
+the decision tree model shows promising performance in classifying between "Control Campaign" and "Test Campaign" instances. With an overall accuracy of 83%, the model demonstrates strong predictive capabilities. However, there are areas for improvement, particularly in correctly identifying instances of "Control Campaign". By further refining the model and addressing its limitations, we can enhance its effectiveness in accurately categorizing different campaign types
+""",unsafe_allow_html=True)
 
 def NB():
 	st.markdown(
@@ -918,6 +1102,8 @@ def DisplayPart(option):
 		ARM()
 	elif option == "NB":
 		NB()
+	elif option == "DT":
+		DT():
 	else:
 		st.write("Work in Progress")
 
