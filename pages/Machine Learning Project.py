@@ -129,6 +129,8 @@ The dataset was divided into two subsets: a training dataset comprising 70% of t
 <a href="https://ibb.co/bBhNKgY"><img src="https://i.ibb.co/KqZVrjB/image.png" alt="image" border="0"></a>
 </center>
 <center>Test Data</center>
+
+<li> <a href ="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/Wholedata.csv"> Link to Data </a>
 	""",unsafe_allow_html=True)
 
 
