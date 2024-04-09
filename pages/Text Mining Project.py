@@ -1115,7 +1115,6 @@ def DisplayPart(option):
 		LDA()
 	elif option == "SVM":
 		SVM()
-		
 	else:
 		st.write("Work in Progress")
 
