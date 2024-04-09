@@ -178,7 +178,7 @@ With an accuracy rate of 45%, the model shows a level of proficiency in predicti
 
 	st.subheader("Conclusion")
 	st.write("""
-With an accuracy rate of 45%, the model shows a level of proficiency in predicting class labels, differentiating between positive, negative, and neutral categories. However, this accuracy level indicates there is significant room for improvement in the model's ability to correctly classify instances into their respective categories based on the provided features.
+Certain words and features within sentences serve as key indicators of sentiment, enabling the classification of each sentence as positive, negative, or neutral. This capability is crucial for understanding the overall sentiment toward specific topics, such as online dating, by analyzing textual data. By identifying the presence of specific words or phrases that commonly convey positive, negative, or neutral emotions, models can assess the sentiment of a piece of text. This process not only helps in gauging public opinion but also in understanding the nuanced perspectives that individuals hold towards online dating. Through this analysis, it becomes possible to discern whether the general sentiment is favorable, unfavorable, or neutral, thereby providing insights into people's attitudes and experiences with online dating platforms.
 """,unsafe_allow_html=True)
 
 def SVM():
