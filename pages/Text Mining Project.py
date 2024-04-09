@@ -8,6 +8,210 @@ option = ""
 def select(option):
 	DisplayPart(option)
 
+
+def SVM():
+	st.markdown(
+    """
+<style>
+    div[data-testid="stVerticalBlock"] div:has(div.fixed-header) {
+        position: sticky;
+        top: 2.875rem;
+        z-index: 999;
+	background-color: #0c1415;
+    }
+    .fixed-header {
+        border-bottom:1px ;
+    }
+    .btn {
+            color: white;
+            height: 40px;
+            width: 100px;
+            padding: 2px;
+            text-decoration: none;
+        }
+    #atag{
+            text-decoration: none;
+        }
+      .nav {
+            width: 50vw;
+            height: 10vh;
+            font-size: Large;
+            text-align: center;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+        }
+</style>
+    """,
+    unsafe_allow_html=True
+)
+	st.header("Support Vector Machine", divider = "blue")
+
+	header = st.container()
+
+	header.write(
+"""
+<div class='fixed-header'/>
+<center>
+    <div class="nav"/>
+	<a href="#Overview" class="btn",id ="atag">Overview</a>
+        <a href="#DataPrep" class="btn",id ="atag">Data Prep</a>
+        <a href="#Code" class="btn",id ="agta">Code</a>
+        <a href="#Result" class="btn",id ="atag">Results</a>
+	<a href="#Conclusion" class="btn",id ="atag">Conclusions</a>
+
+</center>
+""", 
+	    unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown("""
+<div id="Overview">
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Overview")
+	st.write("""
+Support Vector Machines are a powerful and versatile supervised learning algorithm primarily used for classification tasks, but they can also be used for regression and outlier detection. 
+<b>Here's a brief overview of how SVM works:</b>
+<ul>
+<li> <b> Margin: </b> In SVM, the goal is to find the hyperplane that maximizes the margin, which is the distance between the hyperplane and the nearest data points (support vectors) from each class. This margin maximization helps SVMs generalize well to unseen data.
+<li> <b>  Hyperplane: </b> A hyperplane is a decision boundary that separates data points of different classes in a feature space. For a binary classification problem, the hyperplane is a (d-1)-dimensional subspace of the d-dimensional feature space.
+<li> <b>  Support Vectors: </b> Support vectors are the data points closest to the hyperplane and have a non-zero weight in determining the position of the hyperplane. These are critical for defining the decision boundary and optimizing the margin.
+<li> <b> Kernel Trick: </b> The kernel trick allows SVMs to implicitly map input data into a higher-dimensional space where a linear separation boundary can be applied. This transformation enables SVMs to handle non-linear decision boundaries effectively without explicitly calculating the coordinates of the data in the higher-dimensional space.
+<li> <b> Optimization: </b> SVM formulates the problem of finding the optimal hyperplane as a convex optimization problem. The objective is to minimize a cost function, which includes a regularization term to control the trade-off between maximizing the margin and minimizing classification errors. </ul>
+<a href="https://ibb.co/nbxbBtQ"><img src="https://i.ibb.co/2yGySHc/image.png" alt="image" border="0"></a>
+<center> IMB </center> <br>
+
+<h4>Types of SVM:</h4>
+<ul>
+<li> <b> Linear SVM: </b> This is the standard form of SVM where the decision boundary is a straight line (or hyperplane in higher dimensions) that separates classes. Linear SVM works well when the data is linearly separable.
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/DbY8q6s/image.png" alt="image" border="0"></a></center>
+<center> <a href =”https://www.geeksforgeeks.org/support-vector-machine-algorithm/”> geeksforgeeks</a> </center> <br>
+
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/XL7ysNy/image.png" alt="image" border="0"></a></center>
+<center> <a href =”https://www.geeksforgeeks.org/support-vector-machine-algorithm/”> geeksforgeeks</a> </center><br>
+<li> <b> Non-linear SVM: </b>  SVM can handle non-linearly separable data by using kernel functions such as polynomial, radial basis function (RBF), or sigmoid kernels. These kernels implicitly map the input data into higher-dimensional spaces where linear separation is possible.
+<center> <a href="https://ibb.co/vj35H9Z"><img src="https://i.ibb.co/4V8y7kP/image.png" alt="image" border="0"></a></center>
+
+<center> <a href =”https://www.dataspoof.info/post/what-is-support-vector-machine-learn-to-implement-svm-in-python/”> DataSpoof </a></center><br>
+
+<li> <b> Multi-class SVM: </b> SVM inherently supports binary classification. To handle multi-class classification tasks, techniques such as one-vs-one or one-vs-all can be used. In one-vs-one, a separate SVM is trained for each pair of classes, while in one-vs-all, one SVM is trained for each class against all other classes.
+<li> <b> Probabilistic SVM: </b>  Traditional SVM provides a binary classification decision. Probabilistic SVM extends SVM to provide probability estimates for class membership, allowing users to gauge the confidence of the classification decision.
+<li> <b> Sequential Minimal Optimization (SMO): </b> SMO is a popular algorithm for training SVMs. It breaks down the optimization problem into smaller subproblems, making it computationally efficient, particularly for large datasets. </ul>
+Support Vector Machines (SVMs) can be used effectively to differentiate between three sentiments—positive, neutral, and negative—regarding online dating. Positive sentiments reflect satisfaction, excitement, and successful experiences. Neutral sentiments entail factual statements or observations without a strong emotional tone. Negative sentiments encompass dissatisfaction, disappointment, and concerns regarding online dating experiences. SVMs analyze data to categorize sentiments accurately, facilitating a nuanced understanding of public perception toward online dating platforms.
+
+	""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="DataPrep"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Data Prep")
+	st.write("""
+The data, collected from various sources, originally came with labels indicating its sources. However, the Google Gemini API was utilized to re-label the data based on sentiment, categorizing it as positive, negative, or neutral. This re-labeling process involved approximately 200 rows of data. Upon analysis, it was observed that the labeled data was imbalanced, with a significant skew towards negative sentiments compared to positive and neutral ones. To address this class imbalance, a selective sampling strategy was employed for the data associated with negative sentiments.
+
+<center> <a href="https://ibb.co/MRfHJKB"><img src="https://i.ibb.co/JzqTS83/image.png" alt="image" border="0"></a> </center>
+<center> Data Before Cleaning And Labelling</center> <br>
+<center><a href="https://ibb.co/WxrBWcr"><img src="https://i.ibb.co/YR5f7t5/image.png" alt="image" border="0"></a></center>
+<center> Data After Cleaning And Labelling</center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/XJS9kjC/image.png" alt="image" border="0"></a></center>
+<center> Class Imbalance </center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/724THgc/image.png" alt="image" border="0"></a></center>
+<center> Class Imbalance Solved </center> <br>
+<center><a href="https://ibb.co/gz5TX0r"><img src="https://i.ibb.co/XShsdnW/image.png" alt="image" border="0"></a></center>
+<center>Final Data Selected </center> <br>
+	""",unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="Code"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Code")
+	st.write("""
+	<li> <a href ="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/SVM">SVM </a>
+	<li> <a href ="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/datalabel.py"> Data Labelling</a>
+	""",unsafe_allow_html=True)
+
+	st.markdown(""" 
+<div id="Result"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Results")
+	st.write("""
+<H6> Linear SVM with cost 10 </H6>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/JBnBcFC/image.png" alt="image" border="0"></a></center> 
+<center> Confusion Matrix </center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/M8SBQ77/image.png" alt="image" border="0"></a></center> 
+<center> Classification Report </center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/LrYgLhJ/image.png" alt="image" border="0"></a></center> 
+<center> Top Ten Negative Feature </center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/6mNPCSr/image.png" alt="image" border="0"></a></center> 
+<center> Top Ten Neutral Feature </center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/BjY94pH/image.png" alt="image" border="0"></a></center> 
+<center> Top Ten Positive Feature </center> <br>
+<H6> RBF SVM with cost 1 </H6>
+
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/Zhj28kK/image.png" alt="image" border="0"></a></center> 
+<center> Confusion Matrix </center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/CQvY05N/image.png" alt="image" border="0"></a></center> 
+<center> Classification Report </center> <br>
+<H6> Poly SVM with cost 40 and degree 3</H6>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/D40fZzP/image.png" alt="image" border="0"></a></center> 
+<center> Confusion Matrix </center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/xFB915D/image.png" alt="image" border="0"></a></center> 
+<center> Classification Report </center> <br>
+<H6> Poly SVM with cost 2 and degree 3</H6>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/vjvvwj4/image.png" alt="image" border="0"></a></center> 
+<center> Confusion Matrix </center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/FgZVY3v/image.png" alt="image" border="0"></a></center> 
+<center> Classification Report </center> <br>
+
+The SVM (Support Vector Machine) model demonstrates commendable performance in predicting positive labels, whereas its accuracy in identifying negative and neutral labels is less satisfactory.
+	""",unsafe_allow_html=True)
+	st.markdown(""" 
+<div id="Conclusion"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+
+	st.subheader("Conclusion")
+	st.write("""
+The presence of specific words within sentences enables clearer identification of positive labels, while the recognition of negative and neutral labels appears to be less effective. Additionally, the method employed for this analysis is complex and challenging to explain.
+""",unsafe_allow_html=True)
+
 def Clustering():
 	st.markdown(
     """
@@ -909,6 +1113,9 @@ def DisplayPart(option):
 		ARM()
 	elif option =="LDA":
 		LDA()
+	elif option == "SVM":
+		SVM()
+		
 	else:
 		st.write("Work in Progress")
 
