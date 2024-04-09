@@ -7,7 +7,179 @@ option = ""
 
 def select(option):
 	DisplayPart(option)
+def DT():
+	st.markdown(
+    """
+<style>
+    div[data-testid="stVerticalBlock"] div:has(div.fixed-header) {
+        position: sticky;
+        top: 2.875rem;
+        z-index: 999;
+	background-color: #0c1415;
+    }
+    .fixed-header {
+        border-bottom:1px ;
+    }
+    .btn {
+            color: white;
+            height: 40px;
+            width: 100px;
+            padding: 2px;
+            text-decoration: none;
+        }
+    #atag{
+            text-decoration: none;
+        }
+      .nav {
+            width: 50vw;
+            height: 10vh;
+            font-size: Large;
+            text-align: center;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+        }
+</style>
+    """,
+    unsafe_allow_html=True
+)
+	st.header("Decision Trees", divider = "blue")
 
+	header = st.container()
+
+	header.write(
+"""
+<div class='fixed-header'/>
+<center>
+    <div class="nav"/>
+	<a href="#Overview" class="btn",id ="atag">Overview</a>
+        <a href="#DataPrep" class="btn",id ="atag">Data Prep</a>
+        <a href="#Code" class="btn",id ="agta">Code</a>
+        <a href="#Result" class="btn",id ="atag">Results</a>
+	<a href="#Conclusion" class="btn",id ="atag">Conclusions</a>
+
+</center>
+""", 
+	    unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown("""
+<div id="Overview">
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Overview")
+	st.write("""
+
+Decision Trees (DTs) are versatile machine-learning models for classification and regression tasks. These hierarchical structures comprise nodes representing features, branches representing decision rules, and leaf nodes indicating class labels or numerical values. They are commonly employed in various applications such as spam detection, sentiment analysis, medical diagnosis, and predicting house prices. Decision trees operate by recursively partitioning the dataset based on feature values until certain stopping criteria are met, such as maximum depth or minimum samples per leaf. During inference, instances traverse the tree, with each node making decisions based on feature values until reaching a leaf node, where the final prediction is made. Supporting images, such as decision tree diagrams and decision boundaries, help illustrate their operation and effectiveness in partitioning the feature space for classification tasks.
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/fDzRydT/image.png" alt="image" border="0"></a> </center>
+<center><a href = “https://medium.com/@nidhigh/decision-trees-a-powerful-tool-in-machine-learning-dd0724dad4b6”> Medium</a></center><br>
+Key metrics used in decision tree algorithms include GINI impurity, entropy, and information gain. GINI impurity and entropy quantify the disorder or impurity of a dataset before and after a split, while information gain measures the reduction in impurity achieved by a particular split. For instance, in a binary classification scenario, the "goodness" of a split based on a feature like "Age" can be assessed by calculating the GINI impurity or entropy for the original dataset and each resulting subset, and then evaluating the information gain.
+<br>
+<center> <a href="https://ibb.co/zxQqgh4"><img src="https://i.ibb.co/3d4gbyC/image.png" alt="image" border="0"></a>
+</center >
+<center>Formulas </center><br>
+One notable aspect of decision trees is their potential for infinite growth. Decision trees can theoretically split the feature space indefinitely, creating increasingly refined partitions. Moreover, there exist numerous parameters and hyperparameters that can be adjusted, such as maximum tree depth or minimum samples per leaf, offering a vast array of potential tree configurations. However, to mitigate the risk of overfitting and ensure manageable model complexity, various techniques such as pruning and regularization are commonly employed to control tree growth and generalize well to unseen data.
+
+	""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="DataPrep"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Data Prep")
+	st.write("""
+The data, collected from various sources, originally came with labels indicating its sources. However, the Google Gemini API was utilized to re-label the data based on sentiment, categorizing it as positive, negative, or neutral. This re-labeling process involved approximately 200 rows of data. Upon analysis, it was observed that the labeled data was imbalanced, with a significant skew towards negative sentiments compared to positive and neutral ones. To address this class imbalance, a selective sampling strategy was employed for the data associated with negative sentiments.
+
+<center> <a href="https://ibb.co/MRfHJKB"><img src="https://i.ibb.co/JzqTS83/image.png" alt="image" border="0"></a> </center>
+<center> Data Before Cleaning And Labelling</center> <br>
+<center><a href="https://ibb.co/WxrBWcr"><img src="https://i.ibb.co/YR5f7t5/image.png" alt="image" border="0"></a></center>
+<center> Data After Cleaning And Labelling</center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/XJS9kjC/image.png" alt="image" border="0"></a></center>
+<center> Class Imbalance </center> <br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/724THgc/image.png" alt="image" border="0"></a></center>
+<center> Class Imbalance Solved </center> <br>
+<center><a href="https://ibb.co/gz5TX0r"><img src="https://i.ibb.co/XShsdnW/image.png" alt="image" border="0"></a></center>
+<center>Final Data Selected </center> <br>
+<li> <a href ="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/SentimentalLabels.csv"> Link to Data </a>
+	""",unsafe_allow_html=True)
+
+
+
+
+	st.markdown(""" 
+<div id="Code"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Code")
+	st.write("""
+	<li> <a href ="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/Decision%20Tree.py">Code</a>
+	""",unsafe_allow_html=True)
+
+	st.markdown(""" 
+<div id="Result"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Results")
+	st.write("""
+<center><a href="https://ibb.co/k0dRk9L"><img src="https://i.ibb.co/ZKZntYQ/image.png" alt="image" border="0"></a></center> 
+<center> Descision Tree 1</center><br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/kcDNDzy/image.png" alt="image" border="0"></a></center>
+<center> Confusion Matrix For 1st Tree</center><br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/BPsXnPJ/image.png" alt="image" border="0"></a></center><br>
+<center> Classification Report For 1st tree</center><br>
+
+<center><a href="https://ibb.co/jrG6M0N"><img src="https://i.ibb.co/TgRv8jf/image.png" alt="image" border="0"></a></center>
+<center> Descision Tree 2</center><br>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/MgnQ6P2/image.png" alt="image" border="0"></a> </center>
+<center> Confusion Matrix For 2nd Tree</center><br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/pn2rJ0z/image.png" alt="image" border="0"></a></center>
+<center> Classification Report For 2nd tree</center><br>
+
+<center><a href="https://ibb.co/FzDgJJx"><img src="https://i.ibb.co/fHx4tt1/image.png" alt="image" border="0"></a></center>
+<center> Descision Tree 3</center><br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/0McgNw4/image.png" alt="image" border="0"></a></center>
+<center> Confusion Matrix For 3rd Tree</center><br>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/pRPj5vk/image.png" alt="image" border="0"></a></center>
+<center> Classification Report For 3rd tree</center><br>
+
+With an accuracy rate of 45%, the model shows a level of proficiency in predicting class labels, differentiating between positive, negative, and neutral categories. However, this accuracy level indicates there is significant room for improvement in the model's ability to correctly classify instances into their respective categories based on the provided features.
+	""",unsafe_allow_html=True)
+	st.markdown(""" 
+<div id="Conclusion"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+
+	st.subheader("Conclusion")
+	st.write("""
+With an accuracy rate of 45%, the model shows a level of proficiency in predicting class labels, differentiating between positive, negative, and neutral categories. However, this accuracy level indicates there is significant room for improvement in the model's ability to correctly classify instances into their respective categories based on the provided features.
+""",unsafe_allow_html=True)
 
 def SVM():
 	st.markdown(
@@ -1117,6 +1289,8 @@ def DisplayPart(option):
 		LDA()
 	elif option == "SVM":
 		SVM()
+	elif option == "DT":
+		DT()
 	else:
 		st.write("Work in Progress")
 
