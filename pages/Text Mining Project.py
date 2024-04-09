@@ -144,6 +144,8 @@ The data, collected from various sources, originally came with labels indicating
 <center> Class Imbalance Solved </center> <br>
 <center><a href="https://ibb.co/gz5TX0r"><img src="https://i.ibb.co/XShsdnW/image.png" alt="image" border="0"></a></center>
 <center>Final Data Selected </center> <br>
+
+<li> <a href ="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/SentimentalLabels.csv"> Link to Data </a>
 	""",unsafe_allow_html=True)
 
 
