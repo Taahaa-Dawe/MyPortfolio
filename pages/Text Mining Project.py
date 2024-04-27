@@ -9,7 +9,24 @@ def select(option):
 	DisplayPart(option)
 
 
-import streamlit as st
+def  Conclusions():
+	st.markdown("""
+
+Online dating has transformed the landscape of romantic relationships, providing a platform for people to connect in ways that were unimaginable just a few decades ago. Through the use of dating apps and social media, individuals have the unique opportunity to meet a wider array of potential partners than ever before. This digital environment not only broadens the pool of acquaintances but also enables users to filter and select who they wish to interact with based on shared interests and values.
+<center>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/z84c7pH/image.png" alt="image" border="0"></a>
+</center>
+As we can see in the picture above the discussions surrounding online dating are rich and varied, reflecting a spectrum of experiences and emotions. Some individuals express positive sentiments, appreciating the convenience and efficiency that these platforms offer. They celebrate the ability to meet potential partners from the comfort of their own homes and applaud the ease with which they can engage in conversations and establish connections. This aspect of online dating is often seen as empowering, giving users control over their romantic lives in new and exciting ways.
+However, not all feedback is positive. Some users share negative experiences as seen in the picture below, discussing the challenges and frustrations associated with online dating. These might include the disappointment of unmet expectations, the superficiality of decisions made based on brief profiles, and the emotional toll of handling multiple, sometimes concurrent, interactions. Such experiences often highlight the more impersonal and transactional nature of online dating, contrasting sharply with its perceived advantages.
+<center>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/9nsvXtz/image.png" alt="image" border="0"></a>
+</center>
+
+Amid these polarized views, a neutral perspective also emerges. This viewpoint tends to be more analytical, weighing the pros and cons of online dating without strong emotional bias. From this standpoint, online dating is seen as a practical tool—a means to an end that can be effective for some while disappointing for others. This balanced perspective recognizes the complexity of navigating modern relationships through digital means, acknowledging both its transformative potential and its limitations.
+
+Overall, the exploration of online dating through various discussions and analyses reveals a nuanced landscape of modern romance. It underscores how deeply technology has become embedded in our personal lives, influencing not just how we work and socialize but also how we love. By continuing to reflect on and discuss these experiences, society can better understand the evolving dynamics of relationships and the role technology plays in shaping them.
+
+ """,unsafe_allow_html=True)
 def NN():
 	st.markdown(
     """
@@ -1713,6 +1730,8 @@ def DisplayPart(option):
 		NB()
 	elif option =="NN":
 		NN()
+	elif option =="Conclusions":
+		Conclusions()
 	else:
 		st.write("Work in Progress")
 
@@ -1722,7 +1741,7 @@ st.title("Exploring the Landscape of Modern Romance through Text Mining and Mach
 
 header = st.container()
 with header:
-	option = st.selectbox("", ("Introduction", "DataPrep/EDA", "Clustering", "ARM","LDA","DT","NB","SVM", "NN"))
+	option = st.selectbox("", ("Introduction", "DataPrep/EDA", "Clustering", "ARM","LDA","DT","NB","SVM", "NN","Conclusions"))
 header.write("""<div class='fixed-header'/>""", unsafe_allow_html=True)
 select(option)
 ### Custom CSS for the sticky header
