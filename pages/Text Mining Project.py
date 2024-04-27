@@ -21,7 +21,7 @@ As we can see in the picture above the discussions surrounding online dating are
 <br>
 
 However, not all feedback is positive. Some users share negative experiences as seen in the picture below, discussing the challenges and frustrations associated with online dating. These might include the disappointment of unmet expectations, the superficiality of decisions made based on brief profiles, and the emotional toll of handling multiple, sometimes concurrent, interactions. Such experiences often highlight the more impersonal and transactional nature of online dating, contrasting sharply with its perceived advantages.
-<center>
+<br><center>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/9nsvXtz/image.png" alt="image" border="0"></a>
 </center><br>
 
