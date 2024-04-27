@@ -8,6 +8,217 @@ option = ""
 def select(option):
 	DisplayPart(option)
 
+
+import streamlit as st
+def NN():
+	st.markdown(
+    """
+<style>
+    div[data-testid="stVerticalBlock"] div:has(div.fixed-header) {
+        position: sticky;
+        top: 2.875rem;
+        z-index: 999;
+	background-color: #0c1415;
+    }
+    .fixed-header {
+        border-bottom:1px ;
+    }
+    .btn {
+            color: white;
+            height: 40px;
+            width: 100px;
+            padding: 2px;
+            text-decoration: none;
+        }
+    #atag{
+            text-decoration: none;
+        }
+      .nav {
+            width: 50vw;
+            height: 10vh;
+            font-size: Large;
+            text-align: center;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+        }
+</style>
+    """,
+    unsafe_allow_html=True
+)
+	st.header("Neural Network ", divider = "blue")
+
+	header = st.container()
+
+	header.write(
+"""
+<div class='fixed-header'/>
+<center>
+    <div class="nav"/>
+	<a href="#Overview" class="btn",id ="atag">Overview</a>
+        <a href="#DataPrep" class="btn",id ="atag">Data Prep</a>
+        <a href="#Code" class="btn",id ="agta">Code</a>
+        <a href="#Result" class="btn",id ="atag">Results</a>
+	<a href="#Conclusion" class="btn",id ="atag">Conclusions</a>
+
+</center>
+""", 
+	    unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown("""
+<div id="Overview">
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Overview")
+	st.write("""
+Neural networks (NNs) are sophisticated computational frameworks that mimic the structure and function of the human brain, enabling machines to learn from and interpret data with a high degree of accuracy. These networks are made up of layers of nodes or neurons, which process incoming data, apply learned weights, and pass outputs forward to subsequent layers. NNs are pivotal in the field of machine learning and artificial intelligence, serving a variety of applications across industries. Here's an expanded look at some specific types of neural networks:
+
+1.	<b>Artificial Neural Networks (ANNs) </b>: ANNs are foundational to many modern neural network applications. They consist typically of three or more layers: an input layer, several hidden layers, and an output layer. Each neuron in one layer connects to every neuron in the next layer, creating a dense web of interactions. ANNs are versatile and can be used for tasks ranging from simple classifications to complex decision-making processes. The adjustment of weights during training allows ANNs to improve their accuracy over time, making them effective for pattern recognition tasks such as character recognition or stock market prediction.
+<center>
+<a href="https://ibb.co/Pt5zSvd"><img src="https://i.ibb.co/zNSHkTz/image.png" alt="image" border="0"></a>
+</center>
+<center> 
+<a href =”https://towardsdatascience.com/applied-deep-learning-part-1-artificial-neural-networks-d7834f67a4f6”>Medium</a>
+</center>
+2.	<b>Perceptrons</b>: A perceptron is a single-layer neural network, essentially the simplest form of an ANN, and serves as a linear classifier. It consists of one or more inputs, a processor, and only one output. The perceptron makes its predictions based on a linear predictor function combining a set of weights with the feature vector. Although limited in capability — handling only data that is linearly separable — perceptrons laid the groundwork for more complex neural networks.
+<center>
+<a href="https://ibb.co/3pVf8KV"><img src="https://i.ibb.co/v3fsr9f/image.png" alt="image" border="0"></a>
+</center>
+<center> 
+<a href =”https://towardsdatascience.com/what-the-hell-is-perceptron-626217814f53”>Medium</a>
+</center>
+
+3.	<b>Convolutional Neural Networks (CNNs) </b>: CNNs represent a monumental step forward in processing data that has a known grid-like topology, like image data. These networks employ layers with convolutional filters that apply across small patches of the input data, a method particularly well-suited to capturing spatial and temporal dependencies in an image by applying relevant weights and biases. The architecture of a CNN enables it to automatically and adaptively learn spatial hierarchies of features through backpropagation. This capability makes CNNs incredibly effective for tasks such as image and video recognition, image classification, and medical image analysis.
+<center>
+<a href="https://ibb.co/ZfndbV6"><img src="https://i.ibb.co/b6S1GPg/image.png" alt="image" border="0"></a>
+
+</center>
+<center> 
+<a href =”https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53”>Medium</a>
+</center>
+
+4.	<b>Recurrent Neural Networks (RNNs) </b>: RNNs are designed to handle sequential data, such as text or speech. The output from each step of the input sequence is dependent on the previous steps, making RNNs ideal for applications such as language modeling and translation. Unlike feedforward neural networks, RNNs can use their internal state (memory) to process sequences of inputs. This makes them powerful for tasks where context is crucial, such as predicting the next word in a sentence.
+<center>
+<a href="https://ibb.co/TbChp1p"><img src="https://i.ibb.co/z7kfjFj/image.png" alt="image" border="0"></a>
+
+</center>
+<center> 
+<a href =” https://towardsdatascience.com/introducing-recurrent-neural-networks-f359653d7020”>Medium</a>
+</center>
+
+5. <b>Long Short-Term Memory (LSTM) </b>: LSTMs are an advanced variant of RNNs capable of learning long-term dependencies. Traditional RNNs often struggle with the vanishing gradient problem, where gradients transmitted back through the network diminish exponentially, making it difficult to learn long-range dependencies within the input data. LSTMs address this challenge with a unique architecture that includes memory cells and gates controlling the flow of information. They allow information to be retained or discarded, thereby enhancing the model’s ability to learn from data where long contexts are necessary, such as in complex problem-solving tasks in natural language processing or in sequential prediction problems.
+<center>
+<a href="https://ibb.co/wCJ9gfC"><img src="https://i.ibb.co/S0Qhyz0/image.png" alt="image" border="0"></a>
+</center>
+
+<center> 
+<a href =” https://medium.com/@divyanshu132/lstm-and-its-equations-5ee9246d04af”>Medium</a>
+</center>
+
+	""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="DataPrep"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Data Prep")
+	st.write("""
+		
+The text data was transformed into a numerical format using count vectorization, where each document is represented by the frequency of each word appearing in it. Meanwhile, the labels were converted into integer values to facilitate model training.
+<center>
+<a href="https://ibb.co/JQ18dhF"><img src="https://i.ibb.co/ZmjvJZ1/image.png" alt="image" border="0"></a>
+
+</center>
+<center>
+Before Encoding 
+</center>
+<center>
+<a href="https://ibb.co/M6J0Nym"><img src="https://i.ibb.co/0tzbJpx/image.png" alt="image" border="0"></a>
+</center>
+<center>
+After Encoding 
+</center>
+
+	""",unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="Code"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Code")
+	st.write("""
+	<a href ="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/neural_nets.py"> Code</a>
+	""",unsafe_allow_html=True)
+
+	st.markdown(""" 
+<div id="Result"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Results")
+	st.write("""
+<center>
+<a href="https://ibb.co/J2dmMBc"><img src="https://i.ibb.co/mtBbMDR/image.png" alt="image" border="0"></a>
+</center>
+
+<center> Confusion Matirx </center> <BR>
+The matrix compares the true labels of the data with those predicted by the model. It's clear from the matrix that while the model performs well on 'Negative' class predictions, it seems to struggle with 'Neutral' and 'Positive' classes, showing some misclassifications.
+<BR> <BR>
+<center>
+<a href="https://ibb.co/GTLTnmR"><img src="https://i.ibb.co/X8g8jHt/image.png" alt="image" border="0"></a>
+
+</center>
+
+<center> Model Accuracy and Lose</center>
+<BR>
+The image is a pair of plots showing the model's accuracy and loss over training epochs. The accuracy plot indicates how well the model predicts the training and validation sets. The loss plot shows the model's error rate during training. Ideally, you'd expect the training and validation lines to be close together, suggesting the model is generalizing well. However, the validation lines in both plots seem to diverge significantly from the training lines after the first few epochs, which could be indicative of overfitting: the model is learning the training data too well, and this isn't translating to unseen data.
+
+	""",unsafe_allow_html=True)
+	st.markdown(""" 
+<div id="Conclusion"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+
+	st.subheader("Conclusion")
+	st.write("""
+The neural network seems adept at identifying negative sentiments, likely because it has learned clear patterns or keywords often associated with negative emotions. However, its ability to distinguish between positive and neutral sentiments isn't as strong, which may be because these categories often share similar language or lack strong emotive words that the network can latch onto. The subtle differences between a neutral and a positive statement might not be as pronounced or consistently presented in the data it was trained on, leading to confusion. This suggests that the neural network needs either more nuanced data, better feature engineering to capture subtle cues, or perhaps a more complex model architecture that can pick up on the finer distinctions between positive and neutral sentiments.
+""",unsafe_allow_html=True)
+
+
 def NB():
 	st.markdown(
     """
@@ -1500,6 +1711,8 @@ def DisplayPart(option):
 		DT()
 	elif option == "NB":
 		NB()
+	elif option =="NN":
+		NN()
 	else:
 		st.write("Work in Progress")
 
@@ -1509,7 +1722,7 @@ st.title("Exploring the Landscape of Modern Romance through Text Mining and Mach
 
 header = st.container()
 with header:
-	option = st.selectbox("", ("Introduction", "DataPrep/EDA", "Clustering", "ARM","LDA","DT","NB","SVM"))
+	option = st.selectbox("", ("Introduction", "DataPrep/EDA", "Clustering", "ARM","LDA","DT","NB","SVM", "NN"))
 header.write("""<div class='fixed-header'/>""", unsafe_allow_html=True)
 select(option)
 ### Custom CSS for the sticky header
