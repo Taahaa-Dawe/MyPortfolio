@@ -174,7 +174,7 @@ The dataset was divided into two subsets: a training dataset comprising 70% of t
 """,  unsafe_allow_html=True)
 	st.subheader("Code")
 	st.write("""
-	
+	<li> <a href ="https://github.com/Taahaa-Dawe/Machine_Learning_Project_AB_Testing/blob/main/svm.py">Code</a>
 	""",unsafe_allow_html=True)
 
 	st.markdown(""" 
