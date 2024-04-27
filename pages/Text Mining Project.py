@@ -13,7 +13,9 @@ def  Conclusions():
 	st.markdown("""
 
 Online dating has transformed the landscape of romantic relationships, providing a platform for people to connect in ways that were unimaginable just a few decades ago. Through the use of dating apps and social media, individuals have the unique opportunity to meet a wider array of potential partners than ever before. This digital environment not only broadens the pool of acquaintances but also enables users to filter and select who they wish to interact with based on shared interests and values.
-<br><center>
+<br>
+
+<center>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/z84c7pH/image.png" alt="image" border="0"></a>
 </center><br>
 As we can see in the picture above the discussions surrounding online dating are rich and varied, reflecting a spectrum of experiences and emotions. Some individuals express positive sentiments, appreciating the convenience and efficiency that these platforms offer. They celebrate the ability to meet potential partners from the comfort of their own homes and applaud the ease with which they can engage in conversations and establish connections. This aspect of online dating is often seen as empowering, giving users control over their romantic lives in new and exciting ways.
