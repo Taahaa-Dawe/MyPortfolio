@@ -6,6 +6,228 @@ option = ""
 
 def select(option):
 	DisplayPart(option)
+
+def SVM():
+	st.markdown(
+    """
+<style>
+    div[data-testid="stVerticalBlock"] div:has(div.fixed-header) {
+        position: sticky;
+        top: 2.875rem;
+        z-index: 999;
+	background-color: #0c1415;
+    }
+    .fixed-header {
+        border-bottom:1px ;
+    }
+    .btn {
+            color: white;
+            height: 40px;
+            width: 100px;
+            padding: 2px;
+            text-decoration: none;
+        }
+    #atag{
+            text-decoration: none;
+        }
+      .nav {
+            width: 50vw;
+            height: 10vh;
+            font-size: Large;
+            text-align: center;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+        }
+</style>
+    """,
+    unsafe_allow_html=True
+)
+	st.header("Support Vector Machine", divider = "blue")
+
+	header = st.container()
+
+	header.write(
+"""
+<div class='fixed-header'/>
+<center>
+    <div class="nav"/>
+	<a href="#Overview" class="btn",id ="atag">Overview</a>
+        <a href="#DataPrep" class="btn",id ="atag">Data Prep</a>
+        <a href="#Code" class="btn",id ="agta">Code</a>
+        <a href="#Result" class="btn",id ="atag">Results</a>
+	<a href="#Conclusion" class="btn",id ="atag">Conclusions</a>
+
+</center>
+""", 
+	    unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown("""
+<div id="Overview">
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Overview")
+	st.write("""
+Support Vector Machines are a powerful and versatile supervised learning algorithm primarily used for classification tasks, but they can also be used for regression and outlier detection. 
+<b>Here's a brief overview of how SVM works:</b>
+<ul>
+<li> <b> Margin: </b> In SVM, the goal is to find the hyperplane that maximizes the margin, which is the distance between the hyperplane and the nearest data points (support vectors) from each class. This margin maximization helps SVMs generalize well to unseen data.
+<li> <b>  Hyperplane: </b> A hyperplane is a decision boundary that separates data points of different classes in a feature space. For a binary classification problem, the hyperplane is a (d-1)-dimensional subspace of the d-dimensional feature space.
+<li> <b>  Support Vectors: </b> Support vectors are the data points closest to the hyperplane and have a non-zero weight in determining the position of the hyperplane. These are critical for defining the decision boundary and optimizing the margin.
+<li> <b> Kernel Trick: </b> The kernel trick allows SVMs to implicitly map input data into a higher-dimensional space where a linear separation boundary can be applied. This transformation enables SVMs to handle non-linear decision boundaries effectively without explicitly calculating the coordinates of the data in the higher-dimensional space.
+<li> <b> Optimization: </b> SVM formulates the problem of finding the optimal hyperplane as a convex optimization problem. The objective is to minimize a cost function, which includes a regularization term to control the trade-off between maximizing the margin and minimizing classification errors. </ul>
+<a href="https://ibb.co/nbxbBtQ"><img src="https://i.ibb.co/2yGySHc/image.png" alt="image" border="0"></a>
+<center> IMB </center> <br>
+
+<h4>Types of SVM:</h4>
+<ul>
+<li> <b> Linear SVM: </b> This is the standard form of SVM where the decision boundary is a straight line (or hyperplane in higher dimensions) that separates classes. Linear SVM works well when the data is linearly separable.
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/DbY8q6s/image.png" alt="image" border="0"></a></center>
+<center> <a href =”https://www.geeksforgeeks.org/support-vector-machine-algorithm/”> geeksforgeeks</a> </center> <br>
+
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/XL7ysNy/image.png" alt="image" border="0"></a></center>
+<center> <a href =”https://www.geeksforgeeks.org/support-vector-machine-algorithm/”> geeksforgeeks</a> </center><br>
+<li> <b> Non-linear SVM: </b>  SVM can handle non-linearly separable data by using kernel functions such as polynomial, radial basis function (RBF), or sigmoid kernels. These kernels implicitly map the input data into higher-dimensional spaces where linear separation is possible.
+<center> <a href="https://ibb.co/vj35H9Z"><img src="https://i.ibb.co/4V8y7kP/image.png" alt="image" border="0"></a></center>
+
+<center> <a href =”https://www.dataspoof.info/post/what-is-support-vector-machine-learn-to-implement-svm-in-python/”> DataSpoof </a></center><br>
+
+<li> <b> Multi-class SVM: </b> SVM inherently supports binary classification. To handle multi-class classification tasks, techniques such as one-vs-one or one-vs-all can be used. In one-vs-one, a separate SVM is trained for each pair of classes, while in one-vs-all, one SVM is trained for each class against all other classes.
+<li> <b> Probabilistic SVM: </b>  Traditional SVM provides a binary classification decision. Probabilistic SVM extends SVM to provide probability estimates for class membership, allowing users to gauge the confidence of the classification decision.
+<li> <b> Sequential Minimal Optimization (SMO): </b> SMO is a popular algorithm for training SVMs. It breaks down the optimization problem into smaller subproblems, making it computationally efficient, particularly for large datasets. </ul>
+Support Vector Machines (SVMs) can be used effectively to differentiate between three sentiments—positive, neutral, and negative—regarding online dating. Positive sentiments reflect satisfaction, excitement, and successful experiences. Neutral sentiments entail factual statements or observations without a strong emotional tone. Negative sentiments encompass dissatisfaction, disappointment, and concerns regarding online dating experiences. SVMs analyze data to categorize sentiments accurately, facilitating a nuanced understanding of public perception toward online dating platforms.
+<center>
+<a href="https://ibb.co/qNdXQdV"><img src="https://i.ibb.co/QPfzwft/image.png" alt="image" border="0"></a>
+</center>
+<center>
+	Example of  polynomial Kernal 
+</center><br>
+
+	""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="DataPrep"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Data Prep")
+	st.write("""
+		The data was already structured in a format suitable for SVM classification. Here's a glimpse of what the data looks like:
+	<center>
+<a href="https://ibb.co/XF73Jky"><img src="https://i.ibb.co/Dw98KgG/image.png" alt="image" border="0"></a>
+</center>
+<center> Data</center><br>
+
+The dataset was divided into two subsets: a training dataset comprising 70% of the data and a testing dataset comprising the remaining 30%. This partitioning ensures that the model is trained on one set of data and tested on another, disjoint set, preventing any potential bias in the evaluation process. The model was trained using the training dataset, and its performance was assessed using the testing dataset. This approach helps to provide an unbiased evaluation of the model's performance on unseen data.
+<center>
+<a href="https://ibb.co/xq1D6Y5"><img src="https://i.ibb.co/B2ytBGs/image.png" alt="image" border="0"></a>
+</center> 
+<center> Train Data</center><br>
+
+<center>
+<a href="https://ibb.co/f06sjG3"><img src="https://i.ibb.co/h8QS31G/image.png" alt="image" border="0"></a>
+</center>
+<center> Test Data</center>
+<ul>
+<li> <a href ="https://github.com/Taahaa-Dawe/OnlineDatingReview_TextMiningProject/blob/main/Wholedata.csv"> Link to Data </a>
+
+</ul>
+
+
+	""",unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+	st.markdown(""" 
+<div id="Code"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Code")
+	st.write("""
+	
+	""",unsafe_allow_html=True)
+
+	st.markdown(""" 
+<div id="Result"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+	st.subheader("Results")
+	st.write("""
+<b>Linear SVM with cost 10 </b>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/LRqzdH8/image.png" alt="image" border="0"></a> </center>
+<center>Classification Report</center><br>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/RCBCZDG/image.png" alt="image" border="0"></a> </center>
+<center>Confusion Matrix</center><br>
+<b>Linear SVM with cost 40 </b>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/5cYz7hT/image.png" alt="image" border="0"></a> </center>
+<center>Classification Report</center><br>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/GPC2BzT/image.png" alt="image" border="0"></a> </center>
+<center>Confusion Matrix</center><br>
+<b>RBF SVM with cost 1 </b>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/hMRPSxV/image.png" alt="image" border="0"></a> </center>
+<center>Classification Report</center><br>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/2SP4cw6/image.png" alt="image" border="0"></a> </center>
+<center>Confusion Matrix</center><br>
+<b>Poly SVM with cost 40 and degree 3 </b>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/TYdx9hq/image.png" alt="image" border="0"></a> </center>
+<center>Classification Report</center><br>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/2SP4cw6/image.png" alt="image" border="0"></a> </center>
+<center>Confusion Matrix</center><br>
+<b>Poly SVM with cost 2 and degree 3 </b>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/BfqSj5X/image.png" alt="image" border="0"></a> </center>
+<center>Classification Report</center><br>
+<center> <a href="https://imgbb.com/"><img src="https://i.ibb.co/2SP4cw6/image.png" alt="image" border="0"></a> </center>
+<center>Confusion Matrix</center><br>
+<center> <a href="https://ibb.co/3M2rKCV"><img src="https://i.ibb.co/X312HC6/image.png" alt="image" border="0"></a> </center>
+<center>Model Comparison</center><br>
+The SVM (Support Vector Machine) model exhibits commendable performance in predicting campaign outcomes when utilizing a Linear kernel with a cost of 40, achieving the highest accuracy of 0.89. This indicates a strong fit for the dataset at hand. In contrast, the RBF and Polynomial kernels with varying cost parameters did not perform as effectively, consistently reaching an accuracy of 0.61. These results underscore the importance of kernel selection and hyperparameter tuning in SVM models to achieve optimal classification results.
+
+
+	""",unsafe_allow_html=True)
+	st.markdown(""" 
+<div id="Conclusion"> 
+<br><br><br><br><br>
+</div>
+""",  unsafe_allow_html=True)
+
+	st.subheader("Conclusion")
+	st.write("""
+Throughout our analysis, we experimented with different settings on our predictive model to determine which would most accurately distinguish between two types of campaign strategies: Test and Control. We discovered that one particular setting stood out by providing the clearest and most accurate results, making it easier to understand which strategy might be more effective. While other settings were also explored, they did not perform as well, often mixing up the two types of campaigns or not identifying them as effectively. This exercise showed us that with the right adjustments, our model could accurately identify the best strategies, which could be incredibly useful for planning and decision-making in real-world scenarios.
+
+
+""",unsafe_allow_html=True)
+
 def DT():
 	st.markdown(
     """
@@ -1113,6 +1335,8 @@ def DisplayPart(option):
 		NB()
 	elif option == "DT":
 		DT()
+	elif option == "SVM":
+		SVM()
 	else:
 		st.write("Work in Progress")
 
