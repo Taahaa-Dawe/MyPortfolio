@@ -140,35 +140,47 @@ def AnalysisResults():
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #121212;
+            color: #f5f5f5;
         }
         table {
             width: 80%;
             border-collapse: collapse;
-            margin: auto;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #444;
             text-align: left;
-            padding: 8px;
+            padding: 12px;
+            color: #f5f5f5;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #2c2c2c;
+        }
+        tr:nth-child(even) {
+            background-color: #252525;
         }
         tr:hover {
-            background-color: #f1f1f1;
+            background-color: #333;
+        }
+        caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #bbb;
         }
     </style>
 </head>
 <body>
     <table>
+        <caption>Table 1: Summary Table of results of the four models.</caption>
         <thead>
             <tr>
                 <th>Model / KeyPoints</th>
@@ -211,6 +223,7 @@ def AnalysisResults():
     </table>
 </body>
 </html>
+
 """,unsafe_allow_html=True)
 	st.write("<center>Table 1: Summary Table of results of the four models.</center>",unsafe_allow_html=True)
 	st.write("")
