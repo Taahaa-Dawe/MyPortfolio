@@ -9,7 +9,7 @@ option = ""
 def select(option):
 	DisplayPart(option)
 def Abstract():
-	st.write("Authors and Emails:")
+	st.write(" <b> Authors and Emails: </b>",unsafe_allow_html=True)
 	st.markdown(" * Ghizlane Rehioui: ghizlane.rehioui@colorado.edu")
 	st.markdown(" * Taahaa Dawe: taahaa.dawe@colorado.edu")
 	st.header("Abstract", divider='blue')
