@@ -250,8 +250,19 @@ def AnalysisResults():
 	st.write("""https://drive.google.com/drive/folders/183N137KlF9hHQ6YYPsM2OJfsMZyu-v0-?usp=share_link""",unsafe_allow_html=True)
 	st.write("""<b>Model 4:</b>""",unsafe_allow_html=True)
 	st.write("""https://drive.google.com/drive/folders/1cDVd3Dw1d-sElkzBactJ549Y_gVncdwU?usp=share_link""",unsafe_allow_html=True)
+
+
 def Conclusions():
-	pass
+	st.header("Conclusions")
+	st.write("""<a href="https://ibb.co/KxFgh1z"><img src="https://i.ibb.co/LdnyRGh/image.png" alt="image" border="0"></a><br />Figure 25: Quote from <a href ="https://www.euronews.com/2023/01/31/morocco-amazigh">EuroNews.</a><br />""",unsafe_allow_html=True)
+	st.write("")
+	st.write("A significant challenge in advancing Tamazight language technology lies in the limited compatibility of existing language models with the Tifinagh script. Many state-of-the-art tools fail to support this unique script, leaving a gap in their ability to accurately represent and process Tamazight in its authentic written form. This lack of script support poses a barrier not only for computational efforts but also for cultural preservation, as it limits the accessibility and visibility of Tifinagh in digital and educational platforms.")
+	st.write("In addition to script limitations, the disparity in vocabulary sizes between Tamazight and English creates another obstacle. In the dataset used, Tamazight’s 7,161-word vocabulary vastly exceeds English’s 3,929 words, leading to an imbalance that can affect the training and performance of language models. This difference may result in the model underperforming in effectively translating nuanced expressions, highlighting the need for balanced and enriched datasets.")
+	st.write("The issue is compounded by the limited variety within the dataset itself. A lack of diverse linguistic examples reduces the model’s ability to capture the richness of Tamazight’s multiple dialects and cultural expressions. This restricted representation undermines the potential of AI-driven tools to fully embrace the complexity and beauty of the language, making it imperative to invest in gathering broader and more inclusive linguistic data. This is clearly seen by the dataset not showing high accuracies with most of the models, even when using Google Translate, which has been proven to have high accuracies with many old languages including Tifinagh-scripted Tamazight")
+	st.write("""<a href="https://ibb.co/bJYyX13"><img src="https://i.ibb.co/YZJKh2W/image.png" alt="image" border="0"></a><br />Figure 26: Amazigh Traditional Clothing (<a href = "https://www.reuters.com/world/africa/moroccos-amazigh-speakers-fear-indigenous-language-fading-2023-01-30/">Reuters </a>).<br />""",unsafe_allow_html=True)
+	st.write("")
+	st.write("To address these challenges, concerted efforts are required to ensure the preservation and growth of Tamazight in the digital era. Enhancing support for Tifinagh script in language technologies is a critical first step. Additionally, expanding datasets to include a wide array of dialects, contexts, and expressions can foster better generalization and more accurate translation. Collaboration between government initiatives and technological advancements can amplify these efforts, creating opportunities for Tamazight to thrive.")
+	st.write("Ultimately, the revitalization of Tamazight requires a multifaceted approach that bridges linguistic preservation with cutting-edge technology. The Moroccan government’s recent commitment to increased funding for Amazigh-language initiatives demonstrates a promising direction. Coupled with the global pivot towards English and the rise of AI, this moment presents a unique opportunity to elevate Tamazight as a living, dynamic language both within Morocco and beyond. By addressing these challenges head-on, we can contribute to safeguarding a vital piece of cultural heritage while embracing the potential of technological progress.")
 def DisplayPart(option):
 	if option == "Abstract":
 		Abstract()
