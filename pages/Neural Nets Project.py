@@ -9,6 +9,9 @@ option = ""
 def select(option):
 	DisplayPart(option)
 def Abstract():
+	st.write("Authors and Emails:")
+	st.markdown(" * Ghizlane Rehioui: ghizlane.rehioui@colorado.edu")
+	st.markdown(" * Taahaa Dawe: taahaa.dawe@colorado.edu")
 	st.header("Abstract", divider='blue')
 	st.write(""" Amazigh languages, spoken by 14 million people across North Africa, face challenges in preservation and technological integration. This project develops an Amazigh-to-English translation system using Seq2Seq, Transformer, fine-tuned Helsinki-NLP models, and Google Translate API. The fine-tuned pre-trained Transformer Helsinki-NLP model achieved the highest BLEU score (49.27), highlighting its potential for under-resourced languages, despite having only Romanized support. Challenges faced in this project include limited data and lack of Tifinagh script support. This emphasizes the need for more resources to preserve Amazigh’s linguistic identity through technology.""")
 
