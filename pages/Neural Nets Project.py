@@ -77,7 +77,7 @@ def Methodology():
 	st.write("""<center>
  <a href="https://ibb.co/VBVzxZd"><img src="https://i.ibb.co/RH2sNm1/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 12: Sample from cleaned dataset with Tamazight in Tifinagh (left) and English (right).</a><br />
  	</center>""",unsafe_allow_html=True)
-	st.write()
+	st.write("")
 	st.write("""Data cleaning was a critical part of the preparation process. Duplicate and irrelevant entries were removed to improve the quality and relevance of the dataset. The Amazigh text was standardized by replacing Amazigh characters with their Romanized equivalents, as the models lacked support for the Tifinagh script. Additionally, punctuation and formatting inconsistencies were cleaned to ensure uniformity across the dataset, reducing potential noise during training. """,unsafe_allow_html=True)
 	st.write("""<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/ys4wXHJ/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 13: Sample from cleaned dataset with Romanized Tamazight.</a><br /></center>""",unsafe_allow_html=True)
 	st.write("")
@@ -85,16 +85,22 @@ def Methodology():
 	st.write("")
 	st.write("""<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/Bzx9DNy/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 14: Sample of tokenized and padded data.</a><br /></center>""",unsafe_allow_html=True)
 	st.write("")
-	
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
+	st.subheader("Models and Techniques")
+	st.write("""To translate Amazigh to English, several models and techniques were employed. The Sequence-to-Sequence (Seq2Seq) model served as the baseline, leveraging an encoder-decoder architecture. The encoder processed Amazigh input sentences and converted them into a “context vector,” which the decoder then used to predict English translations one word at a time. While this model was effective for simpler sentences, it struggled with longer and more complex structures due to its limited ability to capture long-range dependencies.""",unsafe_allow_html=True)
+	st.write("")
+	st.write("""<center> 
+ <a href="https://ibb.co/bPWc0wv"><img src="https://i.ibb.co/nbgxGd1/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 15: Architecture of a Sequence-to-Sequence Model (Github).</a><br />
+ </center>""",unsafe_allow_html=True)
+	st.write("")
+	st.write(""" Transformer-based models were also implemented to handle the translation task more effectively. A custom Transformer model was built from scratch, utilizing the attention mechanism to focus on relevant parts of input sentences during translation. The model incorporated key components such as multi-head attention, which helped identify relationships between words, positional encoding to ensure the model recognized the order of words, and feed-forward neural networks to enhance encoded representations for accurate translations. This custom model improved translation quality but required extensive training on the dataset""",unsafe_allow_html=True)
+	st.write(""" <center><a href="https://ibb.co/2NRHRKm"><img src="https://i.ibb.co/k1zvzck/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 16: Architecture of a Transformer Model (Attention is All you Need).</a><br /></center>""",unsafe_allow_html=True)
+	st.write("")
+	st.write("""Additionally, a pre-trained Transformer model, Helsinki-NLP/opus-mt-en-ro from Hugging Face, was fine-tuned for the Amazigh-English translation task. Pre-trained on multilingual datasets, this model was faster and more efficient to adapt, as it already had a robust understanding of English. Fine-tuning allowed it to specialize in translating Amazigh sentences while maintaining high translation accuracy and fluency, outperforming the custom Transformer in both efficiency and output quality.""",unsafe_allow_html=True)
+	st.write("""The Google Translate API was used as a benchmark for comparison with the custom and pre-trained models. Translation requests were sent via API calls to the service, which performed well for general translations. However, the API struggled with Amazigh-specific linguistic and cultural nuances, highlighting the limitations of generalized translation tools for low-resource languages.""",unsafe_allow_html=True)
+	st.write("")
+	st.write("""The models were evaluated based on the quality and accuracy of their translations, with BLEU scores and accuracy metrics used as key measures. The BLEU score assessed translation quality by comparing the models’ outputs with reference translations. The custom Transformer model faced prediction issues, making it challenging to calculate a BLEU score. However, the fine-tuned pre-trained Transformer from Hugging Face achieved a BLEU score of 49.5, reflecting high-quality translations. In comparison, the Google Translate API yielded a BLEU score of 14.9, highlighting its struggles with Amazigh-specific linguistic nuances.""",unsafe_allow_html=True)
+	st.write("""Accuracy was also evaluated to determine the percentage of correct predictions. Among the models, the pre-trained Transformer achieved the highest accuracy at approximately 96%, demonstrating its robustness and ability to produce reliable translations. This performance significantly outpaced both the custom Transformer and the Google Translate API, emphasizing the effectiveness of fine-tuning pre-trained models for low-resource language tasks.""",unsafe_allow_html=True)
+
 	
 def AnalysisResults():
 	pass
