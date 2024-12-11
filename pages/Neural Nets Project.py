@@ -16,7 +16,7 @@ def Intro():
 	st.header("Introduction", divider='blue')
 	st.write("""Amazigh languages belong to the Afro-Asiatic language family and are considered one of its most homogeneous branches. Historically, particularly in the French academic traditions, they have often been regarded as a single language. The Amazigh languages are spoken by approximately 14 million people, primarily in scattered communities across the Maghreb region of North Africa, stretching from Egypt to Mauretania, with the largest concentration in Morocco <a href ="https://www.britannica.com/topic/Amazigh-languages">(Britannica)</a>.""", unsafe_allow_html=True)
 	st.write(""" <center>
- 	<a href="https://ibb.co/GPvJbS3"><img src="https://i.ibb.co/h8RMtz1/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>website images</a><br />
+ 	<a href="https://ibb.co/GPvJbS3"><img src="https://i.ibb.co/h8RMtz1/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://www.instagram.com/amazighworldnews/p/C8SmeVtNzN3/'>Figure 1: Percentages of Amazigh Population in Africa (African Mapper).</a><br />
    	</center> """, unsafe_allow_html=True)
 def DataPreparation():
 	pass 
