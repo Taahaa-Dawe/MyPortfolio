@@ -104,7 +104,35 @@ def Methodology():
 
 	
 def AnalysisResults():
-	pass
+	st.header("Analysis and Results")
+	st.subheader("Model 1: Sequence to sequence")
+	st.write("""The Seq2Seq model’s performance varied significantly across different configurations of batch size and training epochs, influencing its ability to learn and generalize effectively. With a batch size of 64 and 150 epochs (Figure 17), the model achieved a training accuracy of 97% and a validation accuracy of 96%. This configuration allowed the model to handle simpler sentences reasonably well but struggled with more complex structures, such as those involving negations or rare linguistic patterns. The test loss evened out at higher values, indicating overfitting and limited generalization despite extended training. The smaller batch size enabled the model to capture finer details but caused noisier gradients, leading to occasional fluctuations in training accuracy. For longer or more nuanced sentences, the model often produced grammatically incomplete or redundant translations.""",unsafe_allow_html=True)
+	st.write(""" <a href="https://ibb.co/FB3Mk8H"><img src="https://i.ibb.co/XzLgfFY/image.png" alt="image" border="0"></a><br />Figure 17: Accuracy (left) and loss (right) plots for Seq2Seq with 64 Batches and 150 Epochs.<br />""",unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	
 def Conclusions():
 	pass
 def DisplayPart(option):
