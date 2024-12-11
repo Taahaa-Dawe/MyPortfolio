@@ -107,32 +107,128 @@ def AnalysisResults():
 	st.header("Analysis and Results")
 	st.subheader("Model 1: Sequence to sequence")
 	st.write("""The Seq2Seq model’s performance varied significantly across different configurations of batch size and training epochs, influencing its ability to learn and generalize effectively. With a batch size of 64 and 150 epochs (Figure 17), the model achieved a training accuracy of 97% and a validation accuracy of 96%. This configuration allowed the model to handle simpler sentences reasonably well but struggled with more complex structures, such as those involving negations or rare linguistic patterns. The test loss evened out at higher values, indicating overfitting and limited generalization despite extended training. The smaller batch size enabled the model to capture finer details but caused noisier gradients, leading to occasional fluctuations in training accuracy. For longer or more nuanced sentences, the model often produced grammatically incomplete or redundant translations.""",unsafe_allow_html=True)
-	st.write(""" <a href="https://ibb.co/FB3Mk8H"><img src="https://i.ibb.co/XzLgfFY/image.png" alt="image" border="0"></a><br />Figure 17: Accuracy (left) and loss (right) plots for Seq2Seq with 64 Batches and 150 Epochs.<br />""",unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	st.write(""" """,unsafe_allow_html=True)
-	
+	st.write(""" <center> <a href="https://ibb.co/FB3Mk8H"><img src="https://i.ibb.co/XzLgfFY/image.png" alt="image" border="0"></a><br />Figure 17: Accuracy (left) and loss (right) plots for Seq2Seq with 64 Batches and 150 Epochs.<br /> </center>""",unsafe_allow_html=True)
+	st.write("""When trained with a batch size of 100 and 150 epochs (Figure 18), the Seq2Seq model showed similar accuracy trends but with slightly slower convergence due to the larger batch size. While the larger batch size smoothed the learning process, it failed to capture nuanced linguistic patterns effectively, resulting in less fluent predictions for complex sentences. Test loss remained high, reflecting overfitting and reduced sensitivity to finer linguistic details.""",unsafe_allow_html=True)
+	st.write(""" <center><a href="https://ibb.co/PDX3sKM"><img src="https://i.ibb.co/Z24tR5S/image.png" alt="image" border="0"></a><br />Figure 18: Accuracy (left) and loss (right) plots for Seq2Seq with 100 Batches and 150 Epochs.<br /> </center>""",unsafe_allow_html=True)
+	st.write("""With a shorter training duration of 50 epochs and a batch size of 64 (Figure 19), both training and validation accuracy evened out early, resulting in suboptimal learning. The test loss was higher compared to the 150-epoch runs, and the model struggled to generalize effectively. This configuration limited the Seq2Seq model’s ability to learn complex sentence structures, leading to inconsistent predictions, particularly for inputs requiring a deeper understanding of grammar and syntax.""",unsafe_allow_html=True)
+	st.write("""<center><a href="https://ibb.co/pdYc5WT"><img src="https://i.ibb.co/gJkNhv8/image.png" alt="image" border="0"></a><br />Figure 19: Accuracy (left) and loss (right) plots for Seq2Seq with 64 Batches and 50 Epochs<br /></center>""",unsafe_allow_html=True)
+	st.write("""In summary, extended training with smaller batch sizes (64 and 150 epochs) provided better generalization for simpler sentences, while larger batch sizes (100) offered smoother training but reduced performance on complex linguistic patterns. Shorter training durations (50 epochs) significantly hindered the model’s ability to handle intricate translations.""",unsafe_allow_html=True)
+	st.subheader("Model 2: Transformer")
+	st.write("""The Transformer model shown here demonstrates strong training and validation metrics but fails to generate meaningful translations for the Amazigh-English task. The accuracy and loss graphs (Figure 20) indicate that the model achieved <b>training accuracy near 99.9%</b> and <b>validation accuracy close to 98%</b> after 18 epochs, with the loss reducing steadily during training. The <b>training loss dropped to nearly 0.017</b>, and the <b>validation loss plateaued at approximately 0.07</b>, suggesting that the model learned patterns from the training data effectively.""",unsafe_allow_html=True)
+	st.write("""<center><a href="https://ibb.co/SvVLsTP"><img src="https://i.ibb.co/kcqdHnx/image.png" alt="image" border="0"></a><br />Figure 20: Accuracy (left) and loss (right) plots for the Transformer Model.<br /></center>""",unsafe_allow_html=True)
+	st.write("""However, despite these promising metrics, the model struggled to predict any coherent translations. When tested on new Amazigh sentences (in Tifinagh script) (Figure 21), the model failed to produce any meaningful English outputs. This indicates that while the model optimized its parameters during training, it likely overfitted to the training data and did not generalize well to unseen inputs. The lack of fine-tuning and limited training data likely contributed to its inability to capture the linguistic and syntactic nuances required for accurate translation.""",unsafe_allow_html=True)
+	st.write("""<center><a href="https://ibb.co/WzLqY3Q"><img src="https://i.ibb.co/3FnGLsw/image.png" alt="image" border="0"></a><br />Figure 21: Transformer failing to make any translation.<br /></center>""",unsafe_allow_html=True)
+	st.write("""This highlights the importance of fine-tuning pre-trained models on domain-specific data and the challenges faced when training a model from scratch with limited resources.""",unsafe_allow_html=True)
+	st.subheader("Model 3: Helsinki-NLP/opus-mt-en-ro")
+	st.write("""The fine-tuned <b>Helsinki-NLP/opus-mt-en-ro model</b> demonstrated exceptional performance in the Amazigh-to-English translation task. The model was trained on Romanized inputs due to the lack of support for the Tifinagh script, yet it effectively processed the dataset and delivered high-quality translations. Over 10 epochs (Figure 22), the training loss consistently decreased from 0.1271 to 0.0143, while the validation loss steadily dropped from 0.1181 to 0.0706. This indicates that the model not only fits the training data well but also generalizes effectively to unseen data. The average BLEU score of 49.27 further highlights the model’s capability to produce grammatically correct and semantically accurate translations.""",unsafe_allow_html=True)
+	st.write("""<center><a href="https://ibb.co/s1rb74b"><img src="https://i.ibb.co/dpyjZvj/image.png" alt="image" border="0"></a><br />Figure 22: Training and testing loss of the Helsinki-NLP model.<br /></center>""",unsafe_allow_html=True)
+	st.write("""The loss trends show that the model converged smoothly, with validation loss plateauing around epoch 6 (~0.07). This suggests that additional improvements might require a larger dataset or longer fine-tuning. Despite being trained on Romanized inputs, the model preserved much of the linguistic integrity of Amazigh, although the absence of Tifinagh script support may have limited its ability to capture cultural and idiomatic nuances. The use of pre-trained MarianMT weights enabled efficient learning, significantly outperforming from-scratch training methods like Seq2Seq and basic Transformers.""",unsafe_allow_html=True)
+	st.write("""While the model excelled in both accuracy and generalization, there is room for improvement. The lack of Tifinagh script support remains a notable limitation, potentially impacting the model’s ability to handle idiomatic expressions and rare terms. Nevertheless, the Helsinki-NLP model sets a strong benchmark for low-resource language translation, and its performance reflects the effectiveness of fine-tuning pre-trained models for specific tasks. Future work could focus on integrating Tifinagh script support to further enhance linguistic fidelity and translation quality.""",unsafe_allow_html=True)
+	st.subheader("Model 4: Google Translate API")
+	st.write("""The Google Translate API served as a baseline for Amazigh-English translation, achieving an <b>average BLEU score of 14.55</b>. While it performed adequately for simple sentences, it struggled with complex structures, idiomatic expressions, and cultural nuances. The BLEU score distribution (Figure 23) showed significant variability, with many translations failing to align meaningfully with the reference sentences, as indicated by the 25th percentile BLEU score of 0.""",unsafe_allow_html=True)
+	st.write("""<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/0fx9G9m/image.png" alt="image" border="0"></a><br />Figure 23: BLEU score distribution of Google Translated Tamazight.<br /></center>""",unsafe_allow_html=True)
+	st.write("""The API’s general-purpose design and reliance on Romanized inputs limited its ability to handle the intricacies of Amazigh. Although it provided a fast solution for basic translations, its lack of specialization highlights the need for fine-tuned models for low-resource languages.""",unsafe_allow_html=True)
+	st.subheader("Summary of all Models")
+	st.write("""The table summary highlights the comparative performance of four models for translating Amazigh. The Sequence-to-Sequence and Transformer models showed limited success, with low prediction accuracy and some confusion in outputs. Google Translate API struggled, failing to generate predictions due to a lack of training for rare languages like Amazigh. """,unsafe_allow_html=True)
+	st.write("""The Helsinki-NLP/opus-mt-en-ro model, hosted on Hugging Face, outperformed others, achieving a BLEU score of 49.27 and delivering more accurate results, albeit with minor confusion. In terms of Tifinagh script support, the Sequence-to-Sequence and Helsinki-NLP models accommodated it effectively, while the Transformer model provided partial support, and Google Translate failed to adapt to it. These findings emphasize the need for fine-tuned solutions for low-resource languages.""",unsafe_allow_html=True)
+	st.write("""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Comparison Table</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Model / KeyPoints</th>
+                <th>Sequence-to-sequence</th>
+                <th>Transformer model</th>
+                <th>Google Translate API</th>
+                <th>Helsinki-NLP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Predictions</td>
+                <td>Few correct words predicted.</td>
+                <td>No predictions.</td>
+                <td>Good predictions, some confusion.</td>
+                <td>Good predictions, some confusion.</td>
+            </tr>
+            <tr>
+                <td>Blue Score (%)</td>
+                <td>0</td>
+                <td>–</td>
+                <td>14.55</td>
+                <td>49.27</td>
+            </tr>
+            <tr>
+                <td>Accuracy (%)</td>
+                <td>98</td>
+                <td>96</td>
+                <td>–</td>
+                <td>96</td>
+            </tr>
+            <tr>
+                <td>Tifinagh Support</td>
+                <td>Yes</td>
+                <td>Unknown (Did not learn)</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+""",unsafe_allow_html=True)
+	st.write("<center>Table 1: Summary Table of results of the four models.</center>",unsafe_allow_html=True)
+	st.write("")
+	st.write("""To sum up, the Helsinki-NLP/opus-mt-en-ro Transformer model, hosted on Hugging Face, demonstrated superior performance compared to traditional approaches in translating Amazigh to English. While traditional Seq2Seq models struggled with the complexity of linguistic nuances, and Google Translate failed to provide adequate specificity for rare languages, the fine-tuned Transformer model (Helsinki-NLP) effectively captured linguistic patterns. It delivered high-quality translations, making it a robust solution for addressing Amazigh-English translation challenges. """,unsafe_allow_html=True)
+	st.write("""Recent efforts indicate ongoing initiatives to enhance Tamazight language support in tools like Google Translate, further underscoring the importance of advancing translation technologies for underrepresented languages.. """,unsafe_allow_html=True)
+
+	st.write(""" <center><a href="https://ibb.co/6F0kMrg"><img src="https://i.ibb.co/KWxJPbF/image.png" alt="image" border="0"></a><br />Figure 24: Google Translate news on Tamazight language support (Amazighworldnews 1, 2).<br /> </center>""",unsafe_allow_html=True)
+	st.subheader("Code:)
+	st.write("""<b>Data Prep and EDA: </b>""",unsafe_allow_html=True)
+	st.write("""https://drive.google.com/drive/folders/1QvSNVwY0pc176zVzGE9nJ_hYTw3n23py?usp=share_link """,unsafe_allow_html=True)
+	st.write("""<b>Model 1:</b>""",unsafe_allow_html=True)
+	st.write("""https://drive.google.com/drive/folders/17pYNb-ri2-Ho2YggqoVIw76dOe18YTZE?usp=share_link""",unsafe_allow_html=True)
+	st.write("""<b>Model 2:</b>""",unsafe_allow_html=True)
+	st.write("""https://drive.google.com/drive/folders/1OeqEn0OpoE9_BuYrc6O2uro6XvY-fQx0?usp=share_link""",unsafe_allow_html=True)
+	st.write("""<b>Model 3:</b>""",unsafe_allow_html=True)
+	st.write("""https://drive.google.com/drive/folders/183N137KlF9hHQ6YYPsM2OJfsMZyu-v0-?usp=share_link""",unsafe_allow_html=True)
+	st.write("""<b>Model 4:</b>""",unsafe_allow_html=True)
+	st.write("""https://drive.google.com/drive/folders/1cDVd3Dw1d-sElkzBactJ549Y_gVncdwU?usp=share_link""",unsafe_allow_html=True)
 def Conclusions():
 	pass
 def DisplayPart(option):
