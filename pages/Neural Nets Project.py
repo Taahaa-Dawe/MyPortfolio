@@ -15,7 +15,8 @@ def Abstract():
 def Intro():
 	st.header("Introduction", divider='blue')
 	st.write("""Amazigh languages belong to the Afro-Asiatic language family and are considered one of its most homogeneous branches. Historically, particularly in the French academic traditions, they have often been regarded as a single language. The Amazigh languages are spoken by approximately 14 million people, primarily in scattered communities across the Maghreb region of North Africa, stretching from Egypt to Mauretania, with the largest concentration in Morocco <a href ="https://www.britannica.com/topic/Amazigh-languages">(Britannica)</a>.""", unsafe_allow_html=True)
-	st.write(""" <center><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf8Rj-FE8NkaMB9S12Xsl50AEb32HSNStFzY0RxrUoykd_PwX1X4JDYYcZOtV98uNnHIZdZQkyAzYRceGuamY-8vq6CFKkiy5G1cmJU1td57ceWy89j0AyKNapike8U7tdANHGz3A?key=TeEPQ0-0KtlwvyEYABLxShwU" alt="image" border="0"></center> """)
+	st.write(""" <center>
+ 	<img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf8Rj-FE8NkaMB9S12Xsl50AEb32HSNStFzY0RxrUoykd_PwX1X4JDYYcZOtV98uNnHIZdZQkyAzYRceGuamY-8vq6CFKkiy5G1cmJU1td57ceWy89j0AyKNapike8U7tdANHGz3A?key=TeEPQ0-0KtlwvyEYABLxShwU" alt="image" border="0"> </center> """)
 def DataPreparation():
 	pass 
 def Methodology():
