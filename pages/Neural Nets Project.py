@@ -218,7 +218,7 @@ def AnalysisResults():
 	st.write("""Recent efforts indicate ongoing initiatives to enhance Tamazight language support in tools like Google Translate, further underscoring the importance of advancing translation technologies for underrepresented languages.. """,unsafe_allow_html=True)
 
 	st.write(""" <center><a href="https://ibb.co/6F0kMrg"><img src="https://i.ibb.co/KWxJPbF/image.png" alt="image" border="0"></a><br />Figure 24: Google Translate news on Tamazight language support (Amazighworldnews 1, 2).<br /> </center>""",unsafe_allow_html=True)
-	st.subheader("Code:)
+	st.subheader("Code:")
 	st.write("""<b>Data Prep and EDA: </b>""",unsafe_allow_html=True)
 	st.write("""https://drive.google.com/drive/folders/1QvSNVwY0pc176zVzGE9nJ_hYTw3n23py?usp=share_link """,unsafe_allow_html=True)
 	st.write("""<b>Model 1:</b>""",unsafe_allow_html=True)
