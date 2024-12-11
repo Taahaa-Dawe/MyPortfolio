@@ -42,23 +42,31 @@ def Intro():
 def DataPreparation():
 	st.header("Data Preparation", divider='blue')
 	st.write("""The data consists of two files. File 1, sourced from <a href ="https://fr.wikipedia.org/wiki/Tifinagh">Wikipedia</a>, contains 31 letters of the Tifinagh alphabet. File 2, sourced from <a href ="https://tatoeba.org/en/downloads">Tatoeba</a>, comprises Amazigh-English sentence pairs, originally totaling 15,371 rows before cleaning and the same number after cleaning. """,unsafe_allow_html=True)
+	st.write("")
 	st.write("""<center> 
  <a href="https://ibb.co/StTZDw9"><img src="https://i.ibb.co/fkRTVdP/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 6: Tifinagh from Wikipedia with 31 letters in total.</a><br />
  	</center>""",unsafe_allow_html=True)
+	st.write("")
 	st.write("""<center> 
  	<a href="https://ibb.co/10tVG6D"><img src="https://i.ibb.co/TwxXMLV/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 7: Sentence Pairs (Amazigh – English) from Tatoeba with 15,371 rows (before cleaning).</a><br />
   	</center>""",unsafe_allow_html=True)
+	st.write("")
 	st.write(""" No exact duplicates were found in File 2. However, duplicates in English translations (due to dialectal variations) and Amazigh translations were found and removed, resulting in the deletion of 4,701 rows, accounting for 30.58% of the data. The remaining sentences were standardized to include both romanized and Tifinagh scripts, with the romanization process performed using File 1. The Tamazight vocabulary in the cleaned dataset contains 7,161 unique words, compared to 3,929 unique English words.""",unsafe_allow_html=True)
+	st.write("")
 	st.write("""<center> <a href="https://ibb.co/Wcjc6Dy"><img src="https://i.ibb.co/wKjKRJW/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 8: Sentence Pairs (Amazigh – English) from Tatoeba with 10,670 rows (after cleaning).</a><br /> </center>""",unsafe_allow_html=True)
 	st.write("")
 	st.subheader("Data Exploration")
 	st.write("""<center><a href="https://ibb.co/YdY45JM"><img src="https://i.ibb.co/2Mm0zRQ/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 9: English (Left) and Tamazight’s (Right) count of words in descending order.</a><br /></center>""",unsafe_allow_html=True)
+	st.write("")
 	st.subheader("English Sentences in the Dataset")
 	st.write("""An analysis of the English sentences in the dataset reveals potential challenges for training. A high frequency of stopwords, pronouns, and people’s names such as “Tom” dominates the text. This imbalance might hinder the model’s ability to learn meaningful patterns, as these elements contribute little to understanding the structural and semantic nuances of the language. """,unsafe_allow_html=True)
-	st.write("""<a href="https://imgbb.com/"><img src="https://i.ibb.co/Jd3GKKG/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 10: WordCloud of English Sentences in the Dataset.</a><br />""",unsafe_allow_html=True)
+	st.write("""<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/Jd3GKKG/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 10: WordCloud of English Sentences in the Dataset.</a><br /></center>""",unsafe_allow_html=True)
+	st.write("")
 	st.subheader("Tamazight Sentences in the Dataset")
 	st.write("""A similar trend is observed in the Tamazight sentences, as demonstrated by a word cloud of the romanized Amazigh text. Stopwords and pronouns are prevalent, with “Tom” (romanized as “tum”) appearing frequently, although less so than in the English dataset. This overrepresentation poses a challenge for training, as it may skew the model’s focus away from more informative linguistic features.""",unsafe_allow_html=True)
-	st.write("""<a href="https://imgbb.com/"><img src="https://i.ibb.co/8D0mfkW/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 11: WordCloud of English Sentences in the Dataset</a><br />""",unsafe_allow_html=True)
+	st.write("")
+	st.write("""<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/8D0mfkW/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 11: WordCloud of English Sentences in the Dataset</a><br /></center>""",unsafe_allow_html=True)
+	st.write("")
 	st.subheader("Data Prep and EDA:")
 	st.write("""https://drive.google.com/drive/folders/1QvSNVwY0pc176zVzGE9nJ_hYTw3n23py?usp=share_link """,unsafe_allow_html=True)
 	
