@@ -71,7 +71,31 @@ def DataPreparation():
 	st.write("""https://drive.google.com/drive/folders/1QvSNVwY0pc176zVzGE9nJ_hYTw3n23py?usp=share_link """,unsafe_allow_html=True)
 	
 def Methodology():
-	pass
+	st.header("Methodology", divider='blue')
+	st.subheader("Data Preparation")
+	st.write("""The first step in the process was to collect and prepare the data for training the models. A parallel dataset containing sentence pairs in Amazigh (as input) and English (as output) was sourced to provide the foundation for the translation task. This dataset served as the basis for both training and evaluating the models’ performance.""")
+	st.write("""<center>
+ <a href="https://ibb.co/VBVzxZd"><img src="https://i.ibb.co/RH2sNm1/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 12: Sample from cleaned dataset with Tamazight in Tifinagh (left) and English (right).</a><br />
+ 	</center>""",unsafe_allow_html=True)
+	st.write()
+	st.write("""Data cleaning was a critical part of the preparation process. Duplicate and irrelevant entries were removed to improve the quality and relevance of the dataset. The Amazigh text was standardized by replacing Amazigh characters with their Romanized equivalents, as the models lacked support for the Tifinagh script. Additionally, punctuation and formatting inconsistencies were cleaned to ensure uniformity across the dataset, reducing potential noise during training. """,unsafe_allow_html=True)
+	st.write("""<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/ys4wXHJ/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 13: Sample from cleaned dataset with Romanized Tamazight.</a><br /></center>""",unsafe_allow_html=True)
+	st.write("")
+	st.write("""Tokenization was then applied to break the sentences into smaller units, or tokens, which enabled the models to process them effectively. Each token was converted into a numerical representation suitable for input to the machine learning models. To maintain uniform input lengths, sentences were padded, meeting the structural requirements for training. This data preparation process ensured the dataset was optimized for use in building accurate and reliable translation models.""",unsafe_allow_html=True)
+	st.write("")
+	st.write("""<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/Bzx9DNy/image.png" alt="image" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Figure 14: Sample of tokenized and padded data.</a><br /></center>""",unsafe_allow_html=True)
+	st.write("")
+	
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	st.write(""" """,unsafe_allow_html=True)
+	
 def AnalysisResults():
 	pass
 def Conclusions():
