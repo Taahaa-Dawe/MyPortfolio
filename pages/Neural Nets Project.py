@@ -187,7 +187,7 @@ def AnalysisResults():
 </head>
 <body>
     <table>
-        <center><caption>Table 1: Summary Table of results of the four models.</caption></center>
+        <caption><center>Table 1: Summary Table of results of the four models.</center></caption>
         <thead>
             <tr>
                 <th>Model / KeyPoints</th>
